@@ -1,0 +1,107 @@
+/*Fonts*/
+* {
+	font-family: 'Josefin Slab', serif; 
+}
+
+.jose-reg {
+	font-family: 'Josefin Slab', serif;
+}
+
+.jose-thin {
+	font-family: 'Josefin Slab', serif;
+	font-weight: 100;
+}
+
+.jose-italic {
+	font-family: 'Josefin Slab', serif;
+	font-style: italic;
+}
+
+.jose-bold {
+	font-family: 'Josefin Slab', serif;
+	font-weight: 700;
+}
+/*------------------------------------------------------------------------------
+==============================All Sections===========================================
+-------------------------------------------------------------------------------*/
+.light-grey-bckgrd {
+	background-color: rgba(179, 179, 179, 0.5);
+	display: inline-block;
+	padding: 10px;
+	border-radius: 7px;
+}
+
+.font-white {
+	color: #fff !important;
+}
+
+.active {
+	color: #b3b3b3 !important;
+}
+
+.text-shadow-blk {
+	text-shadow: 3px 3px 1px #000;
+}
+
+.ltr-spc-wider {
+	letter-spacing: 3px;
+}
+
+h1 {
+	font-size: 45px;
+}
+
+/*------------------------------------------------------------------------------
+==============================Top Logo===========================================
+-------------------------------------------------------------------------------*/
+.top-logo-wrap {
+	padding: 20px 0;
+	border-bottom: 2px solid #000;
+}
+/*------------------------------------------------------------------------------
+==============================Nav Bar===========================================
+-------------------------------------------------------------------------------*/
+.sec-1-wrap {
+	background-image: url("../img/crogansFront.jpg");
+	background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.75;
+}
+
+.and-wrap {
+	width: 100%;
+}
+
+.nav-link {
+	font-size: 18px;
+}
+
+.navbar {
+	margin-bottom: 70px;
+	padding-top: 5px;
+}
+
+.navbar-toggler {
+	background-color: rgb(255, 255, 255) !important;
+	opacity: 0.90;
+	font-size: 18px;
+}
+/*------------------------------------------------------------------------------
+==============================Main Header=======================================
+-------------------------------------------------------------------------------*/
+.main-heading-wrap {
+	margin: 40px 0 25px 0;
+}
+/*------------------------------------------------------------------------------
+==============================Media Queries=====================================
+-------------------------------------------------------------------------------*/
+@media (min-width: 992px) {
+	.navbar {
+		width: 415px;
+	}
+}
+@media (min-width: 820px) {
+	.sec-1-wrap {
+		background-size: cover;
+	}
+}
