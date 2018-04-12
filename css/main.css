@@ -1,6 +1,6 @@
 /*Fonts*/
 * {
-	font-family: 'Josefin Slab', serif; 
+	font-family: 'Josefin Slab', serif ; 
 }
 
 .jose-reg {
@@ -24,6 +24,36 @@
 /*------------------------------------------------------------------------------
 ==============================All Sections===========================================
 -------------------------------------------------------------------------------*/
+body {
+	height: 100%;
+}
+h1 {
+	font-size: 45px;
+}
+footer {
+	color: #000;
+	width: 100%;
+	background-color: #fff;
+	z-index: 9999;
+	position: absolute;
+	bottom: 0;
+	border-top: 2px solid #000;
+}
+h5 {
+	padding-top: 5px;
+	font-size: 23px; 
+	font-weight: bold;
+}
+h6 {
+	font-size: 10px;
+}
+.footer {
+	text-align: center;
+}
+.cb-slideshow li {
+	width: 100%;
+	height: 100%;
+}
 .light-grey-bckgrd {
 	background-color: rgba(179, 179, 179, 0.5);
 	display: inline-block;
@@ -40,68 +70,115 @@
 }
 
 .text-shadow-blk {
-	text-shadow: 3px 3px 1px #000;
+	text-shadow: 2px 2px 2px #000;
 }
 
 .ltr-spc-wider {
 	letter-spacing: 3px;
 }
 
-h1 {
-	font-size: 45px;
-}
 
 /*------------------------------------------------------------------------------
 ==============================Top Logo===========================================
 -------------------------------------------------------------------------------*/
 .top-logo-wrap {
-	padding: 20px 0;
+	background-color: #fff;
+	position: absolute;
+	width: 100%;
+	padding-top: 20px;
 	border-bottom: 2px solid #000;
 }
+
 /*------------------------------------------------------------------------------
 ==============================Nav Bar===========================================
 -------------------------------------------------------------------------------*/
-.sec-1-wrap {
-	background-image: url("../img/crogansFront.jpg");
-	background-repeat: no-repeat;
-    background-size: contain;
-    opacity: 0.75;
-}
-
-.and-wrap {
-	width: 100%;
-}
-
 .nav-link {
 	font-size: 18px;
+	letter-spacing: 2px;
 }
 
 .navbar {
 	margin-bottom: 70px;
 	padding-top: 5px;
+	width: 100%;
+	z-index: 9999;
 }
 
 .navbar-toggler {
-	background-color: rgb(255, 255, 255) !important;
+	background-color: #fff !important;
 	opacity: 0.90;
 	font-size: 18px;
+	margin-top: 195px;
+	color: #000 !important;
 }
-/*------------------------------------------------------------------------------
-==============================Main Header=======================================
--------------------------------------------------------------------------------*/
-.main-heading-wrap {
-	margin: 40px 0 25px 0;
+
+.navbar-nav a:hover {
+	font-size: 20px;
 }
+
+.navbar-toggler:hover {
+	cursor: pointer;
+	font-size: 20px;
+}
+.navbar-collapse {
+	z-index: 9999;
+}
+
 /*------------------------------------------------------------------------------
 ==============================Media Queries=====================================
 -------------------------------------------------------------------------------*/
+@media (max-width: 1042px) {
+	.cb-slideshow li span {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: #153b26;
+	}
+}
+
 @media (min-width: 992px) {
 	.navbar {
-		width: 415px;
+		width: 620px;
+	}
+	.navbar-nav {
+	margin-top: 192px;
+	}
+}
+@media (max-width: 992px) {
+	.navbar-nav {
+		display: inline-block;
+		padding: 10px;
+		background-color: rgba(21, 59, 38, .50);
+		border-radius: 5px;
 	}
 }
 @media (min-width: 820px) {
-	.sec-1-wrap {
+	.slideshow-img {
 		background-size: cover;
+	}
+}
+
+@media (max-width: 650px) {
+	h1 {
+		font-size: 40px;
+	}
+	.cb-slideshow li span {
+		background-size: contain;
+		background-attachment: fixed;
+		background-position: center;
+	}
+	.cb-slideshow li div {
+		bottom: 45%;
+	}
+}
+
+@media (max-width: 525px) {
+	h1 {
+		font-size: 30px;
+	}
+}
+
+@media (max-width: 414px) {
+	h1 {
+		font-size: 25px;
 	}
 }
