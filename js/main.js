@@ -40,3 +40,23 @@ var x = setInterval(function() {
     document.getElementById("countDown").innerHTML = "Happy Saint Patty's Day!"
   }
 }, 1000)
+// ---------------------------------------
+// Switching the menus imgs function
+// ---------------------------------------
+
+function menuSwap(event) {
+  var selected = event.target.innerHTML
+  var menu = document.getElementsByClassName("menu")
+  console.log(menu)
+  for(i = 0; i < menu.length; i ++) {
+  var menuValue = menu[i].attributes.value.textContent
+  console.log(menuValue)
+  var menuName = menu[i].innerHTML
+  console.log(menuName)
+    if(selected == menuName) {
+      document.getElementById("menuImage").src = "img/" + menuValue + ".png"
+    }
+  }
+
+}
+
