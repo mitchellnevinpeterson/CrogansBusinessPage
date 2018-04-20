@@ -12,12 +12,12 @@
 <link rel="stylesheet" href="css/animate.css">
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,400,400i,700" rel="stylesheet">
-<!-- Slidewhow CSS -->
- <link rel="stylesheet" type="text/css" href="css/slideshow.css" />
 <!-- Font Awesome -->
 <link rel="stylesheet" href="css/font-awesome.css">
 <!-- Reset CSS -->
 <link rel="stylesheet" href="css/reset.css">
+<!-- Slidewhow CSS -->
+ <link rel="stylesheet" type="text/css" href="css/slideshow.css" />
 <!-- Custom Main CSS -->
 <link rel="stylesheet" href="css/main.css">
 
@@ -28,67 +28,102 @@
 <header class="top-logo-wrap text-center fluid-img">
         <img src="img/logo4.gif" alt="Crogan's Logo">
 </header>
-      <!-- Nav top bar -->
-
-    <!-- Navagation Bar Section 1-->
-    <nav class="navbar navbar-expand-lg navbar-light mx-auto">
-      <a class="navbar-brand" href="#"></a>
-      <button class="navbar-toggler mx-auto text-uppercase jose-bold" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="clover-img">Navigation</span>
+  <!-- div for the one page application -->
+<div id="app">
+    <!-- Navigation for SMALL Devices- Hides/Shows @media Queries -->
+  <nav id="navSmall">
+    <div class="btn-group">
+      <button id="smallNavDrop" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Page Navigation 
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav jose-bold text-uppercase">
-          <li class="nav-item active">
-            <a class="nav-link active text-shadow-blk" href="#">Home <span class="sr-only">(current)</span></a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <ul class="jose-bold text-uppercase">
+          <!-- Home link -->
+          <li class="dropdown-item">
+            <router-link to="/home" class="dropdown-item font-white text-shadow-blk">Home</router-link>
+          </li>
+          <!-- Menu link that has a dropdown list -->
+          <li class="nav-item">
+          <!-- Menu link -->
+          <li>
+            <router-link to="/menu" class="dropdown-item font-white text-shadow-blk" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Menu</router-link>
+          </li>
+          <!-- About us link -->
+          <li class="nav-item">
+            <router-link to="/about" class="dropdown-item font-white text-shadow-blk">About Us</router-link>
+          </li>
+          <!-- Reservation link -->
+          <li class="nav-item">
+            <router-link to="/reservations" class="dropdown-item font-white text-shadow-blk">Reservations</router-link>
+          </li>
+          <!-- Find us link -->
+          <li class="nav-item">
+            <router-link to="/find" class="dropdown-item font-white text-shadow-blk">Find Us</router-link>
           </li>
           <li class="nav-item">
-            <ul class="nav jose-bold">
-              <li class="nav-item dropdown">
-                <a class="nav-link font-white text-shadow-blk" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu</a>
-                <div class="dropdown-menu">
-                  <a class="menu dropdown-item font-white text-shadow-blk" value="startersMenu">Starters/Soups</a>
-                  <a class="menu dropdown-item font-white text-shadow-blk" value="entreeMenu">Entrées</a>
-                  <a class="menu dropdown-item font-white text-shadow-blk" value="sandwichMenu">Sandwiches/Pasta/Salad</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="menu dropdown-item font-white text-shadow-blk" value="dessertMenu">Dessert</a>
-                  <a class="menu dropdown-item font-white text-shadow-blk" value="happyHourMenu">Happy Hour!</a>
-                </div>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link font-white text-shadow-blk" href="#">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link font-white text-shadow-blk" href="#">Reservations</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link font-white text-shadow-blk" href="#">Find Us</a>
+            <router-link to="/delivery" class="dropdown-item font-white text-shadow-blk">Delivery</router-link>
           </li>
         </ul>
       </div>
-    </nav>
-    <!-- main section with slideshow -->
-<main>
-        <ul class="cb-slideshow">
-            <li><span class="slideshow-img">Image 01</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Irish American Dining</h1></div></li>
-            <li><span class="slideshow-img">Image 02</span><div><h1 class="text-uppercase light-grey-bckgrd jose-bold">Home away from home</h1></div></li>
-            <li><span class="slideshow-img">Image 03</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Traditional Drinks</h1></div></li>
-            <li><span class="slideshow-img">Image 04</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Full Bar, Beer, and Wine</h1></div></li>
-            <li><span class="slideshow-img">Image 05</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Great service, Feel at Home Ambience</h1></div></li>
-            <li><span class="slideshow-img">Image 06</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Food is fresh and made to order</h1></div></li>
+    </div>
+  </nav>
+    <!-- Navagation For LARGE Devices- Hides/Shows @media Queries-->
+    <nav id="navLrg" class="navbar navbar-expand-sm mx-auto">
+        <ul class="nav jose-bold text-uppercase">
+          <!-- Link to home -->
+          <li class="nav-item">
+            <router-link to="/home" class="nav-link font-white text-shadow-blk">Home</router-link>
+          </li>
+          <!-- Menu link that has a dropdown list -->
+          <li class="nav-item">
+            <router-link to="/menu" class="nav-link font-white text-shadow-blk" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu</router-link>
+          </li>
+          <!-- About us link -->
+          <li class="nav-item">
+            <router-link to="/about" class="nav-link font-white text-shadow-blk">About Us</router-link>
+          </li>
+          <!-- Reservation link -->
+          <li class="nav-item">
+            <router-link to="/reservations" class="nav-link font-white text-shadow-blk">Reservations</router-link>
+          </li>
+          <!-- Find us link -->
+          <li class="nav-item">
+            <router-link to="/find" class="nav-link font-white text-shadow-blk">Find Us</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/delivery" class="nav-link font-white text-shadow-blk">Delivery</router-link>
+          </li>
         </ul>
-</main>
-<footer>
-  <ul class="footer">
-    <li>
-      <h5>Days until Saint Patty's Day!</h5>
-      <h4 id="countDown"></h4>
-    </li>
-    <li>
-      <h6>&#169 Copyright Mitch Peterson</h6>
-    </li>
-  </ul>
-</footer>
+    </nav>
+    <!-- main section with content swap using vue -->
+    <main class="content">
+        <transition mode="out-in" name="slide-fade">
+            <router-view></router-view>
+        </transition>
+        <!-- This div with a id="slideshow" is to be there when the page loads only after user clicks on any of the links it will have a class of hide (display: none;) -->
+        <div id="slideshow">
+            <ul class="cb-slideshow">
+                <li><span class="slideshow-img">Image 01</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Irish American Dining</h1></div></li>
+                <li><span class="slideshow-img">Image 02</span><div><h1 class="text-uppercase light-grey-bckgrd jose-bold">Home away from home</h1></div></li>
+                <li><span class="slideshow-img">Image 03</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Traditional Drinks</h1></div></li>
+                <li><span class="slideshow-img">Image 04</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Full Bar, Beer, and Wine</h1></div></li>
+                <li><span class="slideshow-img">Image 05</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Great service, Feel at Home Ambience</h1></div></li>
+                <li><span class="slideshow-img">Image 06</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Food is fresh and made to order</h1></div></li>
+            </ul>
+        </div>
+    </main>
+</div>
+    <footer>
+      <ul class="footer">
+        <li>
+          <h5>Days until Saint Patty's Day!</h5>
+          <h4 id="countDown"></h4>
+        </li>
+        <li>
+          <h6>&#169 Copyright Mitch Peterson</h6>
+        </li>
+      </ul>
+    </footer>
 
 
  <!-- Jquery -->

@@ -35,47 +35,11 @@ q:before,q:after {
 abbr,acronym { border:0;
 }
 /* General Demo Style */
-/*body{
-	background: #000;
-	font-weight: 400;
-	color: #aa3e03;
-}*/
+
 a{
 	color: #333;
 	text-decoration: none;
 }
-/*.container{
-	position: relative;
-	text-align: center;
-}*/
-/*.clr{
-	clear: both;
-}*/
-/*.container > header{
-	padding: 30px 30px 10px 20px;
-	margin: 0px 20px 10px 20px;
-	position: relative;
-	display: block;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
-    text-align: left;
-}
-.container > header h1{
-	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
-	font-size: 35px;
-	line-height: 35px;
-	position: relative;
-	font-weight: 400;
-	color: #fff;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
-    padding: 0px 0px 5px 0px;
-}
-
-.container > header h2, p.info{
-	font-size: 16px;
-	font-style: italic;
-	color: #f8f8f8;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
-}*/
 /* Header Style */
 
 p.codrops-demos a:active{
@@ -126,7 +90,7 @@ p.codrops-demos a.current-demo:hover{
     animation: imageAnimation 36s linear infinite 0s; 
 }
 .cb-slideshow li div { 
-    z-index: 1000;
+    z-index: 990;
     position: absolute;
     bottom: 15%;
     left: 0px;
@@ -150,7 +114,7 @@ p.codrops-demos a.current-demo:hover{
     background-image: url(../img/crogansFront.jpg) 
 }
 .cb-slideshow li:nth-child(2) span { 
-    background-image: url(../img/dinningWindow.jpg);
+    background-image: url(../img/wingsHeineken.jpg);
     -webkit-animation-delay: 6s;
     -moz-animation-delay: 6s;
     -o-animation-delay: 6s;
@@ -174,7 +138,7 @@ p.codrops-demos a.current-demo:hover{
     animation-delay: 18s; 
 }
 .cb-slideshow li:nth-child(5) span { 
-    background-image: url(../img/dinning2.jpg);
+    background-image: url(../img/steak.jpg);
     -webkit-animation-delay: 24s;
     -moz-animation-delay: 24s;
     -o-animation-delay: 24s;

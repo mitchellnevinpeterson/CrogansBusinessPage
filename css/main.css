@@ -27,40 +27,54 @@
 html {
 	height: 100%;
 }
+
 body {
 	min-height: 100%;
 	position: relative;
 }
+
 main {
 	display: inline-block;
+	margin-top: 50px;
+	margin-bottom: 99px;
 }
-h1 {
-	font-size: 45px;
-}
+
 footer {
 	color: #000;
 	width: 100%;
 	background-color: #fff;
 	z-index: 999;
 	position: absolute;
+	display: inline-block;
 	bottom: 0;
 	border-top: 2px solid #000;
 }
+
+h1 {
+	padding: 10px;
+	font-size: 45px;
+}
+
 h5 {
-	padding-top: 5px;
+	padding: 10px;
 	font-size: 23px; 
 	font-weight: bold;
 }
+
 h6 {
+	padding: 5px;
 	font-size: 10px;
 }
-.footer {
+
+ul.footer {
 	text-align: center;
 }
+
 .cb-slideshow li {
 	width: 100%;
 	height: 100%;
 }
+
 .navbar-toggler {
 	background-color: rgba(21, 59, 38, .8) !important;
 	display: inline-block;
@@ -87,6 +101,7 @@ h6 {
 .ltr-spc-wider {
 	letter-spacing: 3px;
 }
+
 .cb-slideshow h1 {
 	background-color: rgba(21, 59, 38, .6);
 	border-radius: 10px;
@@ -94,56 +109,181 @@ h6 {
 	text-shadow: 2px 2px 2px #000;
 }
 
+.hide {
+	display: none;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 /*------------------------------------------------------------------------------
 ==============================Top Logo===========================================
 -------------------------------------------------------------------------------*/
 .top-logo-wrap {
 	background-color: #fff;
-	position: absolute;
+	position: relative;
 	width: 100%;
 	padding-top: 28px;
 	border-bottom: 2px solid #000;
 	z-index: 9999;
 }
-
 /*------------------------------------------------------------------------------
-==============================Nav Bar===========================================
+==============================Nav For SMALL Devices=============================
+-------------------------------------------------------------------------------*/
+#navSmall {
+	width: 100%;
+	display: none;
+}
+
+#smallNavDrop {
+	z-index: 9999;
+	width: 182.89px;
+	margin: 0 auto;
+	background-color: #153b26;
+}
+
+.btn-group {
+	width: 100%;
+	margin: 0 auto;
+	position: absolute;
+	top: 180px;
+}
+
+.dropdown-item {
+	text-align: center;
+}
+
+.dropdown-menu {
+	border-radius: 10px;
+}
+/*------------------------------------------------------------------------------
+==============================Nav For LARGE Devices=============================
 -------------------------------------------------------------------------------*/
 .nav-link {
 	font-size: 18px;
 	letter-spacing: 2px;
 }
 
-.navbar {
-	z-index: 9999;
+.nav-link:hover {
+	cursor: pointer;
 }
 
+.navbar {
+	z-index: 9999;
+	padding: 0;
+	background-color: rgba(21, 59, 38, .6);
+	border-radius: 7px;
+	position: absolute;
+	top: 176px;
+	width: 100%;
+}
 
-.navbar-nav a:hover {
+nav a:hover,
+nav router-link:hover {
 	font-size: 20px;
 }
 
-.navbar-toggler:hover {
+.navbar-toggler:hover,
+#menuLink:hover {
 	cursor: pointer;
 	font-size: 20px;
 }
-.navbar-collapse {
-	z-index: 9999;
-	position: absolute;
-	top: 0px;
+
+.nav {
+	margin: 0 auto;
 }
-.navbar-nav {
-	margin-top: 186px;
-}
+
 .dropdown-menu {
 	background-color: rgba(21, 59, 38, .98);
 	font-weight: bold;
 }
-.active:hover {
-	cursor: pointer;
-}
+
 .dropdown-item:hover {
 	cursor: pointer;
+}
+/*------------------------------------------------------------------------------
+==============================Menu Section====================================
+-------------------------------------------------------------------------------*/
+#menuImage {
+	width: 80%;
+	position: flex;
+	margin-right: 10%;
+	margin-left: 10%;
+	padding-bottom: 20px;
+}
+
+#menuLink {
+	text-align: center;
+	display: inline-block;
+	margin: 7px 7px 0 7px;
+	padding: 5px;
+}
+
+.menu-nav {
+	margin: 0 auto;
+	display: inline-block;
+	font-size: 18px;
+	text-align: center;
+	background-color: rgba(21, 59, 38, .8);
+	border-radius: 7px;
+}
+/*------------------------------------------------------------------------------
+==============================About Section====================================
+-------------------------------------------------------------------------------*/
+
+#aboutHeading {
+	width: 100%;
+	background-color: #bfbfbf;
+	padding: 7px;
+	border-radius: 7px;
+	text-shadow: 2px 2px 2px #000;
+	margin-bottom: 10px;
+}
+
+#reviewLinks {
+	margin: 0 auto;
+	max-width: 1100px;
+}
+
+.col-sm-4 {
+	max-width: 340px;
+	margin: 0 auto;
+}
+
+img.col-img {
+	width: 75%;
+	padding: 0 5px;
+	vertical-align: middle;
+}
+
+.img-div {
+	height: 170px;
+	line-height: 170px;
+}
+
+.p-tag-about {
+	font-size: 1.25rem;
+	margin: 0 20%;
+	width: 60%;
+}
+
+
+/*------------------------------------------------------------------------------
+==============================Animation===========================================
+-------------------------------------------------------------------------------*/
+.slide-fade-enter, .slide-fade-leave {
+	transform: translateX(50px);
+	opacity: 0;
+}
+
+.slide-fade-enter-active {
+transition: 0.75s ease;
+} 
+
+.slide-fade-leave-active {
+	transition: 0.3s ease;
 }
 /*------------------------------------------------------------------------------
 ==============================Media Queries=====================================
@@ -156,12 +296,6 @@ h6 {
 	}
 }
 
-@media (min-width: 992px) {
-	.navbar {
-		width: 620px;
-	}
-	
-}
 @media (max-width: 992px) {
 	.navbar-nav {
 		display: inline-block;
@@ -171,28 +305,61 @@ h6 {
 		margin-top: 250px;
 		margin-left: 10%;
 	}
+	
 }
-@media (min-width: 820px) {
-	.slideshow-img {
-		background-size: cover;
+@media (min-width: 775px) {
+	footer {
+		position: absolute;
+		bottom: 0;
 	}
-}
 
-@media (max-width: 650px) {
+}
+/*For Ipad*/
+@media (max-width: 775px) {
 	h1 {
 		font-size: 40px;
-	}
-	.cb-slideshow li span {
-		background-size: cover;
 	}
 	.cb-slideshow li div {
 		bottom: 20%;
 	}
+	#navLrg {
+		display: none;
+	}
+	#navSmall {
+		display: inline-block;
+	}
+	main {
+	margin-top: 25px;
+	}
+	#menuImage {
+		padding-bottom: 0;
+	}
+	#menuImage {
+		margin: 0;
+		width: 100%;
+		position: relative;
+	}
+	.menu-nav {
+		display: block;
+	}
+	.p-tag-about {
+		width: 80%;
+		margin: 0 10%;
+	}
 }
-
+/*For Phones*/
 @media (max-width: 525px) {
 	h1 {
 		font-size: 30px;
+	}
+	#menuLink {
+		font-size: 1.25rem;
+	}
+	img.col-img {
+		width: 70%;
+	}
+	#menuLink {
+		display: block;
 	}
 }
 
