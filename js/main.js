@@ -45,21 +45,42 @@ var x = setInterval(function() {
 // -----------------------------------------------------
 // Making the navbar sticky
 // -----------------------------------------------------
-// when scrolling this fuction will trigger
-window.onscroll = navSticky()
-// selecting the navbar by id
-var navbar = document.getElementById("navLrg")
-var sticky = navbar.offsetTop
-console.log(sticky)
+// when scrolling these fuctions will trigger
+window.onscroll = function() {navSticky(), navAnimate()}
+// selecting the navbar by id for large devices
+var navLrg = document.getElementById("navLrg")
+var sticky = navLrg.offsetTop
+// selecting the navbar by id for small devices
+var navSmall = document.getElementById("buttonDrop")
+var stickySmall = navSmall.offsetTop
+console.log(stickySmall)
 console.log(window.pageYOffset)
+// the fuction that will add or remove class sticky
 function navSticky() {
-  if (window.pageYOffset >= sticky) {
-    navbar.className = ("sticky")
+  if (window.pageYOffset >= 180) {
+    document.getElementById("navLrg").classList.add("sticky")
   } else {
-    navbar.classList.remove("sticky")
+    document.getElementById("navLrg").classList.remove("sticky")
+  }
+  if (window.pageYOffset >= 180) {
+    document.getElementById("buttonDrop").classList.add("stickySmall")
+    document.getElementById("smallNavDrop").classList.add("stickySmall")
+  } else {
+    document.getElementById("buttonDrop").classList.remove("stickySmall")
+    document.getElementById("smallNavDrop").classList.remove("stickySmall")
   }
 }
-
+// -----------------------------------------
+// Adding Animation to the navigation
+// -----------------------------------------
+// the function that adds the classes to make it animated
+function navAnimate() {
+  if (window.pageYOffset >= 240) {
+    document.getElementById("foodMenu").classList.add("fadeOutUp")
+  } else {
+    document.getElementById("foodMenu").classList.remove("fadeOutUp")
+  }
+}
 // -----------------------------------------------------
 // Making sure the slideshow is hiden upon page refresh
 // -----------------------------------------------------
@@ -67,7 +88,7 @@ function navSticky() {
 var pageReload = window.performance.navigation.type
 // if type = 1 then the page has relaoded
 // if type = 2 then the back button was used
-if(pageReload == 1 || pageReload == 2) {
+if (pageReload == 1 || pageReload == 2) {
   // making the hard coded slideshow html not displayed
   document.getElementById("slideshow").className = ("hide")
 }
@@ -85,7 +106,7 @@ function menuSwap(event) {
   // getting the info from the dropdown links under "menu"
   var menu = document.getElementsByClassName("menu")
   // looping through the link text content
-  for(i = 0; i < menu.length; i ++) {
+  for (i = 0; i < menu.length; i ++) {
   // getting the value content of the menu links
   var menuValue = menu[i].attributes.value.textContent
   // console.log(menuValue)
@@ -93,7 +114,7 @@ function menuSwap(event) {
   var menuName = menu[i].innerHTML
   // console.log(menuName)
   // if the clicked element text content matches the value content then replace image name
-    if(selected == menuName) {
+    if (selected == menuName) {
       document.getElementById("menuImage").src = "img/" + menuValue + ".png"
     }
   }
@@ -102,7 +123,7 @@ function menuSwap(event) {
     document.getElementById("slideshow").className = ("hide")
   }
   // hiding the slideshow when user clicks a different link
-  if(element == "A") {
+  if (element == "A") {
     hide()
   }
 }
@@ -124,7 +145,7 @@ const home = {
 const menu = {
   template:`
     <div class="menuDivWrap text-center">
-      <ul class="menu-nav">
+      <ul id="foodMenu" class="animated menu-nav">
         <li id="menuLink"><a class="menu font-white text-shadow-blk" value="startersMenu">Starters/Soups</a></li>
         <li id="menuLink"><a class="menu font-white text-shadow-blk" value="entreeMenu">Entr&#233es</a></li>
         <li id="menuLink"><a class="menu font-white text-shadow-blk" value="sandwichMenu">Sandwiches/Pasta/Salad</a></li>

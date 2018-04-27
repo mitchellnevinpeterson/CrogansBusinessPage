@@ -29,10 +29,10 @@
         <img src="img/logo4.gif" alt="Crogan's Logo">
 </header>
   <!-- div for the one page application -->
-<div id="app">
+<div id="app" class="text-center">
     <!-- Navigation for SMALL Devices- Hides/Shows @media Queries -->
   <nav id="navSmall">
-    <div id="buttonDrop" class="btn-group">
+    <div class="btn-group">
       <button id="smallNavDrop" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Page Navigation 
       </button>
@@ -46,7 +46,7 @@
           <li class="nav-item">
           <!-- Menu link -->
           <li>
-            <router-link to="/menu" class="dropdown-item font-white text-shadow-blk">Menu</router-link>
+            <router-link to="/menu" class="dropdown-item font-white text-shadow-blk" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Menu</router-link>
           </li>
           <!-- About us link -->
           <li class="nav-item">
@@ -76,7 +76,7 @@
           </li>
           <!-- Menu link that has a dropdown list -->
           <li class="nav-item">
-            <router-link to="/menu" class="nav-link font-white text-shadow-blk">Menu</router-link>
+            <router-link to="/menu" class="nav-link font-white text-shadow-blk" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu</router-link>
           </li>
           <!-- About us link -->
           <li class="nav-item">
@@ -97,20 +97,69 @@
     </nav>
     <!-- main section with content swap using vue -->
     <main class="content">
-        <transition mode="out-in" name="slide-fade">
-            <router-view></router-view>
-        </transition>
-        <!-- This div with a id="slideshow" is to be there when the page loads only after user clicks on any of the links it will have a class of hide (display: none;) -->
-        <div id="slideshow">
-            <ul class="cb-slideshow">
-                <li><span class="slideshow-img">Image 01</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Irish American Dining</h1></div></li>
-                <li><span class="slideshow-img">Image 02</span><div><h1 class="text-uppercase light-grey-bckgrd jose-bold">Home away from home</h1></div></li>
-                <li><span class="slideshow-img">Image 03</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Traditional Drinks</h1></div></li>
-                <li><span class="slideshow-img">Image 04</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Full Bar, Beer, and Wine</h1></div></li>
-                <li><span class="slideshow-img">Image 05</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Great service, Feel at Home Ambience</h1></div></li>
-                <li><span class="slideshow-img">Image 06</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Food is fresh and made to order</h1></div></li>
-            </ul>
+      <div id="aboutDivWrap">
+        <!-- Top Pictures in About Section -->
+        <div id="picsAbout" class="row text-center">
+          <div class="col-sm-4">
+            <div class="img-div">
+                <img class="col-img" src="img/checkPlease.png" alt="">
+            </div>
+            <h5></h5>
+          </div>
+          <!-- Oakland Magazine link -->
+          <div class="col-sm-4">
+            <div class="img-div">
+                <img class="col-img" src="img/oaklandMag.gif" alt="">
+            </div>
+            <h5></h5>
+          </div>
+          <!-- Facebook Link -->
+          <div class="col-sm-4">
+            <div class="img-div">
+                <img class="col-img" src="img/facebook.png" alt="Link to Facebook Crogan's">
+            </div>
+            <h5></h5>
+          </div>
         </div>
+        <!-- About Page Heading -->
+        <div>
+          <h1 id="aboutHeading" class="font-weight-bold font-white">The "Cheers" of Montclair in Oakland!</h1>
+        </div>
+        <!-- Description of Crogan's -->
+        <div>
+          <p class="p-tag-about">Good times in the heart of Montclair! When your in the mood for good times and great food, be sure to visit our restaurant. We're located in one of the most pleasant Village settings and are known for our delightful staff and excellent dining.</p>
+        </div>
+        <!-- Grid of Links -->
+        <!-- Check Please link -->
+        <div id="reviewLinks" class="row text-center">
+          <div class="col-sm-4">
+            <div class="img-div">
+              <a href="https://www.kqed.org/checkplease/1345/crogans-montclair-reviews">
+                <img class="col-img" src="img/checkPlease.png" alt="Link to Check Please Crogan's">
+              </a>
+            </div>
+            <h5>Check us out on Check Please!</h5>
+          </div>
+          <!-- Oakland Magazine link -->
+          <div class="col-sm-4">
+            <div class="img-div">
+              <a href="http://www.oaklandmagazine.com/Oakland-Magazine/July-August-2010/Best-of-Oakland/">
+                <img class="col-img" src="img/oaklandMag.gif" alt="Link to Oakland Magazine">
+              </a>
+            </div>
+            <h5>Voted Best Buffalo Wings!</h5>
+          </div>
+          <!-- Facebook Link -->
+          <div class="col-sm-4">
+            <div class="img-div">
+              <a href="https://www.facebook.com/crogansmontclair">
+                <img class="col-img" src="img/facebook.png" alt="Link to Facebook Crogan's">
+              </a>
+            </div>
+            <h5>Follow us on Facebook!</h5>
+          </div>
+        </div>
+      </div>
     </main>
 </div>
     <footer>

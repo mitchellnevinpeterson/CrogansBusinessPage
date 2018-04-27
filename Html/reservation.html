@@ -32,7 +32,7 @@
 <div id="app">
     <!-- Navigation for SMALL Devices- Hides/Shows @media Queries -->
   <nav id="navSmall">
-    <div id="buttonDrop" class="btn-group">
+    <div class="btn-group">
       <button id="smallNavDrop" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Page Navigation 
       </button>
@@ -46,7 +46,7 @@
           <li class="nav-item">
           <!-- Menu link -->
           <li>
-            <router-link to="/menu" class="dropdown-item font-white text-shadow-blk">Menu</router-link>
+            <router-link to="/menu" class="dropdown-item font-white text-shadow-blk" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Menu</router-link>
           </li>
           <!-- About us link -->
           <li class="nav-item">
@@ -76,7 +76,7 @@
           </li>
           <!-- Menu link that has a dropdown list -->
           <li class="nav-item">
-            <router-link to="/menu" class="nav-link font-white text-shadow-blk">Menu</router-link>
+            <router-link to="/menu" class="nav-link font-white text-shadow-blk" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu</router-link>
           </li>
           <!-- About us link -->
           <li class="nav-item">
@@ -97,20 +97,7 @@
     </nav>
     <!-- main section with content swap using vue -->
     <main class="content">
-        <transition mode="out-in" name="slide-fade">
-            <router-view></router-view>
-        </transition>
-        <!-- This div with a id="slideshow" is to be there when the page loads only after user clicks on any of the links it will have a class of hide (display: none;) -->
-        <div id="slideshow">
-            <ul class="cb-slideshow">
-                <li><span class="slideshow-img">Image 01</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Irish American Dining</h1></div></li>
-                <li><span class="slideshow-img">Image 02</span><div><h1 class="text-uppercase light-grey-bckgrd jose-bold">Home away from home</h1></div></li>
-                <li><span class="slideshow-img">Image 03</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Traditional Drinks</h1></div></li>
-                <li><span class="slideshow-img">Image 04</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Full Bar, Beer, and Wine</h1></div></li>
-                <li><span class="slideshow-img">Image 05</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Great service, Feel at Home Ambience</h1></div></li>
-                <li><span class="slideshow-img">Image 06</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Food is fresh and made to order</h1></div></li>
-            </ul>
-        </div>
+        
     </main>
 </div>
     <footer>

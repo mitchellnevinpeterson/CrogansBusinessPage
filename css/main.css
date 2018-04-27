@@ -113,11 +113,7 @@ ul.footer {
 	display: none;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
+
 /*------------------------------------------------------------------------------
 ==============================Top Logo===========================================
 -------------------------------------------------------------------------------*/
@@ -135,11 +131,12 @@ ul.footer {
 #navSmall {
 	width: 100%;
 	display: none;
+	z-index: 999;
 }
 
 #smallNavDrop {
 	z-index: 9999;
-	width: 182.89px;
+	width: 100%;
 	margin: 0 auto;
 	background-color: #153b26;
 }
@@ -180,6 +177,24 @@ ul.footer {
 	width: 100%;
 }
 
+.sticky {
+	text-align: center;
+  	position: fixed;
+  	top: 0;
+  	z-index: 9999;
+	padding: 0;
+	background-color: rgb(21, 59, 38);
+	border-radius: 7px;
+	width: 100%;
+}
+.stickySmall {
+	z-index: 9999;
+	top: 0;
+	position: fixed;
+	display: block;
+	width: 100%;
+}
+
 nav a:hover,
 nav router-link:hover {
 	font-size: 20px;
@@ -212,12 +227,13 @@ nav router-link:hover {
 	margin-right: 10%;
 	margin-left: 10%;
 	padding-bottom: 20px;
+	max-width: 1000px;
 }
 
 #menuLink {
 	text-align: center;
 	display: inline-block;
-	margin: 7px 7px 0 7px;
+	margin: 0 7px 0 7px;
 	padding: 5px;
 }
 
@@ -229,6 +245,8 @@ nav router-link:hover {
 	background-color: rgba(21, 59, 38, .8);
 	border-radius: 7px;
 }
+
+
 /*------------------------------------------------------------------------------
 ==============================About Section====================================
 -------------------------------------------------------------------------------*/
