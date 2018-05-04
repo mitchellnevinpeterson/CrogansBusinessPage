@@ -158,7 +158,7 @@ const menu = {
 }
 const about = {
   template:`
-    <div id="aboutDivWrap" class="text-center">
+    <div id="aboutDivWrap" class="container text-center mx-auto">
       <!-- About Page Heading -->
       <div>
         <h1 id="aboutHeading" class="font-weight-bold font-white">The "Cheers" of Montclair in Oakland!</h1>
@@ -167,31 +167,55 @@ const about = {
       <div>
         <p class="p-tag-about">Good times in the heart of Montclair! When your in the mood for good times and great food, be sure to visit our restaurant. We're located in one of the most pleasant Village settings and are known for our delightful staff and excellent dining.</p>
       </div>
+      <!-- Top Pictures in About Section -->
+      <div id="picsAbout" class="row text-center">
+        <div class="col-md-4 col-sm-12">
+          <div class="img-div">
+              <img class="col-img cover-img" src="img/joeBar.jpg" alt="Joe the bartender at Crogan's Montclair">
+          </div>
+          <h5></h5>
+        </div>
+        <!-- Window front at Crogans -->
+        <div class="col-md-5 col-sm-12">
+          <div class="img-div">
+              <img class="col-img cover-img" src="img/croganWindows.jpg" alt="Outside front view of Crogan's Montclair">
+          </div>
+          <h5></h5>
+        </div>
+        <!-- Jameson bottle at Crogan's -->
+        <div class="col-md-3 col-sm-12">
+          <div class="img-div">
+              <img class="col-img cover-img" src="img/jamoBottle.jpg" alt="A bottle of Jameson at Crogan's">
+          </div>
+          <h5></h5>
+        </div>
+      </div>
+
       <!-- Grid of Links -->
       <!-- Check Please link -->
       <div id="reviewLinks" class="row mx-auto">
         <div class="col-sm-4">
-          <div class="img-div">
-            <a href="https://www.kqed.org/checkplease/1345/crogans-montclair-reviews" target="_blank">
-              <img class="col-img" src="img/checkPlease.png" alt="Link to Check Please Crogan's">
+          <div class="logo-div">
+            <a href="https://www.kqed.org/checkplease/1345/crogans-montclair-reviews">
+              <img class="col-img logo-img" src="img/checkPlease.png" alt="Link to Check Please Crogan's">
             </a>
           </div>
           <h5>Check us out on Check Please!</h5>
         </div>
         <!-- Oakland Magazine link -->
         <div class="col-sm-4">
-          <div class="img-div">
-            <a href="http://www.oaklandmagazine.com/Oakland-Magazine/July-August-2010/Best-of-Oakland/" target="_blank">
-              <img class="col-img" src="img/oaklandMag.gif" alt="Link to Oakland Magazine">
+          <div class="logo-div">
+            <a href="http://www.oaklandmagazine.com/Oakland-Magazine/July-August-2010/Best-of-Oakland/">
+              <img class="col-img logo-img" src="img/oaklandMag.gif" alt="Link to Oakland Magazine">
             </a>
           </div>
           <h5>Voted Best Buffalo Wings!</h5>
         </div>
         <!-- Facebook Link -->
         <div class="col-sm-4">
-          <div class="img-div">
-            <a href="https://www.facebook.com/crogansmontclair" target="_blank">
-              <img class="col-img" src="img/facebook.png" alt="Link to Facebook Crogan's">
+          <div class="logo-div">
+            <a href="https://www.facebook.com/crogansmontclair">
+              <img class="col-img logo-img" src="img/facebook.png" alt="Link to Facebook Crogan's">
             </a>
           </div>
           <h5>Follow us on Facebook!</h5>
@@ -202,27 +226,27 @@ const about = {
 }
 const reservations = {
   template:`
-    <div class="text-center">
+      <div class="text-center">
           <h1>Blog</h1>
-          <img src="img/bridge.jpg" alt="Art work of the golden gate bridge">
+          
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
       </div>
   `
 }
 const find = {
   template:`
-    <div class="text-center">
+      <div class="text-center">
           <h1>Menu</h1>
-          <img src="img/soldier.jpg" alt="Art work of a soldier entering a new path">
+          
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
       </div>
   `
 }
 const delivery = {
   template:`
-    <div class="text-center">
+      <div class="text-center">
           <h1>Menu</h1>
-          <img src="img/soldier.jpg" alt="Art work of a soldier entering a new path">
+          
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
       </div>
   `
