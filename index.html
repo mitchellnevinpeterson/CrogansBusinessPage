@@ -25,7 +25,7 @@
 </head>
 <body onclick="menuSwap(event)">
       <!-- Top Logo -->
-<header class="top-logo-wrap text-center fluid-img">
+<header id="body" class="top-logo-wrap text-center fluid-img">
         <img src="img/logo4.gif" alt="Crogan's Logo">
 </header>
   <!-- div for the one page application -->
@@ -39,28 +39,28 @@
       <div class="dropdown-menu dropdown-menu-right">
         <ul class="jose-bold text-uppercase">
           <!-- Home link -->
-          <li class="dropdown-item">
+          <li onclick="toTheTop()" class="dropdown-item">
             <router-link to="/home" class="dropdown-item font-white text-shadow-blk">Home</router-link>
           </li>
           <!-- Menu link that has a dropdown list -->
           <li class="nav-item">
           <!-- Menu link -->
-          <li>
+          <li onclick="toTheTop()" class="nav-item">
             <router-link to="/menu" class="dropdown-item font-white text-shadow-blk">Menu</router-link>
           </li>
           <!-- About us link -->
-          <li class="nav-item">
+          <li onclick="toTheTop()" class="nav-item">
             <router-link to="/about" class="dropdown-item font-white text-shadow-blk">About Us</router-link>
           </li>
           <!-- Reservation link -->
-          <li class="nav-item">
+          <li onclick="toTheTop()" class="nav-item">
             <router-link to="/reservations" class="dropdown-item font-white text-shadow-blk">Reservations</router-link>
           </li>
           <!-- Find us link -->
-          <li class="nav-item">
+          <li onclick="toTheTop()" class="nav-item">
             <router-link to="/find" class="dropdown-item font-white text-shadow-blk">Contact</router-link>
           </li>
-          <li class="nav-item">
+          <li onclick="toTheTop()" class="nav-item">
             <router-link to="/delivery" class="dropdown-item font-white text-shadow-blk">Delivery</router-link>
           </li>
         </ul>
@@ -71,26 +71,26 @@
     <nav id="navLrg" class="navbar navbar-expand-sm mx-auto">
         <ul class="nav jose-bold text-uppercase">
           <!-- Link to home -->
-          <li class="nav-item">
+          <li onclick="toTheTop()" class="nav-item">
             <router-link to="/home" class="nav-link font-white text-shadow-blk">Home</router-link>
           </li>
           <!-- Menu link that has a dropdown list -->
-          <li class="nav-item">
+          <li onclick="toTheTop()" class="nav-item">
             <router-link to="/menu" class="nav-link font-white text-shadow-blk">Menu</router-link>
           </li>
           <!-- About us link -->
-          <li class="nav-item">
+          <li onclick="toTheTop()" class="nav-item">
             <router-link to="/about" class="nav-link font-white text-shadow-blk">About Us</router-link>
           </li>
           <!-- Reservation link -->
-          <li class="nav-item">
+          <li onclick="toTheTop()" class="nav-item">
             <router-link to="/reservations" class="nav-link font-white text-shadow-blk">Reservations</router-link>
           </li>
           <!-- Find us link -->
-          <li class="nav-item">
+          <li onclick="toTheTop()" class="nav-item">
             <router-link to="/find" class="nav-link font-white text-shadow-blk">Contact</router-link>
           </li>
-          <li class="nav-item">
+          <li onclick="toTheTop()" class="nav-item">
             <router-link to="/delivery" class="nav-link font-white text-shadow-blk">Delivery</router-link>
           </li>
         </ul>
@@ -120,7 +120,7 @@
           <h5 id="countDown"></h5>
         </li>
         <li>
-          <h6><a href="https://goo.gl/maps/e9wrRZYKHwL2" target="_blank">6101 LaSalle Avenue, Oakland, CA 94611</a><span class="village"> - Monclair Village - </span><a href="tel:15103392098">(510)-339-2098</a></h6>
+          <h6><a href="https://goo.gl/maps/e9wrRZYKHwL2" target="_blank">6101 LaSalle Avenue, Oakland, CA 94611</a><span class="village"> - Monclair Village - </span><a href="tel:15103392098">(510)339-2098</a></h6>
         </li>
       </ul>
     </footer>

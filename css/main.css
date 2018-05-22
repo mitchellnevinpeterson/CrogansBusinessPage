@@ -1,7 +1,7 @@
 /*Fonts*/
 * {
 	font-family: 'Josefin Slab', serif ;
-	letter-spacing: .07rem; 
+	letter-spacing: .07rem;
 }
 
 .jose-reg {
@@ -54,19 +54,28 @@ footer {
 }
 
 h1 {
+	margin-top: 15px;
 	padding: 10px;
-	font-size: 45px;
+	font-size: 45px; 
+	text-align: center;
+}
+
+h2 {
+	margin-top: 15px; 
+	text-align: center;
 }
 
 h5 {
 	padding: 10px 0 0 0;
 	font-size: 1.4rem; 
-	font-weight: bold;
+	font-weight: bold; 
+	text-align: center;
 }
 
 h6 {
 	padding: 8px 0;
-	font-size: 1.25rem;
+	font-size: 1.25rem; 
+	text-align: center;
 }
 
 ul.footer {
@@ -116,6 +125,16 @@ ul.footer {
 	display: none;
 }
 
+#heading {
+	width: 100%;
+	background-color: #bfbfbf;
+	padding: 7px;
+	border-radius: 7px;
+	text-shadow: 2px 2px 2px #000;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	text-align: center;
+}
 
 /*------------------------------------------------------------------------------
 ==============================Top Logo===========================================
@@ -259,14 +278,6 @@ nav router-link:hover {
 ==============================About Section====================================
 -------------------------------------------------------------------------------*/
 
-#aboutHeading {
-	width: 100%;
-	background-color: #bfbfbf;
-	padding: 7px;
-	border-radius: 7px;
-	text-shadow: 2px 2px 2px #000;
-	margin-bottom: 10px;
-}
 
 #reviewLinks {
 	margin: 20px auto;
@@ -297,6 +308,32 @@ nav router-link:hover {
 	padding: 0 5px;
 	vertical-align: middle;
 	object-fit: contain;
+}
+
+/*------------------------------------------------------------------------------
+==============================Reservation Section====================================
+-------------------------------------------------------------------------------*/
+
+.p-tag-reservations {
+	font-size: 1.25rem;
+	margin: 7px 15%;
+	width: 70%;
+	text-align: center;
+}
+
+.happy-hour-discription {
+	margin: 15px 0;
+}
+
+.chow-logo {
+	background: #000;
+	padding: 20px 40px;
+	border-radius: 7px;
+}
+
+#lrgParties {
+	margin: 10px 0;
+	width: 50%;
 }
 
 /*------------------------------------------------------------------------------
@@ -344,6 +381,17 @@ transition: 0.75s ease;
 		margin-top: 250px;
 		margin-left: 10%;
 	}
+	#lrgParties {
+		width: 80%;
+	}
+	.p-tag-reservations {
+		margin: 0 auto;
+		width: 90%;
+	}
+	p {
+		margin: 0 auto;
+		width: 90%;
+	}
 	
 }
 @media (min-width: 804px) {
@@ -389,6 +437,14 @@ transition: 0.75s ease;
 	h1 {
 		font-size: 30px;
 	}
+	.p-tag-reservations{
+		margin: 7px 0;
+		width: 100%;
+	}
+	p {
+		margin: 7px 0;
+		width: 100%;
+	}
 	#menuLink {
 		font-size: 1.25rem;
 	}
@@ -397,6 +453,9 @@ transition: 0.75s ease;
 	}
 	#menuLink {
 		display: block;
+	}
+	#lrgParties {
+		width: 100%;
 	}
 	
 }

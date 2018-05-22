@@ -1,3 +1,7 @@
+// a function for scrolling to the top of the page
+function toTheTop() {
+  window.scrollTo(0, 0)
+}
 
 // ---------------------------------------
 // Countdown to Saint Patty's day function
@@ -81,6 +85,7 @@ function navAnimate() {
     document.getElementById("foodMenu").classList.remove("fadeOutUp")
   }
 }
+
 // -----------------------------------------------------
 // Making sure the slideshow is hiden upon page refresh
 // -----------------------------------------------------
@@ -92,6 +97,7 @@ if (pageReload == 1 || pageReload == 2) {
   // making the hard coded slideshow html not displayed
   document.getElementById("slideshow").className = ("hide")
 }
+
 
 // ---------------------------------------
 // Switching the menus imgs function
@@ -161,14 +167,15 @@ const about = {
     <div id="aboutDivWrap" class="container text-center mx-auto">
       <!-- About Page Heading -->
       <div>
-        <h1 id="aboutHeading" class="font-weight-bold font-white">The "Cheers" of Montclair in Oakland!</h1>
+        <h1 id="heading" class="font-weight-bold font-white">The "Cheers" of Montclair in Oakland!</h1>
       </div>
       <!-- Description of Crogan's -->
       <div>
         <p class="p-tag-about">Good times in the heart of Montclair! When your in the mood for good times and great food, be sure to visit our restaurant. We're located in one of the most pleasant Village settings and are known for our delightful staff and excellent dining.</p>
       </div>
       <!-- Top Pictures in About Section -->
-      <div id="picsAbout" class="row text-center">
+      <div id="picsAbout" class="row text-center mb-5">
+        <!-- Picture of Joe at the bar of Crogan's -->
         <div class="col-md-4 col-sm-12">
           <div class="img-div">
               <img class="col-img cover-img" src="img/joeBar.jpg" alt="Joe the bartender at Crogan's Montclair">
@@ -190,11 +197,20 @@ const about = {
           <h5></h5>
         </div>
       </div>
-
+      <!-- Heading for the poem that inspired the name of Crogan's -->
+      <div>
+        <h1 id="heading" class="font-weight-bold font-white">The poem that inspired the name of Crogan's</h1>
+      </div>
+      <!-- The picture of the poem of the Crogan name -->
+      <div class="row">
+        <div class="col-10 mx-auto">
+          <img class="col-img cover-img" alt="Poem of Party at Crogans" src="img/poem.jpg">
+        </div>
+      </div>
       <!-- Grid of Links -->
       <!-- Check Please link -->
       <div id="reviewLinks" class="row mx-auto">
-        <div class="col-sm-4">
+        <div class="col-md-4">
           <div class="logo-div">
             <a href="https://www.kqed.org/checkplease/1345/crogans-montclair-reviews">
               <img class="col-img logo-img" src="img/checkPlease.png" alt="Link to Check Please Crogan's">
@@ -203,7 +219,7 @@ const about = {
           <h5>Check us out on Check Please!</h5>
         </div>
         <!-- Oakland Magazine link -->
-        <div class="col-sm-4">
+        <div class="col-md-4">
           <div class="logo-div">
             <a href="http://www.oaklandmagazine.com/Oakland-Magazine/July-August-2010/Best-of-Oakland/">
               <img class="col-img logo-img" src="img/oaklandMag.gif" alt="Link to Oakland Magazine">
@@ -212,7 +228,7 @@ const about = {
           <h5>Voted Best Buffalo Wings!</h5>
         </div>
         <!-- Facebook Link -->
-        <div class="col-sm-4">
+        <div class="col-md-4">
           <div class="logo-div">
             <a href="https://www.facebook.com/crogansmontclair">
               <img class="col-img logo-img" src="img/facebook.png" alt="Link to Facebook Crogan's">
@@ -226,11 +242,93 @@ const about = {
 }
 const reservations = {
   template:`
-      <div class="text-center">
-          <h1>Blog</h1>
-          
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-      </div>
+        <!-- Reservation section -->
+        <div id="reservations-wrap" class="container text-center mx-auto">
+            <!-- Description of Crogan's -->
+          <div class="text-center">
+            <h1 id="heading" class="font-weight-bold font-white">Assure you have a spot to dine with us!</h1>
+            <h2 class="font-weight-bold">Join us for Happy Hour!</h2>
+            <h4 class="font-weight-bold"><u>Monday through Friday 4:00pm to 6:00pm</u></h4>
+            <div class="happy-hour-discription">
+              <h4>Select any of our appetizers for a $3 discount</h4>
+              <h4>-and-</h4>
+              <h4>Grab a Draft Beer or House Wine for only $4</h4>
+              <h4>Take a shot of one of our well liquors starting at only $5</h4>
+              <a href="http://chowtime.com/app/user?id=crogans.94611.us"><h2 class="font-weight-bold mt-5">To make a reservation online go to Chowtime!</h2></a>
+              <h4 id="lrgParties" class="mx-auto">To make a reservation for more than 20 people or to reserve our backroom, please call the restaurant directly at:</h4>
+              <h4 class="font-weight-bold mb-3"><a href="tel:15103392098">(510)339-2098</a></h4>
+              <p>*Reservations are for dinning room only!*</p>
+              <p>Cocktail area is open seating</p>
+              <div class="row mt-2">
+                <div class="col-4-sm mx-auto">
+                  <a href="http://chowtime.com/app/user?id=crogans.94611.us">
+                    <img class="col-img cover-img chow-logo" alt="Chowtime Logo" src="img/chowTime.png">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h1 id="heading" class="font-weight-bold font-white">Why should you dine with us?</h1>
+              <p class="p-tag-reservations mb-5">Crogan's is often called the place where everyone knows your name. And why not? After all our guests are our Family! Join us for a drink, sit back and have a toast to whatever day it happens to be! If you happen to be a sports fan, don't forget to bring your game face, because we play hard!</p>
+            </div>
+          </div>
+            <!-- Top Pictures in Reservation Section -->
+            <div id="picsAbout" class="row text-center">
+              <!-- Picture of irish coffee -->
+              <div class="col-md-3 col-sm-12">
+                <div class="img-div">
+                    <img class="col-img cover-img" src="img/irishCoffee02.jpg" alt="Irish coffee at Crogan's Montclair">
+                </div>
+                <h5></h5>
+              </div>
+              <!-- Dinning room at Crogans -->
+              <div class="col-md-6 col-sm-12">
+                <div class="img-div">
+                    <img class="col-img cover-img" src="img/dinning.jpg" alt="Dinning room view of Crogan's Montclair">
+                </div>
+                <h5></h5>
+              </div>
+              <!-- Tullamore Dew bottle at Crogan's -->
+              <div class="col-md-3 col-sm-12">
+                <div class="img-div">
+                    <img class="col-img cover-img" src="img/tullamore.jpg" alt="A bottle of Tullamore Dew at Crogan's">
+                </div>
+                <h5></h5>
+              </div>
+            </div>
+
+          <!-- Grid of Links -->
+          <!-- Check Please link -->
+          <div id="reviewLinks" class="row mx-auto">
+            <div class="col-md-4">
+              <div class="logo-div">
+                <a href="https://www.kqed.org/checkplease/1345/crogans-montclair-reviews">
+                  <img class="col-img logo-img" src="img/checkPlease.png" alt="Link to Check Please Crogan's">
+                </a>
+              </div>
+              <h5>Check us out on Check Please!</h5>
+            </div>
+            <!-- Oakland Magazine link -->
+            <div class="col-md-4">
+              <div class="logo-div">
+                <a href="http://www.oaklandmagazine.com/Oakland-Magazine/July-August-2010/Best-of-Oakland/">
+                  <img class="col-img logo-img" src="img/oaklandMag.gif" alt="Link to Oakland Magazine">
+                </a>
+              </div>
+              <h5>Voted Best Buffalo Wings!</h5>
+            </div>
+            <!-- Facebook Link -->
+            <div class="col-md-4">
+              <div class="logo-div">
+                <a href="https://www.facebook.com/crogansmontclair">
+                  <img class="col-img logo-img" src="img/facebook.png" alt="Link to Facebook Crogan's">
+                </a>
+              </div>
+              <h5>Follow us on Facebook!</h5>
+            </div>
+          </div>
+          </div>
+        </div>
   `
 }
 const find = {
