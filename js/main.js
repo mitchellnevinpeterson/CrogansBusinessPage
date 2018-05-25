@@ -208,9 +208,39 @@ const about = {
         </div>
       </div>
       <!-- Grid of Links -->
-      <!-- Check Please link -->
-      <div id="reviewLinks" class="row mx-auto">
+      <!-- Links -->
+      <div id="links" class="row mx-auto">
+        <!-- Uber Eats Delivery -->
         <div class="col-md-4">
+          <div class="logo-div">
+            <a href="https://www.ubereats.com/san-francisco/food-delivery/crogans/TR7gAqtSS7Kcta58Q2O03w/">
+              <img class="col-img logo-img" src="img/uberEats.png" alt="Link to Uber Eats delivery Crogan's">
+            </a>
+          </div>
+          <h5 class="mt-3">Order delivery on Uber Eats!</h5>
+        </div>
+        <!-- Amazon Delivery -->
+        <div class="col-md-4">
+          <div class="logo-div">
+            <a href="https://www.amazon.com/restaurants/crogan%27s-montclair-oakland/d/B01M03ROZM">
+              <img class="col-img logo-img" src="img/amazon.jpg" alt="Link to Amazon delivery Crogan's">
+            </a>
+          </div>
+          <h5 class="mt-3">Order delivery on Amazon!</h5>
+        </div>
+        <!-- Doordash Delivery -->
+        <div class="col-md-4">
+          <div class="logo-div">
+            <a href="https://www.doordash.com/store/crogans-montclair-restaurant-oakland-46272/?utm_campaign=46272&utm_medium=website&utm_source=partner-link">
+              <img class="col-img logo-img" src="img/doordash.png" alt="Link to Doordash delivery Crogan's">
+            </a>
+          </div>
+          <h5 class="mt-3">Order delivery on Doordash!</h5>
+        </div>
+      </div>
+      <!-- Check Please link -->
+      <div id="links" class="row mx-auto">
+        <div class="col-md-4 border-top-1">
           <div class="logo-div">
             <a href="https://www.kqed.org/checkplease/1345/crogans-montclair-reviews">
               <img class="col-img logo-img" src="img/checkPlease.png" alt="Link to Check Please Crogan's">
@@ -219,7 +249,7 @@ const about = {
           <h5>Check us out on Check Please!</h5>
         </div>
         <!-- Oakland Magazine link -->
-        <div class="col-md-4">
+        <div class="col-md-4 border-top-1">
           <div class="logo-div">
             <a href="http://www.oaklandmagazine.com/Oakland-Magazine/July-August-2010/Best-of-Oakland/">
               <img class="col-img logo-img" src="img/oaklandMag.gif" alt="Link to Oakland Magazine">
@@ -228,7 +258,7 @@ const about = {
           <h5>Voted Best Buffalo Wings!</h5>
         </div>
         <!-- Facebook Link -->
-        <div class="col-md-4">
+        <div class="col-md-4 border-top-1">
           <div class="logo-div">
             <a href="https://www.facebook.com/crogansmontclair">
               <img class="col-img logo-img" src="img/facebook.png" alt="Link to Facebook Crogan's">
@@ -256,7 +286,7 @@ const reservations = {
               <h4>Take a shot of one of our well liquors starting at only $5</h4>
               <a href="http://chowtime.com/app/user?id=crogans.94611.us"><h2 class="font-weight-bold mt-5">To make a reservation online go to Chowtime!</h2></a>
               <h4 id="lrgParties" class="mx-auto">To make a reservation for more than 20 people or to reserve our backroom, please call the restaurant directly at:</h4>
-              <h4 class="font-weight-bold mb-3"><a href="tel:15103392098">(510)339-2098</a></h4>
+              <h4 class="font-weight-bold mb-3"><a href="tel:15103392098"><i class="fas fa-phone"></i>(510)339-2098</a></h4>
               <p>*Reservations are for dinning room only!*</p>
               <p>Cocktail area is open seating</p>
               <div class="row mt-2">
@@ -298,36 +328,45 @@ const reservations = {
             </div>
 
           <!-- Grid of Links -->
-          <!-- Check Please link -->
-          <div id="reviewLinks" class="row mx-auto">
-            <div class="col-md-4">
-              <div class="logo-div">
-                <a href="https://www.kqed.org/checkplease/1345/crogans-montclair-reviews">
-                  <img class="col-img logo-img" src="img/checkPlease.png" alt="Link to Check Please Crogan's">
-                </a>
+          <!-- Links -->
+            <div id="links" class="row mx-auto">
+              <!-- Uber Eats Delivery -->
+              <div class="col-md-3">
+                <div class="logo-div">
+                  <a href="https://www.ubereats.com/san-francisco/food-delivery/crogans/TR7gAqtSS7Kcta58Q2O03w/">
+                    <img class="col-img logo-img" src="img/uberEats.png" alt="Link to Uber Eats delivery Crogan's">
+                  </a>
+                </div>
+                <h5>Order delivery on Uber Eats!</h5>
               </div>
-              <h5>Check us out on Check Please!</h5>
-            </div>
-            <!-- Oakland Magazine link -->
-            <div class="col-md-4">
-              <div class="logo-div">
-                <a href="http://www.oaklandmagazine.com/Oakland-Magazine/July-August-2010/Best-of-Oakland/">
-                  <img class="col-img logo-img" src="img/oaklandMag.gif" alt="Link to Oakland Magazine">
-                </a>
+              <!-- Amazon Delivery -->
+              <div class="col-md-3">
+                <div class="logo-div">
+                  <a href="https://www.amazon.com/restaurants/crogan%27s-montclair-oakland/d/B01M03ROZM">
+                    <img class="col-img logo-img" src="img/amazon.jpg" alt="Link to Amazon delivery Crogan's">
+                  </a>
+                </div>
+                <h5>Order delivery on Amazon!</h5>
               </div>
-              <h5>Voted Best Buffalo Wings!</h5>
-            </div>
-            <!-- Facebook Link -->
-            <div class="col-md-4">
-              <div class="logo-div">
-                <a href="https://www.facebook.com/crogansmontclair">
-                  <img class="col-img logo-img" src="img/facebook.png" alt="Link to Facebook Crogan's">
-                </a>
+              <!-- Doordash Delivery -->
+              <div class="col-md-3">
+                <div class="logo-div">
+                  <a href="https://www.doordash.com/store/crogans-montclair-restaurant-oakland-46272/?utm_campaign=46272&utm_medium=website&utm_source=partner-link">
+                    <img class="col-img logo-img" src="img/doordash.png" alt="Link to Doordash delivery Crogan's">
+                  </a>
+                </div>
+                <h5>Order delivery on Doordash!</h5>
               </div>
-              <h5>Follow us on Facebook!</h5>
+              <!-- Facebook Link -->
+              <div class="col-md-3">
+                <div class="logo-div">
+                  <a href="https://www.facebook.com/crogansmontclair">
+                    <img class="col-img logo-img" src="img/facebook.png" alt="Link to Facebook Crogan's">
+                  </a>
+                </div>
+                <h5>Follow us on Facebook!</h5>
+              </div>
             </div>
-          </div>
-          </div>
         </div>
   `
 }
@@ -342,11 +381,91 @@ const find = {
 }
 const delivery = {
   template:`
-      <div class="text-center">
-          <h1>Menu</h1>
-          
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-      </div>
+        <!-- Delivery section -->
+        <div id="delivery-wrap" class="container text-center mx-auto">
+            
+            <!-- Heading of the delivery page -->
+            <h1 id="heading" class="font-weight-bold font-white">Want to stay at home?<br/>Order delivery!</h1>
+            <!-- Carousel images of food -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="img/braisedRib.jpg" alt="Braised Short Rib">
+                  <h3 class="carousel-caption d-none d-md-block">Braised Short Rib</h3>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="img/fishNchips.jpg" alt="Fish and Chips">
+                  <h3 class="carousel-caption d-none d-md-block">Fish and Chips</h3>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="img/caesar.jpg" alt="Caesar Salad">
+                  <h3 class="carousel-caption d-none d-md-block">Caesar Salad</h3>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <!-- Links -->
+            <div id="links" class="row mx-auto">
+              <!-- Uber Eats Delivery -->
+              <div class="col-md-4">
+                <div class="logo-div">
+                  <a href="https://www.ubereats.com/san-francisco/food-delivery/crogans/TR7gAqtSS7Kcta58Q2O03w/">
+                    <img class="col-img logo-img" src="img/uberEats.png" alt="Link to Uber Eats delivery Crogan's">
+                  </a>
+                </div>
+                <h5>Order delivery on Uber Eats!</h5>
+              </div>
+              <!-- Amazon Delivery -->
+              <div class="col-md-4">
+                <div class="logo-div">
+                  <a href="https://www.amazon.com/restaurants/crogan%27s-montclair-oakland/d/B01M03ROZM">
+                    <img class="col-img logo-img" src="img/amazon.jpg" alt="Link to Amazon delivery Crogan's">
+                  </a>
+                </div>
+                <h5>Order delivery on Amazon!</h5>
+              </div>
+              <!-- Doordash Delivery -->
+              <div class="col-md-4">
+                <div class="logo-div">
+                  <a href="https://www.doordash.com/store/crogans-montclair-restaurant-oakland-46272/?utm_campaign=46272&utm_medium=website&utm_source=partner-link">
+                    <img class="col-img logo-img" src="img/doordash.png" alt="Link to Doordash delivery Crogan's">
+                  </a>
+                </div>
+                <h5>Order delivery on Doordash!</h5>
+              </div>
+            </div>
+              <!-- Heading for why dine with us -->
+              <div>
+                <h1 id="heading" class="font-weight-bold font-white">Rather dine in person?</h1>
+                <!-- Description of Delivery/Reservations -->
+                <div class="text-center">
+                  <a href="http://chowtime.com/app/user?id=crogans.94611.us"><h2 class="font-weight-bold mt-4">To make a reservation online go to Chowtime!</h2></a>
+                  <h4 id="lrgParties" class="mx-auto">To make a reservation for more than 20 people or to reserve our backroom, please call the restaurant directly at:</h4>
+                  <h4 class="font-weight-bold mb-3"><a href="tel:15103392098"><i class="fas fa-phone"></i>(510)339-2098</a></h4>
+                  <div class="row mt-2">
+                    <div class="col-4-sm mx-auto">
+                      <a href="http://chowtime.com/app/user?id=crogans.94611.us">
+                        <img class="col-img cover-img chow-logo" alt="Chowtime Logo" src="img/chowTime.png">
+                      </a>
+                      <p class="mt-2">*Reservations are for dinning room only!*</p>
+                      <p class="mb-3">Cocktail area is open seating</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
   `
 }
 const router = new VueRouter({

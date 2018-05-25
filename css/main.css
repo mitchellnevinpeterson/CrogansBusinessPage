@@ -56,7 +56,7 @@ footer {
 h1 {
 	margin-top: 15px;
 	padding: 10px;
-	font-size: 45px; 
+	font-size: 2.81rem; 
 	text-align: center;
 }
 
@@ -92,7 +92,7 @@ ul.footer {
 	display: inline-block;
 	padding: 10px;
 	border-radius: 7px;
-	font-size: 18px;
+	font-size: 1.125rem;
 	margin-top: 195px;
 	color: #fff !important;
 	text-shadow: 2px 2px 2px #000;
@@ -194,7 +194,7 @@ div.dropdown-menu-right {
 ==============================Nav For LARGE Devices=============================
 -------------------------------------------------------------------------------*/
 .nav-link {
-	font-size: 18px;
+	font-size: 1.125rem;
 	
 }
 
@@ -232,13 +232,15 @@ div.dropdown-menu-right {
 
 nav a:hover,
 nav router-link:hover {
-	font-size: 20px;
+	font-size: 1.25rem;
+	text-shadow: 2px 2px 2px #fff;
 }
 
 .navbar-toggler:hover,
-#menuLink:hover {
+#menuLink:hover,
+.menu:hover {
 	cursor: pointer;
-	font-size: 20px;
+	text-shadow: 2px 2px 2px #fff;
 }
 
 .nav {
@@ -267,7 +269,7 @@ nav router-link:hover {
 .menu-nav {
 	margin: 0 auto;
 	display: inline-block;
-	font-size: 18px;
+	font-size: 1.125rem;
 	text-align: center;
 	background-color: rgba(21, 59, 38, .8);
 	border-radius: 7px;
@@ -278,13 +280,18 @@ nav router-link:hover {
 ==============================About Section====================================
 -------------------------------------------------------------------------------*/
 
+ .border-top-1 {
+ 	border-top: 1px solid #000;
+ }
 
-#reviewLinks {
+#links {
 	margin: 20px auto;
 	max-width: 1100px;
 }
 
 .logo-img {
+	max-height: 170px;
+	object-fit: contain;
 	width: 75%;
 	padding: 0 5px;
 	vertical-align: middle;
@@ -294,13 +301,13 @@ nav router-link:hover {
 	height: 170px;
 	line-height: 170px;
 	max-width: 340px;
-	margin: 0 auto;
+	margin: 15px auto 0 auto;
 }
 
 .p-tag-about {
-	font-size: 1.25rem;
-	margin: 7px 15%;
-	width: 70%;
+	font-size: 1.8rem;
+	margin: 7px 10%;
+	width: 80%;
 }
 
 .cover-img {
@@ -315,7 +322,7 @@ nav router-link:hover {
 -------------------------------------------------------------------------------*/
 
 .p-tag-reservations {
-	font-size: 1.25rem;
+	font-size: 1.8rem;
 	margin: 7px 15%;
 	width: 70%;
 	text-align: center;
@@ -334,6 +341,15 @@ nav router-link:hover {
 #lrgParties {
 	margin: 10px 0;
 	width: 50%;
+}
+
+/*------------------------------------------------------------------------------
+==============================Delivery Section====================================
+-------------------------------------------------------------------------------*/
+
+.carousel-caption {
+	text-shadow: 1px 2px 2px #000;
+
 }
 
 /*------------------------------------------------------------------------------
@@ -384,7 +400,8 @@ transition: 0.75s ease;
 	#lrgParties {
 		width: 80%;
 	}
-	.p-tag-reservations {
+	.p-tag-reservations,
+	.p-tag-about {
 		margin: 0 auto;
 		width: 90%;
 	}
@@ -404,7 +421,7 @@ transition: 0.75s ease;
 /*For Ipad*/
 @media (max-width: 775px) {
 	h1 {
-		font-size: 40px;
+		font-size: 2.5rem;
 	}
 
 	#navLrg {
@@ -427,17 +444,30 @@ transition: 0.75s ease;
 	.menu-nav {
 		display: block;
 	}
-	.p-tag-about {
+	.p-tag-about,
+	.p-tag-reservations {
+		font-size: 1.5rem;
 		width: 90%;
 		margin: 0 5%;
 	}
 }
 /*For Phones*/
 @media (max-width: 525px) {
-	h1 {
-		font-size: 30px;
+	h1,
+	h2 {
+		font-size: 1.88rem;
 	}
-	.p-tag-reservations{
+	h4,
+	h5,
+	 {
+		font-size: 1.25rem;
+	}
+	h6 {
+		font-size: 1rem;
+	}
+	.p-tag-reservations,
+	.p-tag-about{
+		font-size: 1.25rem;
 		margin: 7px 0;
 		width: 100%;
 	}
@@ -457,11 +487,17 @@ transition: 0.75s ease;
 	#lrgParties {
 		width: 100%;
 	}
+	.col-md-4,
+	.col-md-3,
+	.col-md-5 {
+		border-top: 1px solid #000;
+	}
 	
 }
 
 @media (max-width: 414px) {
-	h1 {
-		font-size: 25px;
+	h1,
+	h2 {
+		font-size: 1.56rem;
 	}
 }
