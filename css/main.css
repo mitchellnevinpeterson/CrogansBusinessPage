@@ -37,7 +37,7 @@ body {
 main {
 	display: inline-block;
 	margin-top: 50px;
-	margin-bottom: 116px;
+	margin-bottom: 136px;
 	width: 100%;
 	padding-bottom: 20px;
 }
@@ -76,6 +76,15 @@ h6 {
 	padding: 8px 0;
 	font-size: 1.25rem; 
 	text-align: center;
+}
+
+img {
+	box-shadow: -10px 10px 10px #999;
+	padding: 0 !important;
+}
+
+p {
+	font-size: 1.25rem;
 }
 
 ul.footer {
@@ -134,8 +143,13 @@ ul.footer {
 	margin-top: 20px;
 	margin-bottom: 10px;
 	text-align: center;
+	box-shadow: -10px 10px 10px #e6e6e6;
 }
 
+img.border-1 {
+	padding: 5px !important;
+	border: 1px solid #000;
+}
 /*------------------------------------------------------------------------------
 ==============================Top Logo===========================================
 -------------------------------------------------------------------------------*/
@@ -147,13 +161,16 @@ ul.footer {
 	border-bottom: 2px solid #000;
 	z-index: 9999;
 }
+#topLogo {
+	box-shadow: none;
+}
 /*------------------------------------------------------------------------------
 ==============================Nav For SMALL Devices=============================
 -------------------------------------------------------------------------------*/
 #navSmall {
 	width: 100%;
 	display: none;
-	z-index: 999;
+	z-index: 9999;
 }
 
 #smallNavDrop {
@@ -255,8 +272,8 @@ nav router-link:hover {
 	position: flex;
 	margin-right: 10%;
 	margin-left: 10%;
-	padding-bottom: 20px;
 	max-width: 1000px;
+	box-shadow: none;
 }
 
 #menuLink {
@@ -273,6 +290,7 @@ nav router-link:hover {
 	text-align: center;
 	background-color: rgba(21, 59, 38, .8);
 	border-radius: 7px;
+	z-index: 9999;
 }
 
 
@@ -290,18 +308,23 @@ nav router-link:hover {
 }
 
 .logo-img {
-	max-height: 170px;
-	object-fit: contain;
+	object-fit: cover;
 	width: 75%;
 	padding: 0 5px;
-	vertical-align: middle;
 }
 
 .logo-div {
-	height: 170px;
-	line-height: 170px;
-	max-width: 340px;
+	height: 183.75px;
+	line-height: 183.75px;
+	max-width: 290px;
 	margin: 15px auto 0 auto;
+	vertical-align: middle;
+	margin-bottom: 15px;
+}
+
+.logo-div-height {
+	height: 290px;
+	line-height: 209px;
 }
 
 .p-tag-about {
@@ -336,6 +359,7 @@ nav router-link:hover {
 	background: #000;
 	padding: 20px 40px;
 	border-radius: 7px;
+	margin-bottom: 20px;
 }
 
 #lrgParties {
@@ -350,6 +374,35 @@ nav router-link:hover {
 .carousel-caption {
 	text-shadow: 1px 2px 2px #000;
 
+}
+
+#carouselExampleIndicators {
+	margin-top: 12px;
+	box-shadow: -10px 10px 10px #e6e6e6;
+}
+
+/*------------------------------------------------------------------------------
+==============================Contact Section====================================
+-------------------------------------------------------------------------------*/
+
+iframe {
+	width: 100%;
+	border-radius: 7px;
+	box-shadow: -10px 10px 10px #e6e6e6;
+}
+
+#contactInfo {
+	min-width: 370px;
+}
+
+.p-tag-contact {
+	font-size: 1.5rem;
+	margin: 7px 0;
+	width: 100%;
+	background: rgba(21, 59, 38, .3);
+	border: 3px dashed #000;
+	border-radius: 10px;
+	box-shadow: -10px 10px 10px #e6e6e6;
 }
 
 /*------------------------------------------------------------------------------
@@ -371,6 +424,7 @@ transition: 0.75s ease;
 /*------------------------------------------------------------------------------
 ==============================Media Queries=====================================
 -------------------------------------------------------------------------------*/
+
 @media (max-width: 1042px) {
 	.cb-slideshow li span {
 		background-size: cover;
@@ -386,9 +440,21 @@ transition: 0.75s ease;
 	.cb-slideshow li div {
 		bottom: 20%;
 	}
+	
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
+	.logo-div {
+		height: 106.88px;
+		line-height: 106.88px;
+	}
+	.logo-div-height {
+		height: 209.98px;
+		line-height: 150px;
+	}
+	.logo-div h5 {
+		font-size: 1rem;
+	}
 	.navbar-nav {
 		display: inline-block;
 		padding: 10px;
@@ -409,6 +475,9 @@ transition: 0.75s ease;
 		margin: 0 auto;
 		width: 90%;
 	}
+	.logo-img {
+		max-width: 150px;
+	} 
 	
 }
 @media (min-width: 804px) {
@@ -434,13 +503,12 @@ transition: 0.75s ease;
 	margin-top: 25px;
 	}
 	#menuImage {
-		padding-bottom: 0;
-	}
-	#menuImage {
 		margin: 0;
 		width: 100%;
 		position: relative;
+		padding-bottom: 0;
 	}
+	
 	.menu-nav {
 		display: block;
 	}
@@ -450,6 +518,23 @@ transition: 0.75s ease;
 		width: 90%;
 		margin: 0 5%;
 	}
+	.logo-div {
+		height: 206.75px;
+		line-height: 206.75px;
+	}
+	.logo-div-height {
+		height: 209.98px;
+		line-height: 168px;
+	}
+	.logo-div h5 {
+		font-size: 1.25rem;
+	}
+	nav a:hover {
+		color: #000 !important;
+	}
+	.border-top-1 {
+		border: none;
+	}
 }
 /*For Phones*/
 @media (max-width: 525px) {
@@ -458,7 +543,7 @@ transition: 0.75s ease;
 		font-size: 1.88rem;
 	}
 	h4,
-	h5,
+	h5
 	 {
 		font-size: 1.25rem;
 	}
@@ -466,10 +551,13 @@ transition: 0.75s ease;
 		font-size: 1rem;
 	}
 	.p-tag-reservations,
-	.p-tag-about{
+	.p-tag-about {
 		font-size: 1.25rem;
 		margin: 7px 0;
 		width: 100%;
+	}
+	.p-tag-contact {
+		font-size: 1.25rem;
 	}
 	p {
 		margin: 7px 0;
@@ -477,20 +565,24 @@ transition: 0.75s ease;
 	}
 	#menuLink {
 		font-size: 1.25rem;
-	}
-	.logo-img {
-		width: 70%;
-	}
-	#menuLink {
 		display: block;
 	}
 	#lrgParties {
 		width: 100%;
 	}
-	.col-md-4,
-	.col-md-3,
-	.col-md-5 {
-		border-top: 1px solid #000;
+	.col-4 {
+		padding: 0;
+	}
+	.logo-img {
+		width: 70%;
+		padding-top: 10px;
+	}
+	.logo-div {
+		height: 70%;
+		line-height: 100px;
+	}
+	.chow-logo {
+		width: 80%;
 	}
 	
 }
