@@ -498,6 +498,7 @@ const contact = {
               <div id="contactInfo" class="col-6 col-md-4 mx-auto">
                 <h4 class="font-weight-bold mb-4 mt-4"><i class="fas fa-user"></i> Owner: Mike Williams</h4>
                 <h4 class="font-weight-bold mb-3"><a href="tel:15103392098"><i class="fas fa-phone"></i> Phone: (510)339-2098</a></h4>
+                <h4 class="font-weight-bold mb-3"><a href="mailto:mike@crogans.com"><i class="fas fa-envelope"></i> Email: mike@crogans.com</a></h4>
                 <h4 class="font-weight-bold mb-4"><i class="fas fa-fax"></i> Fax: (510)339-2077</h4>
                 <h4 class="font-weight-bold mb-1"><a href="https://goo.gl/maps/e9wrRZYKHwL2" target="_blank"><i class="fas fa-thumbtack"></i> Location: 6101 LaSalle Avenue, Oakland, CA 94611</a></h4>
                 <h4 class="font-weight-bold mb-4"> - Monclair Village - </h4>
