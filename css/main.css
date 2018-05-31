@@ -47,8 +47,8 @@ footer {
 	width: 100%;
 	background-color: #fff;
 	z-index: 999;
-	position: absolute;
-	display: inline-block;
+	position: fixed;
+	display: block;
 	bottom: 0;
 	border-top: 2px solid #000;
 }
@@ -91,21 +91,19 @@ ul.footer {
 	text-align: center;
 }
 
-.cb-slideshow li {
+.cb-slideshow li span {
 	width: 100%;
-	height: 100%;
+	height: 70%;
+	margin: 174px 0;
 }
 
-/*.navbar-toggler {
-	background-color: rgba(21, 59, 38, .8) !important;
-	display: inline-block;
-	padding: 10px;
-	border-radius: 7px;
-	font-size: 1.125rem;
-	margin-top: 195px;
-	color: #fff !important;
-	text-shadow: 2px 2px 2px #000;
-}*/
+.cb-slideshow li {
+	background-color: rgb(21, 59, 38);
+}
+
+#slideshow {
+	margin: 0 auto;
+}
 
 .font-white {
 	color: #fff !important;
@@ -150,6 +148,7 @@ img.border-1 {
 	padding: 5px !important;
 	border: 1px solid #000;
 }
+
 /*------------------------------------------------------------------------------
 ==============================Top Logo===========================================
 -------------------------------------------------------------------------------*/
@@ -184,7 +183,6 @@ img.border-1 {
 	width: 100%;
 	margin: 0 auto;
 	position: absolute;
-	top: 180px;
 }
 
 .dropdown-item {
@@ -254,8 +252,8 @@ nav router-link:hover {
 }
 
 .navbar-toggler:hover,
-#menuLink:hover,
-.menu:hover {
+.menu:hover,
+.menu-zoom:hover {
 	cursor: pointer;
 	text-shadow: 2px 2px 2px #fff;
 }
@@ -276,16 +274,9 @@ nav router-link:hover {
 	box-shadow: none;
 }
 
-#menuLink {
-	text-align: center;
-	display: inline-block;
-	margin: 0 7px 0 7px;
-	padding: 5px;
-}
-
 .menu-nav {
 	margin: 0 auto;
-	display: inline-block;
+	display: block;
 	font-size: 1.125rem;
 	text-align: center;
 	background-color: rgba(21, 59, 38, .8);
@@ -293,6 +284,25 @@ nav router-link:hover {
 	z-index: 9999;
 }
 
+#foodMenu li {
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	margin: 0 7px 0 7px;
+	padding: 5px;
+}
+
+#foodMenuZoom li {
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	margin: 0 7px 0 7px;
+	padding: 5px;
+}
+
+#foodMenuZoom {
+	width: 70%;
+}
 
 /*------------------------------------------------------------------------------
 ==============================About Section====================================
@@ -425,8 +435,37 @@ transition: 0.75s ease;
 ==============================Media Queries=====================================
 -------------------------------------------------------------------------------*/
 
+@media (min-width: 1200px) {
+	.cb-slideshow li span {
+	width: 90%;
+	height: 80%;
+	margin: 174px 5% 0 5%;
+	box-shadow: -40px 0 40px rgb(21, 59, 38), 40px 0 40px rgb(21, 59, 38);
+	}
+	.navbar {
+		width: 80%;
+		margin-left: 10% !important;
+		margin-right: 10% !important;
+	}
+	.cb-slideshow h1 {
+	width: 80%;
+	margin-right: 10%;
+	margin-left: 10%;
+	}
+}
+
+@media (min-width: 1600px) {
+	.cb-slideshow li span {
+	width: 80%;
+	height: 80%;
+	margin: 174px 10% 0 10%;
+	}
+}
+
 @media (max-width: 1042px) {
 	.cb-slideshow li span {
+		margin: 174px 0 10% 0;
+		width: 100%;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-color: #153b26;
@@ -437,8 +476,8 @@ transition: 0.75s ease;
 	main {
 		margin-bottom: 184px;
 	}
-	.cb-slideshow li div {
-		bottom: 20%;
+	.cb-slideshow h1 {
+	margin-bottom: 40px;
 	}
 	
 }
@@ -497,7 +536,7 @@ transition: 0.75s ease;
 		display: none;
 	}
 	#navSmall {
-		display: inline-block;
+		display: block;
 	}
 	main {
 	margin-top: 25px;
@@ -511,6 +550,7 @@ transition: 0.75s ease;
 	
 	.menu-nav {
 		display: block;
+		margin-top: 15px;
 	}
 	.p-tag-about,
 	.p-tag-reservations {
@@ -534,6 +574,20 @@ transition: 0.75s ease;
 	}
 	.border-top-1 {
 		border: none;
+	}
+	div.dropdown-menu-right {
+	margin-right: 38%;
+	}
+	#foodMenu li {
+	display: block;
+	}
+
+	#foodMenuZoom li {
+		display: block;
+	}
+
+	#foodMenuZoom {
+		width: 100%;
 	}
 }
 /*For Phones*/
@@ -559,11 +613,15 @@ transition: 0.75s ease;
 	.p-tag-contact {
 		font-size: 1.25rem;
 	}
+	.p-tag {
+		font-size: 1rem;
+	}
 	p {
 		margin: 7px 0;
 		width: 100%;
 	}
-	#menuLink {
+	.menu,
+	.menu-zoom {
 		font-size: 1.25rem;
 		display: block;
 	}
@@ -584,6 +642,13 @@ transition: 0.75s ease;
 	.chow-logo {
 		width: 80%;
 	}
+	.cb-slideshow li span {
+    	max-height: 500px;
+    	margin-top: 174px;
+	}
+	div.dropdown-menu-right {
+	margin-right: 24%;
+	}
 	
 }
 
@@ -591,5 +656,19 @@ transition: 0.75s ease;
 	h1,
 	h2 {
 		font-size: 1.56rem;
+	}
+	div.dropdown-menu-right {
+	margin-right: 25%;
+	}
+}
+@media (max-width: 320px) {
+	div.dropdown-menu-right {
+	margin-right: 20%;
+	}
+	.cb-slideshow li span {
+    	max-height: 260px;
+	}
+	.cb-slideshow h1 {
+	margin-bottom: 47px;
 	}
 }

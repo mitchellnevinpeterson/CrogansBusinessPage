@@ -96,8 +96,20 @@ var pageReload = window.performance.navigation.type
 if (pageReload == 1 || pageReload == 2) {
   // making the hard coded slideshow html not displayed
   document.getElementById("slideshow").className = ("hide")
+  document.getElementsByTagName("footer")[0].style.position = "absolute"
 }
 
+// ---------------------------------------
+// Changing the body background-color function
+// ---------------------------------------
+function footerPos(event) {
+  // getting the value of the inner text of the element clicked on
+  var target = event.target.innerText.toLowerCase()
+  console.log(target)
+  if (target == "menu" || target == "about us" || target == "reservations" || target == "contact" || target == "delivery") {
+    document.getElementsByTagName("footer")[0].style.position = "absolute" 
+  }
+}
 
 // ---------------------------------------
 // Switching the menus imgs function
@@ -124,15 +136,97 @@ function menuSwap(event) {
       document.getElementById("menuImage").src = "img/" + menuValue + ".png"
     }
   }
-  // The function to hide the slideshow when clicking on other links
+}
+// -----------------------------------------------
+// Hiding the slide show in original HTML function
+// -----------------------------------------------
+// The function to hide the slideshow when clicking on other links
   function hide() {
-    document.getElementById("slideshow").className = ("hide")
+    // getting the name of the clicked element
+    var element = event.target.tagName
+    // hiding the slideshow when user clicks a different link
+    if (element == "A") {
+      document.getElementById("slideshow").className = ("hide")
+    } 
   }
-  // hiding the slideshow when user clicks a different link
-  if (element == "A") {
-    hide()
+  
+
+// ---------------------------------------
+// Zooming in on clicked menu imgs function
+// ---------------------------------------
+
+function zoom(){
+    // Display none on header, nav and footer while zoomed
+    // Header
+    document.getElementById("topHeader").classList.add("hide")
+    // Large screen Nav
+    document.getElementById("navLrg").classList.add("hide")
+    // Small device Nav
+    document.getElementById("navSmall").classList.add("hide")
+    // Original menu img
+    document.getElementById("menuImage").classList.add("hide")
+    // Footer
+    document.getElementsByClassName("footer")[0].classList.add("hide")
+    // Get the src from original image
+    var menuSrc = document.getElementById("menuImage")
+    console.log(menuSrc)
+    // Get the modal
+    var modal = document.getElementById("myModal")
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var modalImg = document.getElementById("img01")
+    // Changing the style of modal
+    modal.style.display = "block"
+    // Changing the src of img modal
+    modalImg.src = menuSrc.src
+}
+
+// When the user clicks on <span> (x), close the modal
+function closeZoom() { 
+    // Display the header, nav and footer after closing zoom
+    // Header
+    document.getElementById("topHeader").classList.remove("hide")
+    // Large screen Nav
+    document.getElementById("navLrg").classList.remove("hide")
+    // Small device Nav
+    document.getElementById("navSmall").classList.remove("hide")
+    // Original menu img
+    document.getElementById("menuImage").classList.remove("hide")
+    // Footer
+    document.getElementsByClassName("footer")[0].classList.remove("hide")
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0]
+    // Get the modal
+    var modal = document.getElementById("myModal")
+    // Display none to the modal
+    modal.style.display = "none"
+}
+// ---------------------------------------
+// Switching the menus imgs function
+// ---------------------------------------
+function menuSwapZoom(event) {
+  // getting the name of the clicked element
+  var element = event.target.tagName
+  // console.log(element)
+  // getting the text content of the "clicked" element
+  var selected = event.target.innerHTML
+  // console.log(selected)
+  // getting the info from the dropdown links under "menu"
+  var menu = document.getElementsByClassName("menu-zoom")
+  // looping through the link text content
+  for (i = 0; i < menu.length; i ++) {
+  // getting the value content of the menu links
+  var menuValue = menu[i].attributes.value.textContent
+  // console.log(menuValue)
+  // getting the link text content
+  var menuName = menu[i].innerHTML
+  // console.log(menuName)
+  // if the clicked element text content matches the value content then replace image name
+    if (selected == menuName) {
+      document.getElementById("img01").src = "img/" + menuValue + ".png"
+    }
   }
 }
+
 // ---------------------------------------
 // Vue router for one page application
 // ---------------------------------------
@@ -152,14 +246,31 @@ const menu = {
   template:`
     <div class="menuDivWrap text-center container">
       <ul id="foodMenu" class="animated menu-nav">
-        <li id="menuLink"><a class="menu font-white text-shadow-blk" value="startersMenu">Starters/Soups</a></li>
-        <li id="menuLink"><a class="menu font-white text-shadow-blk" value="entreeMenu">Entr&#233es</a></li>
-        <li id="menuLink"><a class="menu font-white text-shadow-blk" value="sandwichMenu">Sandwiches/Pasta/Salad</a></li>
-        <li id="menuLink"><a class="menu font-white text-shadow-blk" value="dessertMenu">Dessert</a></li>
-        <li id="menuLink"><a class="menu font-white text-shadow-blk" value="brunchMenu">Weekend Brunch</a></li>
-        <li id="menuLink"><a class="menu font-white text-shadow-blk" value="happyHourMenu">Happy Hour!</a></li>
+        <li><a class="menu font-white text-shadow-blk" value="startersMenu">Starters/Soups</a></li>
+        <li><a class="menu font-white text-shadow-blk" value="entreeMenu">Entr&#233es</a></li>
+        <li><a class="menu font-white text-shadow-blk" value="sandwichMenu">Sandwiches/Pasta/Salad</a></li>
+        <li><a class="menu font-white text-shadow-blk" value="dessertMenu">Dessert</a></li>
+        <li><a class="menu font-white text-shadow-blk" value="brunchMenu">Weekend Brunch</a></li>
+        <li><a class="menu font-white text-shadow-blk" value="happyHourMenu">Happy Hour!</a></li>
       </ul>
-      <img id="menuImage" class="menus" src="img/startersMenu.png" alt="Crogan's Menu">
+      <p class="mt-2 p-tag">*Click on menu image to zoom in*</p>
+      <img id="menuImage" onclick="zoom()" class="menus" src="img/startersMenu.png" alt="Crogan's Menu">
+      <!-- The Modal to Zoom Menu Imgs -->
+      <div id="myModal" class="modal">
+        <!-- The Close Button -->
+        <span onclick="closeZoom()" class="close">&times;</span>
+        <!-- The menu nav -->
+        <ul onclick="menuSwapZoom(event)" id="foodMenuZoom" class="animated menu-nav">
+          <li><a class="menu-zoom font-white text-shadow-blk" value="startersMenu">Starters/Soups</a></li>
+          <li><a class="menu-zoom font-white text-shadow-blk" value="entreeMenu">Entr&#233es</a></li>
+          <li><a class="menu-zoom font-white text-shadow-blk" value="sandwichMenu">Sandwiches/Pasta/Salad</a></li>
+          <li><a class="menu-zoom font-white text-shadow-blk" value="dessertMenu">Dessert</a></li>
+          <li><a class="menu-zoom font-white text-shadow-blk" value="brunchMenu">Weekend Brunch</a></li>
+          <li><a class="menu-zoom font-white text-shadow-blk" value="happyHourMenu">Happy Hour!</a></li>
+        </ul>
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+      </div>
       <!-- Heading for make a reservation -->
       <div class="container">
         <h1 id="heading" class="font-weight-bold font-white">Make a reservation!</h1>
