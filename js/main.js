@@ -1,3 +1,4 @@
+
 // a function for scrolling to the top of the page
 function toTheTop() {
   window.scrollTo(0, 0)
@@ -34,13 +35,9 @@ function countDown() {
 
     // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24))
-    console.log(days)
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-    console.log(hours)
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-    console.log(minutes)
     var seconds = Math.floor((distance % (1000 * 60)) / 1000)
-    console.log(seconds)
 
     // Display the result in the element with id="countDown"
     document.getElementById("countDown").innerText = days + "d " + hours + "h "
@@ -101,11 +98,12 @@ function navAnimate() {
 var pageReload = window.performance.navigation.type
 // if type = 1 then the page has relaoded
 // if type = 2 then the back button was used
-if (pageReload) {
-  // making the hard coded slideshow html not displayed
-  document.getElementById("slideshow").className = ("hide")
-  document.getElementsByTagName("footer")[0].style.position = "absolute"
-}
+// if (pageReload || pageReload == 2) {
+//   // making the hard coded slideshow html not displayed and footer display abosolute
+//   document.getElementById("slideshow").style.display = "none"
+//   document.getElementById("slideshow").className = ("hide")
+//   document.getElementsByTagName("footer")[0].style.position = "absolute"
+// }
 
 // ---------------------------------------
 // Changing the body background-color function
@@ -150,17 +148,17 @@ function menuSwap(event) {
     var element = event.target.tagName
     // hiding the slideshow when user clicks a different link
     if (element == "A") {
+      document.getElementById("slideshow").style.display = "none"
       document.getElementById("slideshow").className = ("hide")
     } 
   }
-  
-  
+
 
 // ---------------------------------------
 // Zooming in on clicked menu imgs function
 // ---------------------------------------
 
-function zoom(){
+function zoom() {
     // Display none on header, nav and footer while zoomed
     // Header
     document.getElementById("topHeader").classList.add("hide")
@@ -743,6 +741,7 @@ const delivery = {
         </div>
   `
 }
+
 const router = new VueRouter({
   routes: [
   {
@@ -771,6 +770,7 @@ const router = new VueRouter({
   }
   ]
 })
+router.push('home')
 var routeTest = new Vue ({
     router,
     el:'#app',
@@ -778,6 +778,6 @@ var routeTest = new Vue ({
       
     },
     methods: {
-
+      
     }
 }).$mount('#app')

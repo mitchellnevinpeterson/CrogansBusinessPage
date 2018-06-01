@@ -100,19 +100,9 @@
     <!-- main section with content swap using vue -->
     <main class="content">
         <transition mode="out-in" name="slide-fade">
-            <router-view></router-view>
+            <router-view>
+            </router-view>
         </transition>
-        <!-- This div with a id="slideshow" is to be there when the page loads only after user clicks on any of the links it will have a class of hide (display: none;) -->
-        <div id="slideshow">
-            <ul class="cb-slideshow">
-                <li><span class="slideshow-img">Image 01</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Irish American Dining</h1></div></li>
-                <li><span class="slideshow-img">Image 02</span><div><h1 class="text-uppercase light-grey-bckgrd jose-bold">Home away from home</h1></div></li>
-                <li><span class="slideshow-img">Image 03</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Traditional Drinks</h1></div></li>
-                <li><span class="slideshow-img">Image 04</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Full Bar, Beer, and Wine</h1></div></li>
-                <li><span class="slideshow-img">Image 05</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Great service, Feel at Home Ambience</h1></div></li>
-                <li><span class="slideshow-img">Image 06</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Food is fresh and made to order</h1></div></li>
-            </ul>
-        </div>
     </main>
 </div>
     <footer>
@@ -122,7 +112,7 @@
           <h5 id="countDown"></h5>
         </li>
         <li>
-          <h6><a href="https://goo.gl/maps/e9wrRZYKHwL2" target="_blank">6101 LaSalle Avenue, Oakland, CA 94611</a><span class="village"> - Monclair Village - </span><a href="tel:15103392098">(510)339-2098</a></h6>
+          <h6><a href="https://goo.gl/maps/e9wrRZYKHwL2" target="_blank">6101 LaSalle Avenue, Oakland, CA 94611</a><span class="village"> - Monclair Village - </span><span class="phone"><a href="tel:15103392098">(510)339-2098</a></span></h6>
         </li>
       </ul>
     </footer>
