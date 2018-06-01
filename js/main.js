@@ -135,7 +135,7 @@ function menuSwap(event) {
   var menuName = menu[i].innerHTML
   // if the clicked element text content matches the value content then replace image name
     if (selected == menuName) {
-      document.getElementById("menuImage").src = "img/" + menuValue + ".png"
+      document.getElementById("menuImage").src = "img/" + menuValue + ".jpg"
     }
   }
 }
@@ -228,7 +228,7 @@ function menuSwapZoom(event) {
   var menuName = menu[i].innerHTML
   // if the clicked element text content matches the value content then replace image name
     if (selected == menuName) {
-      document.getElementById("img01").src = "img/" + menuValue + ".png"
+      document.getElementById("img01").src = "img/" + menuValue + ".jpg"
     }
   }
 }
@@ -260,7 +260,7 @@ const menu = {
         <li><a class="menu font-white text-shadow-blk" value="happyHourMenu">Happy Hour!</a></li>
       </ul>
       <p class="mt-2 p-tag">*Click on menu image to zoom in*</p>
-      <img id="menuImage" onclick="zoom()" class="menus" src="img/startersMenu.png" alt="Crogan's Menu">
+      <img id="menuImage" onclick="zoom()" class="menus" src="img/startersMenu.jpg" alt="Crogan's Menu">
       <!-- The Modal to Zoom Menu Imgs -->
       <div id="myModal" class="modal">
         <!-- The Close Button -->

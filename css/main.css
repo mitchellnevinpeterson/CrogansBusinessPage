@@ -79,7 +79,8 @@ h6 {
 }
 
 img {
-	box-shadow: -10px 10px 10px #999;
+	-webkit-box-shadow: -10px 10px 10px #999;
+	        box-shadow: -10px 10px 10px #999;
 	padding: 0 !important;
 }
 
@@ -95,7 +96,8 @@ ul.footer {
 	width: 100%;
 	height: 70%;
 	margin: 174px 0;
-	box-shadow: -40px 0 40px rgb(21, 59, 38), 40px 0 40px rgb(21, 59, 38), 0 40px 40px rgb(21, 59, 38);
+	-webkit-box-shadow: -40px 0 40px rgb(21, 59, 38), 40px 0 40px rgb(21, 59, 38), 0 40px 40px rgb(21, 59, 38);
+	        box-shadow: -40px 0 40px rgb(21, 59, 38), 40px 0 40px rgb(21, 59, 38), 0 40px 40px rgb(21, 59, 38);
 }
 
 .cb-slideshow li {
@@ -142,7 +144,8 @@ ul.footer {
 	margin-top: 20px;
 	margin-bottom: 10px;
 	text-align: center;
-	box-shadow: -10px 10px 10px #e6e6e6;
+	-webkit-box-shadow: -10px 10px 10px #e6e6e6;
+	        box-shadow: -10px 10px 10px #e6e6e6;
 }
 
 img.border-1 {
@@ -162,7 +165,8 @@ img.border-1 {
 	z-index: 9999;
 }
 #topLogo {
-	box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 }
 /*------------------------------------------------------------------------------
 ==============================Nav For SMALL Devices=============================
@@ -272,7 +276,8 @@ nav router-link:hover {
 	margin-right: 10%;
 	margin-left: 10%;
 	max-width: 1000px;
-	box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 }
 
 .menu-nav {
@@ -319,7 +324,8 @@ nav router-link:hover {
 }
 
 .logo-img {
-	object-fit: cover;
+	-o-object-fit: cover;
+	   object-fit: cover;
 	width: 75%;
 	padding: 0 5px;
 }
@@ -348,7 +354,8 @@ nav router-link:hover {
 	width: 100%;
 	padding: 0 5px;
 	vertical-align: middle;
-	object-fit: contain;
+	-o-object-fit: contain;
+	   object-fit: contain;
 }
 
 /*------------------------------------------------------------------------------
@@ -389,7 +396,8 @@ nav router-link:hover {
 
 #carouselExampleIndicators {
 	margin-top: 12px;
-	box-shadow: -10px 10px 10px #e6e6e6;
+	-webkit-box-shadow: -10px 10px 10px #e6e6e6;
+	        box-shadow: -10px 10px 10px #e6e6e6;
 }
 
 /*------------------------------------------------------------------------------
@@ -399,7 +407,8 @@ nav router-link:hover {
 iframe {
 	width: 100%;
 	border-radius: 7px;
-	box-shadow: -10px 10px 10px #e6e6e6;
+	-webkit-box-shadow: -10px 10px 10px #e6e6e6;
+	        box-shadow: -10px 10px 10px #e6e6e6;
 }
 
 #contactInfo {
@@ -413,7 +422,8 @@ iframe {
 	background: rgba(21, 59, 38, .3);
 	border: 3px dashed #000;
 	border-radius: 10px;
-	box-shadow: -10px 10px 10px #e6e6e6;
+	-webkit-box-shadow: -10px 10px 10px #e6e6e6;
+	        box-shadow: -10px 10px 10px #e6e6e6;
 }
 
 /*------------------------------------------------------------------------------
@@ -421,15 +431,21 @@ iframe {
 -------------------------------------------------------------------------------*/
 .slide-fade-enter, 
 .slide-fade-leave {
-	transform: translateX(50px);
+	-webkit-transform: translateX(50px);
+	    -ms-transform: translateX(50px);
+	        transform: translateX(50px);
 	opacity: 0;
 }
 
 .slide-fade-enter-active {
+-webkit-transition: 0.75s ease;
+-o-transition: 0.75s ease;
 transition: 0.75s ease;
 } 
 
 .slide-fade-leave-active {
+	-webkit-transition: 0.3s ease;
+	-o-transition: 0.3s ease;
 	transition: 0.3s ease;
 }
 /*------------------------------------------------------------------------------
@@ -684,3 +700,5 @@ transition: 0.75s ease;
 	margin-bottom: 20px;
 	}
 }
+
+
