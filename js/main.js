@@ -6,45 +6,53 @@ function toTheTop() {
 // ---------------------------------------
 // Countdown to Saint Patty's day function
 // ---------------------------------------
-// Making the year reset every year to the new future year
-var date = new Date()
-var year = date.getFullYear() + 1
-// if the year is the same and before March 17
-var day = date.getDate()
-var month = date.getMonth()
-// if it is before saint patty's day then the year needs to be current year not + 1
-if (month < 2) {
-  year = date.getFullYear()
-}else if (month == 2 && day < 17) {
-  year = date.getFullYear()
-}
-// Set the date we're counting down to
-var countDownDate = new Date("March 17," + "'" + year + "'" + "00:00:00").getTime();
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get todays date and time
-  var now = new Date().getTime()
-
-  // Find the distance between now an the count down date
-  var distance = countDownDate - now
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24))
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000)
-
-  // Display the result in the element with id="countDown"
-  document.getElementById("countDown").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s "
-
-  // If the count down is finished, write some text 
-  if (month == 2 && day == 17) {
-    clearInterval(x);
-    document.getElementById("countDown").innerHTML = "Happy Saint Patty's Day!"
+function countDown() {
+  // Making the year reset every year to the new future year
+  var date = new Date()
+  var year = date.getFullYear() + 1
+  // if the year is the same and before March 17
+  var day = date.getDate()
+  var month = date.getMonth()
+  // if it is before saint patty's day then the year needs to be current year not + 1
+  if (month < 2) {
+    year = date.getFullYear()
+  }else if (month == 2 && day < 17) {
+    year = date.getFullYear()
   }
-}, 1000)
+  // Set the date we're counting down to
+  var countDownDate = new Date(year, 2, 17, 0, 0, 0, 0).getTime()
+
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime()
+
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now
+
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24))
+    console.log(days)
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+    console.log(hours)
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+    console.log(minutes)
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000)
+    console.log(seconds)
+
+    // Display the result in the element with id="countDown"
+    document.getElementById("countDown").innerText = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s "
+
+    // If the count down is finished, write some text 
+    if (month == 2 && day == 17) {
+      clearInterval(x);
+      document.getElementById("countDown").innerText = "Happy Saint Patty's Day!"
+    }
+  }, 1000)
+}
 
 // -----------------------------------------------------
 // Making the navbar sticky
@@ -57,8 +65,6 @@ var sticky = navLrg.offsetTop
 // selecting the navbar by id for small devices
 var navSmall = document.getElementById("buttonDrop")
 var stickySmall = navSmall.offsetTop
-console.log(stickySmall)
-console.log(window.pageYOffset)
 // the fuction that will add or remove class sticky
 function navSticky() {
   if (window.pageYOffset >= 180) {
@@ -79,10 +85,12 @@ function navSticky() {
 // -----------------------------------------
 // the function that adds the classes to make it animated
 function navAnimate() {
-  if (window.pageYOffset >= 240) {
-    document.getElementById("foodMenu").classList.add("fadeOutUp")
-  } else {
-    document.getElementById("foodMenu").classList.remove("fadeOutUp")
+  if(document.getElementById("foodMenu")) {
+    if (window.pageYOffset >= 240) {
+      document.getElementById("foodMenu").classList.add("fadeOutUp")
+    } else {
+      document.getElementById("foodMenu").classList.remove("fadeOutUp")
+    }
   }
 }
 
@@ -93,7 +101,7 @@ function navAnimate() {
 var pageReload = window.performance.navigation.type
 // if type = 1 then the page has relaoded
 // if type = 2 then the back button was used
-if (pageReload == 1 || pageReload == 2) {
+if (pageReload) {
   // making the hard coded slideshow html not displayed
   document.getElementById("slideshow").className = ("hide")
   document.getElementsByTagName("footer")[0].style.position = "absolute"
@@ -105,7 +113,7 @@ if (pageReload == 1 || pageReload == 2) {
 function footerPos(event) {
   // getting the value of the inner text of the element clicked on
   var target = event.target.innerText.toLowerCase()
-  console.log(target)
+  // Changing the footer position if you click on other links other than the home page
   if (target == "menu" || target == "about us" || target == "reservations" || target == "contact" || target == "delivery") {
     document.getElementsByTagName("footer")[0].style.position = "absolute" 
   }
@@ -117,20 +125,16 @@ function footerPos(event) {
 function menuSwap(event) {
   // getting the name of the clicked element
   var element = event.target.tagName
-  // console.log(element)
   // getting the text content of the "clicked" element
   var selected = event.target.innerHTML
-  // console.log(selected)
   // getting the info from the dropdown links under "menu"
   var menu = document.getElementsByClassName("menu")
   // looping through the link text content
   for (i = 0; i < menu.length; i ++) {
   // getting the value content of the menu links
   var menuValue = menu[i].attributes.value.textContent
-  // console.log(menuValue)
   // getting the link text content
   var menuName = menu[i].innerHTML
-  // console.log(menuName)
   // if the clicked element text content matches the value content then replace image name
     if (selected == menuName) {
       document.getElementById("menuImage").src = "img/" + menuValue + ".png"
@@ -150,6 +154,7 @@ function menuSwap(event) {
     } 
   }
   
+  
 
 // ---------------------------------------
 // Zooming in on clicked menu imgs function
@@ -165,11 +170,14 @@ function zoom(){
     document.getElementById("navSmall").classList.add("hide")
     // Original menu img
     document.getElementById("menuImage").classList.add("hide")
+    // Reservation section
+    document.getElementById("menuReservation").classList.add("hide")
+    // Link section
+    document.getElementById("links").classList.add("hide")
     // Footer
     document.getElementsByClassName("footer")[0].classList.add("hide")
     // Get the src from original image
     var menuSrc = document.getElementById("menuImage")
-    console.log(menuSrc)
     // Get the modal
     var modal = document.getElementById("myModal")
     // Get the image and insert it inside the modal - use its "alt" text as a caption
@@ -191,6 +199,10 @@ function closeZoom() {
     document.getElementById("navSmall").classList.remove("hide")
     // Original menu img
     document.getElementById("menuImage").classList.remove("hide")
+    // Reservation section
+    document.getElementById("menuReservation").classList.remove("hide")
+    // Link section
+    document.getElementById("links").classList.remove("hide")
     // Footer
     document.getElementsByClassName("footer")[0].classList.remove("hide")
     // Get the <span> element that closes the modal
@@ -206,20 +218,16 @@ function closeZoom() {
 function menuSwapZoom(event) {
   // getting the name of the clicked element
   var element = event.target.tagName
-  // console.log(element)
   // getting the text content of the "clicked" element
   var selected = event.target.innerHTML
-  // console.log(selected)
   // getting the info from the dropdown links under "menu"
   var menu = document.getElementsByClassName("menu-zoom")
   // looping through the link text content
   for (i = 0; i < menu.length; i ++) {
   // getting the value content of the menu links
   var menuValue = menu[i].attributes.value.textContent
-  // console.log(menuValue)
   // getting the link text content
   var menuName = menu[i].innerHTML
-  // console.log(menuName)
   // if the clicked element text content matches the value content then replace image name
     if (selected == menuName) {
       document.getElementById("img01").src = "img/" + menuValue + ".png"
@@ -245,7 +253,7 @@ const home = {
 const menu = {
   template:`
     <div class="menuDivWrap text-center container">
-      <ul id="foodMenu" class="animated menu-nav">
+      <ul onclick="menuSwap(event)" id="foodMenu" class="animated menu-nav">
         <li><a class="menu font-white text-shadow-blk" value="startersMenu">Starters/Soups</a></li>
         <li><a class="menu font-white text-shadow-blk" value="entreeMenu">Entr&#233es</a></li>
         <li><a class="menu font-white text-shadow-blk" value="sandwichMenu">Sandwiches/Pasta/Salad</a></li>
@@ -272,16 +280,16 @@ const menu = {
         <img class="modal-content" id="img01">
       </div>
       <!-- Heading for make a reservation -->
-      <div class="container">
+      <div id="menuReservation" class="container">
         <h1 id="heading" class="font-weight-bold font-white">Make a reservation!</h1>
         <!-- Description of Delivery/Reservations -->
         <div class="text-center">
-          <a href="http://chowtime.com/app/user?id=crogans.94611.us"><h2 class="font-weight-bold mt-4">To make a reservation online go to Chowtime!</h2></a>
+          <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us"><h2 class="font-weight-bold mt-4">To make a reservation online go to Chowtime!</h2></a>
           <h4 id="lrgParties" class="mx-auto">To make a reservation for more than 20 people or to reserve our private backroom, please call the restaurant directly at:</h4>
           <h4 class="font-weight-bold mb-3"><a href="tel:15103392098"><i class="fas fa-phone"></i>(510)339-2098</a></h4>
           <div class="row mt-2">
             <div class="col-4-sm mx-auto">
-              <a href="http://chowtime.com/app/user?id=crogans.94611.us">
+              <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us">
                 <img class="col-img cover-img chow-logo" alt="Chowtime Logo" src="img/chowTime.png">
               </a>
               <p class="mt-2">*Reservations are for dinning room only!*</p>
@@ -296,7 +304,7 @@ const menu = {
         <!-- Uber Eats Delivery -->
         <div class="col-md-4">
           <div class="logo-div logo-div-height">
-            <a href="https://www.ubereats.com/san-francisco/food-delivery/crogans/TR7gAqtSS7Kcta58Q2O03w/">
+            <a target="_blank" href="https://www.ubereats.com/san-francisco/food-delivery/crogans/TR7gAqtSS7Kcta58Q2O03w/">
               <img class="col-img logo-img" src="img/uberEats.png" alt="Link to Uber Eats delivery Crogan's">
             <h5>Order delivery on Uber Eats!</h5>
             </a>
@@ -305,7 +313,7 @@ const menu = {
         <!-- Amazon Delivery -->
         <div class="col-md-4">
           <div class="logo-div logo-div-height">
-            <a href="https://www.amazon.com/restaurants/crogan%27s-montclair-oakland/d/B01M03ROZM">
+            <a target="_blank" href="https://www.amazon.com/restaurants/crogan%27s-montclair-oakland/d/B01M03ROZM">
               <img class="col-img logo-img" src="img/amazon.jpg" alt="Link to Amazon delivery Crogan's">
             <h5>Order delivery on Amazon!</h5>
             </a>
@@ -314,7 +322,7 @@ const menu = {
         <!-- Doordash Delivery -->
         <div class="col-md-4">
           <div class="logo-div logo-div-height">
-            <a href="https://www.doordash.com/store/crogans-montclair-restaurant-oakland-46272/?utm_campaign=46272&utm_medium=website&utm_source=partner-link">
+            <a target="_blank" href="https://www.doordash.com/store/crogans-montclair-restaurant-oakland-46272/?utm_campaign=46272&utm_medium=website&utm_source=partner-link">
               <img class="col-img logo-img" src="img/doordash.png" alt="Link to Doordash delivery Crogan's">
             <h5>Order delivery on Doordash!</h5>
             </a>
@@ -410,7 +418,7 @@ const about = {
         <!-- Uber Eats Delivery -->
         <div class="col-6 col-md-4">
           <div class="logo-div logo-div-height">
-            <a href="https://www.ubereats.com/san-francisco/food-delivery/crogans/TR7gAqtSS7Kcta58Q2O03w/">
+            <a target="_blank" href="https://www.ubereats.com/san-francisco/food-delivery/crogans/TR7gAqtSS7Kcta58Q2O03w/">
               <img class="col-img logo-img" src="img/uberEats.png" alt="Link to Uber Eats delivery Crogan's">
             <h5 class="mt-3">Order delivery on Uber Eats!</h5>
             </a>
@@ -419,7 +427,7 @@ const about = {
         <!-- Amazon Delivery -->
         <div class="col-6 col-md-4">
           <div class="logo-div logo-div-height">
-            <a href="https://www.amazon.com/restaurants/crogan%27s-montclair-oakland/d/B01M03ROZM">
+            <a target="_blank" href="https://www.amazon.com/restaurants/crogan%27s-montclair-oakland/d/B01M03ROZM">
               <img class="col-img logo-img" src="img/amazon.jpg" alt="Link to Amazon delivery Crogan's">
             <h5 class="mt-3">Order delivery on Amazon!</h5>
             </a>
@@ -428,7 +436,7 @@ const about = {
         <!-- Doordash Delivery -->
         <div class="col-6 col-md-4">
           <div class="logo-div logo-div-height">
-            <a href="https://www.doordash.com/store/crogans-montclair-restaurant-oakland-46272/?utm_campaign=46272&utm_medium=website&utm_source=partner-link">
+            <a target="_blank" href="https://www.doordash.com/store/crogans-montclair-restaurant-oakland-46272/?utm_campaign=46272&utm_medium=website&utm_source=partner-link">
               <img class="col-img logo-img" src="img/doordash.png" alt="Link to Doordash delivery Crogan's">
             <h5 class="mt-3">Order delivery on Doordash!</h5>
             </a>
@@ -437,7 +445,7 @@ const about = {
       <!-- Check Please link -->
         <div class="col-6 col-md-4 border-top-1">
           <div class="logo-div logo-div-height">
-            <a href="https://www.kqed.org/checkplease/1345/crogans-montclair-reviews">
+            <a target="_blank" href="https://www.kqed.org/checkplease/1345/crogans-montclair-reviews">
               <img class="col-img logo-img" src="img/checkPlease.png" alt="Link to Check Please Crogan's">
             <h5>Check us out on Check Please!</h5>
             </a>
@@ -446,7 +454,7 @@ const about = {
         <!-- Oakland Magazine link -->
         <div class="col-6 col-md-4 border-top-1">
           <div class="logo-div logo-div-height">
-            <a href="http://www.oaklandmagazine.com/Oakland-Magazine/July-August-2010/Best-of-Oakland/">
+            <a target="_blank" href="http://www.oaklandmagazine.com/Oakland-Magazine/July-August-2010/Best-of-Oakland/">
               <img class="col-img logo-img" src="img/oaklandMag.gif" alt="Link to Oakland Magazine">
             <h5>Voted Best Buffalo Wings!</h5>
             </a>
@@ -455,7 +463,7 @@ const about = {
         <!-- Facebook Link -->
         <div class="col-6 col-md-4 border-top-1">
           <div class="logo-div logo-div-height">
-            <a href="https://www.facebook.com/crogansmontclair">
+            <a target="_blank" href="https://www.facebook.com/crogansmontclair">
               <img class="col-img logo-img" src="img/facebook.png" alt="Link to Facebook Crogan's">
             <h5>Follow us on Facebook!</h5>
             </a>
@@ -467,12 +475,12 @@ const about = {
         <h1 id="heading" class="font-weight-bold font-white">Make a reservation!</h1>
         <!-- Description of Delivery/Reservations -->
         <div class="text-center">
-          <a href="http://chowtime.com/app/user?id=crogans.94611.us"><h2 class="font-weight-bold mt-4">To make a reservation online go to Chowtime!</h2></a>
+          <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us"><h2 class="font-weight-bold mt-4">To make a reservation online go to Chowtime!</h2></a>
           <h4 id="lrgParties" class="mx-auto">To make a reservation for more than 20 people or to reserve our private backroom, please call the restaurant directly at:</h4>
           <h4 class="font-weight-bold mb-3"><a href="tel:15103392098"><i class="fas fa-phone"></i>(510)339-2098</a></h4>
           <div class="row mt-2">
             <div class="col-4-sm mx-auto">
-              <a href="http://chowtime.com/app/user?id=crogans.94611.us">
+              <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us">
                 <img class="col-img cover-img chow-logo" alt="Chowtime Logo" src="img/chowTime.png">
               </a>
               <p class="mt-2">*Reservations are for dinning room only!*</p>
@@ -498,14 +506,14 @@ const reservations = {
               <h4>-and-</h4>
               <h4>Grab a Draft Beer or House Wine for only $4</h4>
               <h4>Take a shot of one of our well liquors starting at only $5</h4>
-              <a href="http://chowtime.com/app/user?id=crogans.94611.us"><h2 class="font-weight-bold mt-5">To make a reservation online go to Chowtime!</h2></a>
+              <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us"><h2 class="font-weight-bold mt-5">To make a reservation online go to Chowtime!</h2></a>
               <h4 id="lrgParties" class="mx-auto">To make a reservation for more than 20 people or to reserve our private backroom, please call the restaurant directly at:</h4>
               <h4 class="font-weight-bold mb-3"><a href="tel:15103392098"><i class="fas fa-phone"></i>(510)339-2098</a></h4>
               <p>*Reservations are for dinning room only!*</p>
               <p>Cocktail area is open seating</p>
               <div class="row mt-2">
                 <div class="col-4-sm mx-auto">
-                  <a href="http://chowtime.com/app/user?id=crogans.94611.us">
+                  <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us">
                     <img class="col-img cover-img chow-logo" alt="Chowtime Logo" src="img/chowTime.png">
                   </a>
                 </div>
@@ -543,7 +551,7 @@ const reservations = {
               <!-- Uber Eats Delivery -->
               <div class="col-6 col-md-3">
                 <div class="logo-div">
-                  <a href="https://www.ubereats.com/san-francisco/food-delivery/crogans/TR7gAqtSS7Kcta58Q2O03w/">
+                  <a target="_blank" href="https://www.ubereats.com/san-francisco/food-delivery/crogans/TR7gAqtSS7Kcta58Q2O03w/">
                     <img class="col-img logo-img" src="img/uberEats.png" alt="Link to Uber Eats delivery Crogan's">
                   <h5>Order delivery on Uber Eats!</h5>
                   </a>
@@ -552,7 +560,7 @@ const reservations = {
               <!-- Amazon Delivery -->
               <div class="col-6 col-md-3">
                 <div class="logo-div">
-                  <a href="https://www.amazon.com/restaurants/crogan%27s-montclair-oakland/d/B01M03ROZM">
+                  <a target="_blank" href="https://www.amazon.com/restaurants/crogan%27s-montclair-oakland/d/B01M03ROZM">
                     <img class="col-img logo-img" src="img/amazon.jpg" alt="Link to Amazon delivery Crogan's">
                   <h5>Order delivery on Amazon!</h5>
                   </a>
@@ -561,7 +569,7 @@ const reservations = {
               <!-- Doordash Delivery -->
               <div class="col-6 col-md-3">
                 <div class="logo-div">
-                  <a href="https://www.doordash.com/store/crogans-montclair-restaurant-oakland-46272/?utm_campaign=46272&utm_medium=website&utm_source=partner-link">
+                  <a target="_blank" href="https://www.doordash.com/store/crogans-montclair-restaurant-oakland-46272/?utm_campaign=46272&utm_medium=website&utm_source=partner-link">
                     <img class="col-img logo-img" src="img/doordash.png" alt="Link to Doordash delivery Crogan's">
                   <h5>Order delivery on Doordash!</h5>
                   </a>
@@ -570,7 +578,7 @@ const reservations = {
               <!-- Facebook Link -->
               <div class="col-6 col-md-3">
                 <div class="logo-div">
-                  <a href="https://www.facebook.com/crogansmontclair">
+                  <a target="_blank" href="https://www.facebook.com/crogansmontclair">
                     <img class="col-img logo-img" src="img/facebook.png" alt="Link to Facebook Crogan's">
                   <h5>Follow us on Facebook!</h5>
                   </a>
@@ -629,12 +637,12 @@ const contact = {
             <h1 id="heading" class="font-weight-bold font-white">Make a reservation!</h1>
             <!-- Description of Delivery/Reservations -->
             <div class="text-center">
-              <a href="http://chowtime.com/app/user?id=crogans.94611.us"><h2 class="font-weight-bold mt-4">To make a reservation online go to Chowtime!</h2></a>
+              <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us"><h2 class="font-weight-bold mt-4">To make a reservation online go to Chowtime!</h2></a>
               <h4 id="lrgParties" class="mx-auto">To make a reservation for more than 20 people or to reserve our backroom, please call the restaurant directly at:</h4>
               <h4 class="font-weight-bold mb-3"><a href="tel:15103392098"><i class="fas fa-phone"></i>(510)339-2098</a></h4>
               <div class="row mt-2">
                 <div class="col-4-sm mx-auto">
-                  <a href="http://chowtime.com/app/user?id=crogans.94611.us">
+                  <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us">
                     <img class="col-img cover-img chow-logo" alt="Chowtime Logo" src="img/chowTime.png">
                   </a>
                   <p class="mt-2">*Reservations are for dinning room only!*</p>
@@ -688,7 +696,7 @@ const delivery = {
               <!-- Uber Eats Delivery -->
               <div class="col-md-4">
                 <div class="logo-div logo-div-height">
-                  <a href="https://www.ubereats.com/san-francisco/food-delivery/crogans/TR7gAqtSS7Kcta58Q2O03w/">
+                  <a target="_blank" href="https://www.ubereats.com/san-francisco/food-delivery/crogans/TR7gAqtSS7Kcta58Q2O03w/">
                     <img class="col-img logo-img" src="img/uberEats.png" alt="Link to Uber Eats delivery Crogan's">
                   <h5>Order delivery on Uber Eats!</h5>
                   </a>
@@ -697,7 +705,7 @@ const delivery = {
               <!-- Amazon Delivery -->
               <div class="col-md-4">
                 <div class="logo-div logo-div-height">
-                  <a href="https://www.amazon.com/restaurants/crogan%27s-montclair-oakland/d/B01M03ROZM">
+                  <a target="_blank" href="https://www.amazon.com/restaurants/crogan%27s-montclair-oakland/d/B01M03ROZM">
                     <img class="col-img logo-img" src="img/amazon.jpg" alt="Link to Amazon delivery Crogan's">
                   <h5>Order delivery on Amazon!</h5>
                   </a>
@@ -706,7 +714,7 @@ const delivery = {
               <!-- Doordash Delivery -->
               <div class="col-md-4">
                 <div class="logo-div logo-div-height">
-                  <a href="https://www.doordash.com/store/crogans-montclair-restaurant-oakland-46272/?utm_campaign=46272&utm_medium=website&utm_source=partner-link">
+                  <a target="_blank" href="https://www.doordash.com/store/crogans-montclair-restaurant-oakland-46272/?utm_campaign=46272&utm_medium=website&utm_source=partner-link">
                     <img class="col-img logo-img" src="img/doordash.png" alt="Link to Doordash delivery Crogan's">
                   <h5>Order delivery on Doordash!</h5>
                   </a>
@@ -718,12 +726,12 @@ const delivery = {
                 <h1 id="heading" class="font-weight-bold font-white">Rather dine in person?</h1>
                 <!-- Description of Delivery/Reservations -->
                 <div class="text-center">
-                  <a href="http://chowtime.com/app/user?id=crogans.94611.us"><h2 class="font-weight-bold mt-4">To make a reservation online go to Chowtime!</h2></a>
+                  <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us"><h2 class="font-weight-bold mt-4">To make a reservation online go to Chowtime!</h2></a>
                   <h4 id="lrgParties" class="mx-auto">To make a reservation for more than 20 people or to reserve our private backroom, please call the restaurant directly at:</h4>
                   <h4 class="font-weight-bold mb-3"><a href="tel:15103392098"><i class="fas fa-phone"></i>(510)339-2098</a></h4>
                   <div class="row mt-2">
                     <div class="col-4-sm mx-auto">
-                      <a href="http://chowtime.com/app/user?id=crogans.94611.us">
+                      <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us">
                         <img class="col-img cover-img chow-logo" alt="Chowtime Logo" src="img/chowTime.png">
                       </a>
                       <p class="mt-2">*Reservations are for dinning room only!*</p>
