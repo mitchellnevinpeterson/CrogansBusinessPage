@@ -26,7 +26,7 @@ function navSticky() {
   } else {
     document.getElementById("navLrg").classList.remove("sticky")
   }
-  if (window.pageYOffset >= 180) {
+  if (window.pageYOffset >= 0) {
     document.getElementById("buttonDrop").classList.add("stickySmall")
     document.getElementById("smallNavDrop").classList.add("stickySmall")
   } else {
@@ -40,6 +40,7 @@ function navSticky() {
 // the function that adds the classes to make it animated
 function navAnimate() {
   if(document.getElementById("foodMenu")) {
+    // one page app pageYOffset should be 240
     if (window.pageYOffset >= 240) {
       document.getElementById("foodMenu").classList.add("fadeOutUp")
     } else {
@@ -78,11 +79,11 @@ function footerPos(event) {
 // ---------------------------------------
 // Switching the menus imgs function
 // ---------------------------------------
-function menuSwap(event) {
+function menuSwap(menuNav) {
   // getting the name of the clicked element
-  var element = event.target.tagName
+  var element = menuNav.target.tagName
   // getting the text content of the "clicked" element
-  var selected = event.target.innerHTML
+  var selected = menuNav.target.innerHTML
   // getting the info from the dropdown links under "menu"
   var menu = document.getElementsByClassName("menu")
   // looping through the link text content
@@ -98,13 +99,13 @@ function menuSwap(event) {
   }
   // scrolling down to hide the logo and to show the menu better
   var yOffset = window.pageYOffset
-  // this will only scroll if y offset is less than the logo height (174)
-  if(yOffset < 174){
+  // this will only scroll if y offset is less than the logo height (For on page app the yOffset is 174)
+  if(yOffset < 330){
     var y = 2
     var scroll = setInterval (function() {
       window.scrollTo(0, y)
       y += 2
-      if(y > 174) clearInterval(scroll)
+      if(y > 330) clearInterval(scroll)
     }, 6)
   }
 }
@@ -192,8 +193,13 @@ function menuSwapZoom(event) {
 // Dynamic hamburger Icon for navigation
 // ---------------------------------------
 $(document).ready(function(){
-  $('#nav-icon1, #home, #cart, #sell').click(function(){
+  // making the dynamic hamburger open and close when user clicks on the navbar
+  $('#smallNavDrop').click(function(){
     $('#nav-icon1').toggleClass('open')
+  })
+  // making the dynamic hamburger close when user clicks off of dropdown menu
+  $('#main').click(function(){
+    $('#nav-icon1').removeClass('open')
   })
 })
 

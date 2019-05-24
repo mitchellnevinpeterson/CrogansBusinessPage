@@ -162,8 +162,17 @@ img.border-1 {
 	width: 100%;
 	padding-top: 28px;
 	border-bottom: 2px solid #000;
-	z-index: 9999;
+	z-index: 999;
 }
+
+.smTopLogo {
+	display: inline-block;
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 55px;
+}
+
 #topLogo {
 	-webkit-box-shadow: none;
 	        box-shadow: none;
@@ -176,6 +185,7 @@ img.border-1 {
 	width: 100%;
 	display: none;
 	z-index: 9999;
+	height: 50px;
 }
 
 #smallNavDrop {
@@ -199,9 +209,9 @@ img.border-1 {
 	border-radius: 10px;
 }
 
-div.dropdown-menu-right {
+/*div.dropdown-menu-right {
 	margin-right: 23%;
-}
+}*/
 
 .dropdown-menu {
 	background-color: rgba(21, 59, 38, 1);
@@ -211,6 +221,10 @@ div.dropdown-menu-right {
 	cursor: pointer;
 }
 
+.dropdown-toggle::after {
+	display: none;
+}
+
 /*====================================*/
 /* Dynamic Hamburger Icon */
 /*=====================================*/
@@ -218,8 +232,11 @@ div.dropdown-menu-right {
 #nav-icon1 {
   width: 3rem;
   height: 2rem;
-  position: relative;
-  margin: 0 auto;
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  /*margin: 0 auto;*/
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -384,7 +401,6 @@ nav router-link:hover {
 #foodMenuZoom {
 	width: 70%;
 }
-
 /*------------------------------------------------------------------------------
 ==============================About Section====================================
 -------------------------------------------------------------------------------*/
@@ -535,7 +551,7 @@ transition: 0.75s ease;
 	.cb-slideshow li span {
 	width: 90%;
 	height: 80%;
-	margin: 174px 5% 0 5%;
+	margin: 109px 5% 0 5%;
 	
 	}
 	.navbar {
@@ -554,13 +570,13 @@ transition: 0.75s ease;
 	.cb-slideshow li span {
 	width: 80%;
 	height: 80%;
-	margin: 174px 10% 0 10%;
+	margin: 109px 10% 0 10%;
 	}
 }
 
 @media (max-width: 1042px) {
 	.cb-slideshow li span {
-		margin: 174px 0 10% 0;
+		margin: 109px 0 10% 0;
 		width: 100%;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -623,13 +639,14 @@ transition: 0.75s ease;
 
 }*/
 /*For Ipad*/
-@media (max-width: 775px) {
+@media (max-width: 1024px) {
 
 	h1 {
 		font-size: 2.5rem;
 	}
 
-	#navLrg {
+	#navLrg,
+	#topHeader {
 		display: none;
 	}
 	#navSmall {
@@ -672,9 +689,9 @@ transition: 0.75s ease;
 	.border-top-1 {
 		border: none;
 	}
-	div.dropdown-menu-right {
+	/*div.dropdown-menu-right {
 	margin-right: 38%;
-	}
+	}*/
 	#foodMenu li {
 	display: block;
 	}
@@ -703,6 +720,9 @@ transition: 0.75s ease;
 	}
 	h6 {
 		font-size: 1rem;
+	}
+	.cb-slideshow li span {
+    	height: 40%;
 	}
 	.p-tag-reservations,
 	.p-tag-about {
@@ -742,10 +762,9 @@ transition: 0.75s ease;
 	.chow-logo {
 		width: 80%;
 	}
-	.cb-slideshow li span {
+	/*.cb-slideshow li span {
     	max-height: 500px;
-    	margin-top: 174px;
-	}
+	}*/
 	div.dropdown-menu-right {
 	margin-right: 24%;
 	}

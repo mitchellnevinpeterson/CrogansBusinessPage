@@ -3,7 +3,7 @@
 <!-- Responsive Veiwport -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Description for google search  -->
-<meta name="description" content="Good times in the heart of Montclair! When your in the mood for good times and great food, be sure to visit our restaurant. We're located in one of the most pleasant Village settings and are known for our delightful staff and excellent dining.">
+<meta name="description" content="Good times in the heart of Montclair! When you're in the mood for good times and great food, be sure to visit our restaurant. We're located in one of the most pleasant Village settings and are known for our delightful staff and excellent dining.">
 <!-- Favicon -->
 <link rel="icon" href="img/logo5.gif">
 <!-- Title -->
@@ -31,7 +31,7 @@
 
     
 </head>
-<body onclick="menuSwap(event), footerPos(event)">
+<body id="body" onclick="footerPos(event)">
       <!-- Top Logo -->
 <header id="topHeader" class="top-logo-wrap text-center fluid-img">
         <img id="topLogo" src="img/logo4.gif" alt="Crogan's Logo">
@@ -40,9 +40,14 @@
 <div id="app">
     <!-- Navigation for SMALL Devices- Hides/Shows @media Queries -->
   <nav id="navSmall">
-    <div onclick="singleClick()" id="buttonDrop" class="btn-group">
-      <button onclick="singleClick()" id="smallNavDrop" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="fa fa-bars"></i> 
+    <div id="buttonDrop" class="btn-group">
+      <button id="smallNavDrop" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img id="topLogo" src="img/logo4.gif" class="smTopLogo" alt="Crogan's Logo">
+          <div id="nav-icon1">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div> 
       </button>
       <div id="dropMenu" class="dropdown-menu dropdown-menu-right">
         <ul class="jose-bold text-uppercase">
@@ -104,7 +109,7 @@
         </ul>
     </nav>
     <!-- main section with content swap using vue -->
-    <main class="content">
+    <main id="main" class="content">
         <transition mode="out-in" name="slide-fade">
             <router-view>
             </router-view>
@@ -114,7 +119,7 @@
     <footer>
       <ul class="footer">
         <li>
-          <h5>Days until Saint Patty's Day!</h5>
+          <h5 id="daysTill">Days until Saint Patty's Day!</h5>
           <h5 class="pt-0 pb-0" id="countDown"></h5>
         </li>
         <li>

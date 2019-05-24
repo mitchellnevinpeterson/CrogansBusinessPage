@@ -29,21 +29,16 @@
     <!-- Slidewhow CSS -->
      <link rel="stylesheet" type="text/css" href="css/slideshow.css" />
      <!-- Menu zoom CSS -->
-     <link rel="stylesheet" type="text/css" href="css/menuZoom.css">
+     <link rel="stylesheet" type="text/css" href="css/menuZoom.css?v=1.0">
     <!-- Custom Main CSS -->
-    <link rel="stylesheet" href="css/main.css?v=1.0"> 
+    <link rel="stylesheet" href="css/main.css?v=1.1"> 
   </head>
-  <body onclick="menuSwap(event), footerPos(event)">
-        <!-- Top Logo -->
-  <header id="topHeader" class="top-logo-wrap text-center fluid-img">
-          <img id="topLogo" src="img/logo4.gif" alt="Crogan's Logo">
-  </header>
-    <!-- div for the one page application -->
-  <div id="app">
-      <!-- Navigation for SMALL Devices- Hides/Shows @media Queries -->
+  <body id="body" onclick="footerPos(event)">
+          <!-- Navigation for SMALL Devices- Hides/Shows @media Queries -->
     <nav id="navSmall">
       <div id="buttonDrop" class="btn-group">
-        <button id="smallNavDrop" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button id="smallNavDrop" type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img id="topLogo" src="img/logo4.gif" class="smTopLogo" alt="Crogan's Logo">
           <div id="nav-icon1">
             <span></span>
             <span></span>
@@ -53,64 +48,71 @@
         <div id="dropMenu" class="dropdown-menu dropdown-menu-right">
           <ul class="jose-bold text-uppercase">
             <!-- Home link -->
-            <li onclick="toTheTop()" class="nav-item">
+            <li class="nav-item">
               <a href="index.html" class="nav-link dropdown-item font-white text-shadow-blk">Home</a>
             </li>
             <!-- Menu link -->
-            <li onclick="toTheTop()" class="nav-item">
+            <li class="nav-item">
               <a href="menu.html" class="nav-link dropdown-item font-white text-shadow-blk">Menu</a>
             </li>
             <!-- About us link -->
-            <li onclick="toTheTop()" class="nav-item">
+            <li class="nav-item">
               <a href="about.html" class="nav-link dropdown-item font-white text-shadow-blk">About Us</a>
             </li>
             <!-- Reservation link -->
-            <li onclick="toTheTop()" class="nav-item">
+            <li class="nav-item">
               <a href="reservations.html" class="nav-link dropdown-item font-white text-shadow-blk">Reservations</a>
             </li>
             <!-- Find us link -->
-            <li onclick="toTheTop()" class="nav-item">
+            <li class="nav-item">
               <a href="contact.html" class="nav-link dropdown-item font-white text-shadow-blk">Contact</a>
             </li>
             <!-- Delivery link -->
-            <li onclick="toTheTop()" class="nav-item">
+            <li class="nav-item">
               <a href="delivery.html" class="nav-link dropdown-item font-white text-shadow-blk">Delivery</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+        <!-- Top Logo -->
+  <header id="topHeader" class="top-logo-wrap text-center fluid-img">
+          <img id="topLogo" src="img/logo4.gif" alt="Crogan's Logo">
+  </header>
+    <!-- div for the one page application -->
+  <div id="app">
+
       <!-- Navagation For LARGE Devices- Hides/Shows @media Queries-->
       <nav id="navLrg" class="navbar navbar-expand-sm mx-auto">
           <ul class="nav jose-bold text-uppercase">
             <!-- Home link -->
-            <li onclick="toTheTop()" class="nav-item jose-bold text-uppercase">
+            <li class="nav-item jose-bold text-uppercase">
               <a href="index.html" class="nav-link font-white text-shadow-blk">Home</a>
             </li>
             <!-- Menu link -->
-            <li onclick="toTheTop()" class="nav-item jose-bold text-uppercase">
+            <li class="nav-item jose-bold text-uppercase">
               <a href="menu.html" class="nav-link font-white text-shadow-blk">Menu</a>
             </li>
             <!-- About us link -->
-            <li onclick="toTheTop()" class="nav-item jose-bold text-uppercase">
+            <li class="nav-item jose-bold text-uppercase">
               <a href="about.html" class="nav-link font-white text-shadow-blk">About Us</a>
             </li>
             <!-- Reservation link -->
-            <li onclick="toTheTop()" class="nav-item jose-bold text-uppercase">
+            <li class="nav-item jose-bold text-uppercase">
               <a href="reservations.html" class="nav-link font-white text-shadow-blk">Reservations</a>
             </li>
             <!-- Find us link -->
-            <li onclick="toTheTop()" class="nav-item jose-bold text-uppercase">
+            <li class="nav-item jose-bold text-uppercase">
               <a href="contact.html" class="nav-link font-white text-shadow-blk">Contact</a>
             </li>
             <!-- Delivery link -->
-            <li onclick="toTheTop()" class="nav-item jose-bold text-uppercase">
+            <li class="nav-item jose-bold text-uppercase">
               <a href="delivery.html" class="nav-link font-white text-shadow-blk">Delivery</a>
             </li>
           </ul>
       </nav>
       <!-- main section with content swap using vue -->
-      <main class="content">
+      <main id="main" class="content">
         <div class="menuDivWrap text-center container">
         <ul onclick="menuSwap(event)" id="foodMenu" class="animated menu-nav">
           <li><a class="menu font-white text-shadow-blk" value="startersMenu">Starters/Soups</a></li>
@@ -154,7 +156,7 @@
                 <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us">
                   <img class="col-img cover-img chow-logo" alt="Chowtime Logo" src="img/chowTime.png">
                 </a>
-                <p class="mt-2">*Reservations are for dinning room only!*</p>
+                <p class="mt-2">*Reservations are for dining room only!*</p>
                 <p class="mb-3">Cocktail area is open seating</p>
               </div>
             </div>
@@ -224,7 +226,7 @@
       <footer style="position: absolute;">
         <ul class="footer">
           <li>
-            <h5>Days until Saint Patty's Day!</h5>
+            <h5 id="daysTill">Days until Saint Patty's Day!</h5>
             <h5 class="pt-0 pb-0" id="countDown"></h5>
           </li>
           <li>
@@ -252,9 +254,9 @@
   <script src="polyfills/polyfillPromise.js"></script>
   <script src="polyfills/polyfillAuto.js"></script>
   <!-- Count Down to saint Patty's day js -->
-  <script src="js/countdown.js" type="text/javascript"></script>
+  <script src="js/countdown.js?v=1.0" type="text/javascript"></script>
   <!-- Custom Java Script -->
-  <script src="js/main.js?v=1.0" type="text/javascript"></script>
+  <script src="js/main.js?v=1.4" type="text/javascript"></script>
 
   </body>
 </html>

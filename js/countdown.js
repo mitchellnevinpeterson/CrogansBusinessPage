@@ -37,10 +37,11 @@ function countDown() {
     document.getElementById("countDown").innerText = days + "d " + hours + "h "
     + minutes + "m " + seconds + "s "
 
-    // If the count down is finished, write some text 
+    // If the count down is finished, write some text
     if (month == 2 && day == 17) {
       clearInterval(x);
       document.getElementById("countDown").innerText = "Happy Saint Patty's Day!"
+      document.getElementById("daysTill").style.display = "none"
     }
   }, 1000)
 }

@@ -5,7 +5,7 @@
     <!-- Responsive Veiwport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Description for google search  -->
-    <meta name="description" content="Good times in the heart of Montclair! When your in the mood for good times and great food, be sure to visit our restaurant. We're located in one of the most pleasant Village settings and are known for our delightful staff and excellent dining.">
+    <meta name="description" content="Good times in the heart of Montclair! When you're in the mood for good times and great food, be sure to visit our restaurant. We're located in one of the most pleasant Village settings and are known for our delightful staff and excellent dining.">
     <!-- Cache Control -->
     <meta http-equiv="Cache-control" content="must-revalidate">
     <!-- Favicon -->
@@ -31,9 +31,9 @@
      <!-- Menu zoom CSS -->
      <link rel="stylesheet" type="text/css" href="css/menuZoom.css">
     <!-- Custom Main CSS -->
-    <link rel="stylesheet" href="css/main.css?v=1.0"> 
+    <link rel="stylesheet" href="css/main.css?v=1.1"> 
   </head>
-  <body onclick="menuSwap(event), footerPos(event)">
+  <body id="body" onclick="footerPos(event)">
         <!-- Top Logo -->
   <header id="topHeader" class="top-logo-wrap text-center fluid-img">
           <img id="topLogo" src="img/logo4.gif" alt="Crogan's Logo">
@@ -44,6 +44,7 @@
     <nav id="navSmall">
       <div id="buttonDrop" class="btn-group">
         <button id="smallNavDrop" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img id="topLogo" src="img/logo4.gif" class="smTopLogo" alt="Crogan's Logo">
           <div id="nav-icon1">
             <span></span>
             <span></span>
@@ -108,7 +109,7 @@
           </ul>
       </nav>
       <!-- main section with content swap using vue -->
-      <main class="content">
+      <main id="main" class="content">
         <div id="aboutDivWrap" class="container text-center mx-auto">
         <!-- About Page Heading -->
         <div>
@@ -116,7 +117,7 @@
         </div>
         <!-- Description of Crogan's -->
         <div>
-          <p class="p-tag-about">Good times in the heart of Montclair! When your in the mood for good times and great food, be sure to visit our restaurant. We're located in one of the most pleasant Village settings and are known for our delightful staff and excellent dining.</p>
+          <p class="p-tag-about">Good times in the heart of Montclair! When you're in the mood for good times and great food, be sure to visit our restaurant. We're located in one of the most pleasant Village settings and are known for our delightful staff and excellent dining.</p>
         </div>
         <!-- Top Pictures in About Section -->
         <div id="picsAbout" class="row text-center mb-5">
@@ -145,13 +146,13 @@
         </div>
         <!-- Description Sports Bar -->
         <div>
-          <p class="p-tag-about">Watch all the sports action here! NFL Sunday Ticket, NBA, MLB, Hockey, NASCAR, we got it all gonn'in on here! Join us for all the latest sports action.</p>
-          <p class="font-weight-bold"> - Dinning Room Hours - </p>
+          <p class="p-tag-about">Watch all the sports action here! NFL, NBA, MLB, Hockey, NASCAR, we got it all going on here! Join us for all the latest sports action.</p>
+          <p class="font-weight-bold"> - Dining Room Hours - </p>
           <p>Mon. - Sat. 11:30am to 10:00pm</p>
           <p>Sunday 11:30am to 9:30pm</p>
           <p class="font-weight-bold"> - Bar Hours - </p>
-          <p>Sun. - Wed. til 11:00pm</p>
-          <p>Thurs. - Sat. til 11:30pm</p>
+          <p>Sun. - Wed. 11:30am to 11:00pm</p>
+          <p>Thurs. - Sat. 11:30am to 11:30pm</p>
           <p class="font-weight-bold"> - We're Closed On - </p>
           <p> - Christmas Day - </p>
           <p> - Thanksgiving - </p>
@@ -160,34 +161,34 @@
         <!-- Sports showing in the bar area -->
         <div class="row">
           <!-- SF Giants -->
-          <div class="col-6 col-md-3 mt-3">
+          <div class="col-6 col-md-4 mt-3">
             <img alt="Logo of the SF Gaints" class="col-img cover-img" src="img/sfGaints.png">
           </div>
           <!-- Oakland Raiders -->
-          <div class="col-6 col-md-3 mt-3">
+          <div class="col-6 col-md-4 mt-3">
             <img alt="Logo of the Oakland Raiders" class="col-img cover-img" src="img/raiders.jpg">
           </div>
           <!-- SF 49er's -->
-          <div class="col-6 col-md-3 mt-3">
+          <div class="col-6 col-md-4 mt-3">
             <img alt="Logo of the SF 49er's" class="col-img cover-img" src="img/49er.jpg">
           </div>
           <!-- SJ Sharks -->
-          <div class="col-6 col-md-3 mt-3">
+          <div class="col-6 col-md-4 mt-3">
             <img alt="Logo of the SJ Sharks" class="col-img cover-img" src="img/sjSharks.png">
           </div>
           <!-- Oakland Athletics -->
-          <div class="col-6 col-md-4 mt-3">
+          <div class="col-6 col-md-4 mt-3 mx-auto">
             <img alt="Logo of the Oakland Athletics" class="col-img cover-img" src="img/athletics.jpg">
           </div>
           <!-- Oakland Warriors -->
-          <div class="col-6 col-md-4 mt-3">
+          <div class="col-6 col-md-4 mt-3 mx-auto">
             <img alt="Logo of the NBA Warriors" class="col-img cover-img" src="img/warriors.jpg">
           </div>
           <!-- NFL Ticket -->
-          <div class="col-8 col-md-4 mt-3 mb-5 mx-auto">
+          <!-- <div class="col-8 col-md-4 mt-3 mb-5 mx-auto">
             <img alt="Logo of the NFL Ticket" class="col-img cover-img" src="img/nflTicket.png">
           </div>
-        </div>
+        </div> -->
         <!-- Heading for the poem that inspired the name of Crogan's -->
         <div>
           <h1 id="heading" class="font-weight-bold font-white">The poem that inspired the name of Crogan's</h1>
@@ -296,7 +297,7 @@
                 <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us">
                   <img class="col-img cover-img chow-logo" alt="Chowtime Logo" src="img/chowTime.png">
                 </a>
-                <p class="mt-2">*Reservations are for dinning room only!*</p>
+                <p class="mt-2">*Reservations are for dining room only!*</p>
                 <p class="mb-3">Cocktail area is open seating</p>
               </div>
             </div>
@@ -309,7 +310,7 @@
       <footer style="position: absolute;">
         <ul class="footer">
           <li>
-            <h5>Days until Saint Patty's Day!</h5>
+            <h5 id="daysTill">Days until Saint Patty's Day!</h5>
             <h5 class="pt-0 pb-0" id="countDown"></h5>
           </li>
           <li>
@@ -337,9 +338,9 @@
   <script src="polyfills/polyfillPromise.js"></script>
   <script src="polyfills/polyfillAuto.js"></script>
   <!-- Count Down to saint Patty's day js -->
-  <script src="js/countdown.js" type="text/javascript"></script>
+  <script src="js/countdown.js?v=1.0" type="text/javascript"></script>
   <!-- Custom Java Script -->
-  <script src="js/main.js?v=1.0" type="text/javascript"></script>
+  <script src="js/main.js?v=1.4" type="text/javascript"></script>
 
   </body>
 </html>

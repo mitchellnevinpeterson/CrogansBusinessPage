@@ -59,7 +59,7 @@ const menu = {
               <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us">
                 <img class="col-img cover-img chow-logo" alt="Chowtime Logo" src="img/chowTime.png">
               </a>
-              <p class="mt-2">*Reservations are for dinning room only!*</p>
+              <p class="mt-2">*Reservations are for dining room only!*</p>
               <p class="mb-3">Cocktail area is open seating</p>
             </div>
           </div>
@@ -107,7 +107,7 @@ const about = {
       </div>
       <!-- Description of Crogan's -->
       <div>
-        <p class="p-tag-about">Good times in the heart of Montclair! When your in the mood for good times and great food, be sure to visit our restaurant. We're located in one of the most pleasant Village settings and are known for our delightful staff and excellent dining.</p>
+        <p class="p-tag-about">Good times in the heart of Montclair! When you're in the mood for good times and great food, be sure to visit our restaurant. We're located in one of the most pleasant Village settings and are known for our delightful staff and excellent dining.</p>
       </div>
       <!-- Top Pictures in About Section -->
       <div id="picsAbout" class="row text-center mb-5">
@@ -136,7 +136,7 @@ const about = {
       </div>
       <!-- Description Sports Bar -->
       <div>
-        <p class="p-tag-about">Watch all the sports action here! NFL Sunday Ticket, NBA, MLB, Hockey, NASCAR, we got it all gonn'in on here! Join us for all the latest sports action.</p>
+        <p class="p-tag-about">Watch all the sports action here! NFL Sunday Ticket, NBA, MLB, Hockey, NASCAR, we got it all going on here! Join us for all the latest sports action.</p>
       </div>
       <!-- Sports showing in the bar area -->
       <div class="row">
@@ -250,7 +250,7 @@ const about = {
               <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us">
                 <img class="col-img cover-img chow-logo" alt="Chowtime Logo" src="img/chowTime.png">
               </a>
-              <p class="mt-2">*Reservations are for dinning room only!*</p>
+              <p class="mt-2">*Reservations are for dining room only!*</p>
               <p class="mb-3">Cocktail area is open seating</p>
             </div>
           </div>
@@ -276,7 +276,7 @@ const reservations = {
               <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us"><h2 class="font-weight-bold mt-5">To make a reservation online go to Chowtime!</h2></a>
               <h4 id="lrgParties" class="mx-auto">To make a reservation for more than 20 people or to reserve our private backroom, please call the restaurant directly at:</h4>
               <h4 class="font-weight-bold mb-3"><a href="tel:15103392098"><i class="fas fa-phone"></i>(510)339-2098</a></h4>
-              <p>*Reservations are for dinning room only!*</p>
+              <p>*Reservations are for dining room only!*</p>
               <p>Cocktail area is open seating</p>
               <div class="row mt-2">
                 <div class="col-4-sm mx-auto">
@@ -299,10 +299,10 @@ const reservations = {
                     <img class="col-img cover-img" src="img/irishCoffee02.jpg" alt="Irish coffee at Crogan's Montclair">
                 </div>
               </div>
-              <!-- Dinning room at Crogans -->
+              <!-- Dining room at Crogans -->
               <div class=" col-12 col-md-6 mt-3 mx-auto">
                 <div class="img-div">
-                    <img class="col-img cover-img" src="img/dinning.jpg" alt="Dinning room view of Crogan's Montclair">
+                    <img class="col-img cover-img" src="img/dining.jpg" alt="dining room view of Crogan's Montclair">
                 </div>
               </div>
               <!-- Tullamore Dew bottle at Crogan's -->
@@ -388,7 +388,7 @@ const contact = {
                 <h4 class="font-weight-bold mb-4"><i class="fas fa-fax"></i> Fax: (510)339-2077</h4>
                 <h4 class="font-weight-bold mb-1"><a href="https://goo.gl/maps/e9wrRZYKHwL2" target="_blank"><i class="fas fa-thumbtack"></i> Location: 6101 LaSalle Avenue, Oakland, CA 94611</a></h4>
                 <h4 class="font-weight-bold mb-4"> - Monclair Village - </h4>
-                <p class="font-weight-bold"> - Dinning Room Hours - </p>
+                <p class="font-weight-bold"> - Dining Room Hours - </p>
                 <p>Mon. - Sat. 11:30am to 10:00pm</p>
                 <p>Sunday 11:30am to 9:30pm</p>
                 <p class="font-weight-bold"> - We're Closed On - </p>
@@ -412,7 +412,7 @@ const contact = {
                   <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us">
                     <img class="col-img cover-img chow-logo" alt="Chowtime Logo" src="img/chowTime.png">
                   </a>
-                  <p class="mt-2">*Reservations are for dinning room only!*</p>
+                  <p class="mt-2">*Reservations are for dining room only!*</p>
                   <p class="mb-3">Cocktail area is open seating</p>
                 </div>
               </div>
@@ -501,7 +501,7 @@ const delivery = {
                       <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us">
                         <img class="col-img cover-img chow-logo" alt="Chowtime Logo" src="img/chowTime.png">
                       </a>
-                      <p class="mt-2">*Reservations are for dinning room only!*</p>
+                      <p class="mt-2">*Reservations are for dining room only!*</p>
                       <p class="mb-3">Cocktail area is open seating</p>
                     </div>
                   </div>
