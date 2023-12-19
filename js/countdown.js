@@ -40,7 +40,7 @@ function countDown() {
     // If the count down is finished, write some text
     if (month == 2 && day == 17) {
       clearInterval(x);
-      document.getElementById("countDown").innerText = "Happy Saint Patty's Day!"
+      document.getElementById("countDown").innerText = "Happy Saint Paddy's Day!"
       document.getElementById("daysTill").style.display = "none"
     }
   }, 1000)

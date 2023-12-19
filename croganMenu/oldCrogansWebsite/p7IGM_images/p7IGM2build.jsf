@@ -1,0 +1,64 @@
+/*
+
+ Image Gallery Magic 2 by PVII
+ Copyright 2012 Project Seven Development. All rights reserved.
+ ---------------------------------------------------------------
+ www.projectseven.com
+
+ ---------------------------------------------------------------
+ IGM2 Fireworks Optimization and Export Directives
+      JSF Version: 2.0
+ ---------------------------------------------------------------
+
+*/
+
+var thePath,theFPath,theTPath,theDoc,i=0,mS='',runIt=true,tPrompt=false;
+var theSourceImage,theFullImage,theThumbImage;
+var theDestPath=String.fromCharCode(102,105,108,101,58,47,47,47,67,124,47,85,115,101,114,115,47,74,97,121,110,101,47,68,111,99,117,109,101,110,116,115,47,67,117,114,114,101,110,116,32,67,108,105,101,110,116,115,47,67,114,111,103,114,97,110,115,47,50,48,49,51,47,112,55,73,71,77,95,105,109,97,103,101,115);
+var theSourceFolder=String.fromCharCode(102,105,108,101,58,47,47,47,67,124,47,85,115,101,114,115,47,74,97,121,110,101,47,68,111,99,117,109,101,110,116,115,47,67,117,114,114,101,110,116,32,67,108,105,101,110,116,115,47,67,114,111,103,114,97,110,115,47,50,48,49,51,47,105,109,97,103,101,115,47);
+var fullOpt=({colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:256, applyScale:true, percentScale:100, useScale:false, xSize:-800, ySize:-800 });
+var thumbOpt=({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-100, ySize:-100});
+fw.progressCountTotal=1;
+fw.progressCountCurrent=0;
+fw.dismissBatchDialogWhenDone=true;
+function checkContinueProcess(im){
+ runIt=fw.yesNoDialog('Fireworks JSF: FW could not open image source file:\n'+im+'\n\nDo you wish to continue processing the remaining images?');
+}
+function checkFileWrite(tP,tY){
+ var retVal=true;
+ if(tPrompt){
+ if(Files.exists(tP)){
+  if(!fw.yesNoDialog('Fireworks JSF: The '+tY+' image file:\n\n'+tP+'\n\nalready exists. Do you wish to replace the file?')){
+    retVal=false;
+   }
+  }
+ }
+ return retVal;
+}
+function P7_processImage(){
+ fw.batchStatusString=theSourceImage;
+ thePath=theSourceFolder+theSourceImage;
+ theDoc=fw.openDocument(thePath);
+ if(theDoc&&runIt){ 
+  if(theFullImage!='none'){ 
+   theFPath=theDestPath+'/fullsize/'+theFullImage;
+   if(checkFileWrite(theFPath,'Full Size')){ 
+    fw.exportDocumentAs(theDoc,theFPath,fullOpt);
+   }
+  } 
+  theTPath=theDestPath+'/thumbs/'+theThumbImage;
+  if(checkFileWrite(theTPath,'Thumbnail')){
+   fw.exportDocumentAs(theDoc,theTPath,thumbOpt);
+  }
+  fw.closeDocument(theDoc,false);
+ }else{
+  checkContinueProcess(thePath);
+ }
+}
+
+fw.progressCountCurrent=1;
+theSourceImage=String.fromCharCode(116,102,105,108,101,95,115,112,108,97,115,104,95,105,109,103,49,46,106,112,103);
+theFullImage='none';
+theThumbImage=String.fromCharCode(116,102,105,108,101,95,115,112,108,97,115,104,95,105,109,103,49,95,116,109,98,46,106,112,103);
+P7_processImage();
+

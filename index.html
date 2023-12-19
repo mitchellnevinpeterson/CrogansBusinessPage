@@ -1,161 +1,287 @@
 <!DOCTYPE html>
-<meta charset="uft-8" />
-<!-- Responsive Veiwport -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Description for google search  -->
-<meta name="description" content="Good times in the heart of Montclair! When you're in the mood for good times and great food, be sure to visit our restaurant. We're located in one of the most pleasant Village settings and are known for our delightful staff and excellent dining.">
-<!-- Favicon -->
-<link rel="icon" href="img/logo5.gif">
-<!-- Title -->
-<title>Crogan's</title>
-<!-- Boot Strap CSS-->
-<link rel="stylesheet" href="css/bootstrap-grid.min.css">
-<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> -->
-<!-- Animate Stylesheet -->
-<link rel="stylesheet" href="css/animate.css">
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,400,400i,700" rel="stylesheet">
-<!-- Font Awesome -->
-<link rel="stylesheet" href="css/fontawesome.min.css">
-<link rel="stylesheet" href="css/fontawesome-all.min.css">
-<!-- Reset CSS -->
-<link rel="stylesheet" href="css/reset.css">
-<!-- Slidewhow CSS -->
- <link rel="stylesheet" type="text/css" href="css/slideshow.css" />
- <!-- Menu zoom CSS -->
- <link rel="stylesheet" type="text/css" href="css/menuZoom.css">
-<!-- Custom Main CSS -->
-<link rel="stylesheet" href="css/main.css">
-
-    
-</head>
-<body id="body" onclick="footerPos(event)">
-      <!-- Top Logo -->
-<header id="topHeader" class="top-logo-wrap text-center fluid-img">
-        <img id="topLogo" src="img/logo4.gif" alt="Crogan's Logo">
-</header>
-  <!-- div for the one page application -->
-<div id="app">
-    <!-- Navigation for SMALL Devices- Hides/Shows @media Queries -->
-  <nav id="navSmall">
-    <div id="buttonDrop" class="btn-group">
-      <button id="smallNavDrop" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <img id="topLogo" src="img/logo4.gif" class="smTopLogo" alt="Crogan's Logo">
+<html>
+  <head>
+    <meta charset="uft-8" />
+    <!-- Responsive Veiwport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Description for google search  -->
+    <meta name="description" content="Good times in the heart of Montclair! When you're in the mood for good times and great food, be sure to visit our restaurant. We're located in one of the most pleasant Village settings and are known for our delightful staff and excellent dining.">
+    <!-- Cache Control -->
+    <meta http-equiv="Cache-control" content="must-revalidate">
+    <!-- Favicon -->
+    <link rel="icon" href="img/logo5.gif">
+    <!-- Title -->
+    <title>Crogan's</title>
+    <!-- Boot Strap CSS-->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> -->
+    <!-- Animate Stylesheet -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,400,400i,700" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- Slidewhow CSS -->
+     <link rel="stylesheet" type="text/css" href="css/slideshow.css" />
+     <!-- Menu zoom CSS -->
+     <link rel="stylesheet" type="text/css" href="css/menuZoom.css?v=1.0">
+    <!-- Custom Main CSS -->
+    <link rel="stylesheet" href="css/main.css?v=2.0#339933">
+  </head>
+  <body id="body" onclick="footerPos(event)">
+          <!-- Navigation for SMALL Devices- Hides/Shows @media Queries -->
+          <nav id="navSmall">
+      <div id="buttonDrop" class="btn-group">
+        <button id="smallNavDrop" type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img id="topLogo" src="img/logo4.gif" class="smTopLogo" alt="Crogan's Logo">
           <div id="nav-icon1">
             <span></span>
             <span></span>
             <span></span>
-          </div> 
-      </button>
-      <div id="dropMenu" class="dropdown-menu dropdown-menu-right">
-        <ul class="jose-bold text-uppercase">
-          <!-- Home link -->
-          <li onclick="toTheTop()" class="dropdown-item">
-            <router-link to="/home" class="dropdown-item font-white text-shadow-blk">Home</router-link>
-          </li>
-          <!-- Menu link that has a dropdown list -->
-          <li class="nav-item">
-          <!-- Menu link -->
-          <li onclick="toTheTop()" class="nav-item">
-            <router-link to="/menu" class="dropdown-item font-white text-shadow-blk">Menu</router-link>
-          </li>
-          <!-- About us link -->
-          <li onclick="toTheTop()" class="nav-item">
-            <router-link to="/about" class="dropdown-item font-white text-shadow-blk">About Us</router-link>
-          </li>
-          <!-- Reservation link -->
-          <li onclick="toTheTop()" class="nav-item">
-            <router-link to="/reservations" class="dropdown-item font-white text-shadow-blk">Reservations</router-link>
-          </li>
-          <!-- Contact link -->
-          <li onclick="toTheTop()" class="nav-item">
-            <router-link to="/contact" class="dropdown-item font-white text-shadow-blk">Contact</router-link>
-          </li>
-          <li onclick="toTheTop()" class="nav-item">
-            <router-link to="/delivery" class="dropdown-item font-white text-shadow-blk">Delivery</router-link>
-          </li>
-        </ul>
+          </div>
+        </button>
+        <div id="dropMenu" class="dropdown-menu dropdown-menu-right">
+          <ul class="jose-bold text-uppercase">
+            <!-- Home link -->
+            <!-- <li onclick="toTheTop()" class="nav-item">
+              <a href="home.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to home Page">Home</a>
+            </li> -->
+            <!-- Menu link -->
+            <li class="nav-item">
+              <a href="menu.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to menu page">Menu</a>
+            </li>
+            <!-- About us link -->
+            <!-- <li class="nav-item">
+              <a href="about.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to about us page">About Us</a>
+            </li> -->
+            <!-- Reservation link -->
+            <li class="nav-item">
+              <a href="reservations.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to reservation page">Reservations</a>
+            </li>
+            <!-- Contact link -->
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to contact page">Contact</a>
+            </li>
+            <!-- Delivery link -->
+            <li class="nav-item">
+              <a href="delivery.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to delivery page">Delivery</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+        <!-- Top Logo -->
+  <header id="topHeader" class="top-logo-wrap text-center fluid-img">
+          <img id="topLogo" src="img/logo4.gif" alt="Crogan's Logo" title="Crogan's Logo">
+  </header>
+    <!-- div for the one page application -->
+  <div id="app"> <!-- app -->
     <!-- Navagation For LARGE Devices- Hides/Shows @media Queries-->
-    <nav id="navLrg" class="navbar navbar-expand-sm mx-auto">
-        <ul class="nav jose-bold text-uppercase">
-          <!-- Link to home -->
-          <li onclick="toTheTop()" class="nav-item">
-            <router-link to="/home" class="nav-link font-white text-shadow-blk">Home</router-link>
+      <nav id="navLrg" class="navbar navbar-expand-sm mx-auto">
+          <ul class="nav jose-bold text-uppercase">
+            <!-- Home link -->
+            <!-- <li onclick="toTheTop()" class="nav-item jose-bold text-uppercase">
+              <a href="home.html" class="nav-link font-white text-shadow-blk" title="Go to home page">Home</a>
+            </li> -->
+            <!-- Menu link -->
+            <li  class="nav-item jose-bold text-uppercase">
+              <a href="menu.html" class="nav-link font-white text-shadow-blk" title="Go to menu page">Menu</a>
+            </li>
+            <!-- About us link -->
+            <!-- <li class="nav-item jose-bold text-uppercase">
+              <a href="about.html" class="nav-link font-white text-shadow-blk" title="Go to about us page">About Us</a>
+            </li> -->
+            <!-- Reservation link -->
+            <li class="nav-item jose-bold text-uppercase">
+              <a href="reservations.html" class="nav-link font-white text-shadow-blk" title="Go to reservations page">Reservations</a>
+            </li>
+            <!-- Contact link -->
+            <li class="nav-item jose-bold text-uppercase">
+              <a href="contact.html" class="nav-link font-white text-shadow-blk" title="Go to contact page">Contact</a>
+            </li>
+            <!-- Delivery link -->
+            <li class="nav-item jose-bold text-uppercase">
+              <a href="delivery.html" class="nav-link font-white text-shadow-blk" title="Go to delivery page">Delivery</a>
+            </li>
+          </ul>
+      </nav>
+      <!-- main section with content swap using vue -->
+      <!-- <main id="main" class="content">
+        <area alt="A picture slide show of Crogan's">
+          <ul class="cb-slideshow" title="A picture slide show of Crogan's">
+            <li><span class="slideshow-img">Image 01</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Irish American Dining</h1></div></li>
+            <li><span class="slideshow-img">Image 02</span><div><h1 class="text-uppercase light-grey-bckgrd jose-bold">Home away from home</h1></div></li>
+            <li><span class="slideshow-img">Image 03</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Traditional Drinks</h1></div></li>
+            <li><span class="slideshow-img">Image 04</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Full Bar, Beer, and Wine</h1></div></li>
+            <li><span class="slideshow-img">Image 05</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Great service, Feel at Home Ambience</h1></div></li>
+            <li><span class="slideshow-img">Image 06</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Food is fresh and made to order</h1></div></li>
+        </ul>
+        </area>
+
+      </main> -->
+      <!-- Temporary COVID-19 Closure infomation -->
+      <!-- <main id="covid19">
+        <div class="container">
+          <div class="row text-center">
+            <div id="covid19Text" class="col-12 col-md-10 mx-auto">
+              <h3 class="font-weight-bold mb-4 mt-4">
+                * Due to the COVID-19 outbreak we are currently closed *
+              </h3>
+              <p class="font-weight-bold mb-4 mt-4">
+                As you all know, these are very uncertain times for our industry, and that means that our wait staff, bartenders, bussers, and kitchen staff are all without work for an unknown amount of time. Many of our staff have families to support, so the lack of income is devastating.
+              </p>
+              <h3 class="font-weight-bold mb-4 mt-4">
+                <a href="https://www.gofundme.com/f/support-crogan039s-staff?utm_medium=copy_link&utm_source=customer&utm_campaign=p_lico+share-sheet">
+                <i class="fas fa-hand-holding-usd"></i>
+                Donate to Employee's
+                </a>
+              </h3>
+              <h3 class="font-weight-bold mb-3"><a href="mailto:milw74@gmail.com"><i class="fas fa-envelope"></i> mike@crogans.com</a></h4>
+              <h3 class="font-weight-bold mb-4 mt-4"><i class="fas fa-user"></i> Owner: Mike Williams</h4>
+            </div>
+          </div>
+        </div>
+        </main> -->
+        <!-- End of COVID-19 -->
+
+<!-- Start Of Descriptive Cleaning due to COVID -->
+        <main id="covid19"> <!-- covid19 -->
+          <div class="container">
+            <div class="row text-center">
+              <div id="covid19Text" class="col-12 col-md-10 mx-auto">
+                <!-- <h3 class="font-weight-bold mb-4 mt-4">
+                  We have opened the indoor dining room at 25% capacity!
+                </h3> -->
+                <!-- <h3 class="font-weight-bold p-3" style="font-size: 2.25rem">We are proud to offer our outdoor seating!</h3> -->
+                <!-- <h3 class="font-weight-bold p-3" style="font-size: 2.25rem">We are proud to offer our indoor seating, at 100% capacity!</h3> -->
+                <center class="pt-4">
+                  <a class="chownow-order-online" style="background-color: #d00; border: none; border-radius: 4px; color: #fff; text-decoration: none; text-transform: uppercase; padding: 10px 40px;" href="https://ordering.chownow.com/order/23135/locations" target="_blank">Order Online</a>
+                </center>
+                <h3 class="font-weight-bold mb-4 mt-4" style="color: #153b26; text-shadow: 0.5px 0.75px #fff">
+                  Come join us!</br></br>We have heat lamps for warmth, and TVs for sports entertainment. We also have a full bar, come grab a drink and bit to eat!
+                </h3>
+                <h3 class="font-weight-bold p-3" style="font-size: 1.75rem">Outdoor seating available!</h3>
+                <h3 class="font-weight-bold mb-4 mt-4" style="color: #153b26; text-shadow: 0.5px 0.75px #fff">
+                  <!-- Due to the current COVID-19 guidelines, Crogans is only able to offer:  -->
+                  <a class="nav-item" href="tel:15103392098"><u>Take Out</u></a> or <a href="delivery.html" style="line-height: 12px" title="Go to delivery page"><u>Delivery</u></a> through our third party apps.
+                </h3>
+                <!-- <p class="font-weight-bold">Mon-Thurs 4pm to 8pm</p> -->
+<!-- Hours -->
+                <h3 class="font-weight-bold mt-5" style="color: #153b26; text-shadow: 0.5px 0.75px #fff">~ Mon-Sat 11:30am til 9:00pm ~<br>~ Sun 11:30am til 8:00pm ~</h3>
+                <h3 class="font-weight-bold mb-4 mt-4" style="text-shadow: 2px 2px #fff;">Another way you can support Crogans is to purchase a gift cerificate for future use. They also make a great gift!
+                </h3>
+                <center class="pt-2 pb-3">
+                  <a class="chownow-order-online" style="background-color: #153b26; border: none; border-radius: 4px; color: #fff; text-decoration: none; text-transform: uppercase; padding: 10px 40px;" href="https://ordering.chownow.com/order/23135/locations" target="_blank">Gift Certificates</a>
+                </center>
+                <!-- <h3 class="font-weight-bold mb-4 mt-4">
+                  * Masks/Facial coverings are required for indoor dinning. Alemeda County requirement include, but are not limited to: *
+                </h3>
+                <div class="row col-md-6 col-sm-12 text-left mx-auto">
+                  <p class="font-weight-bold d-block"><i class="far fa-check-square"></i> Customers must wear face coverings any time they are not eating or drinking</p>
+                  <p class="font-weight-bold d-block"><i class="far fa-check-square"></i> Any time servers, bussers, or other employees approach their table</p>
+                  <p class="font-weight-bold d-block"><i class="far fa-check-square"></i> Any time they leave the table, such as to use a restroom</p>
+                  <p class="font-weight-bold d-block"><i class="far fa-check-square"></i> While they are waiting to be seated</p>
+                  <p class="font-weight-bold d-block"><i class="far fa-check-square"></i> While reviewing the menu and ordering</p>
+                  <p class="font-weight-bold d-block"><i class="far fa-check-square"></i> While socializing at a table waiting for their food and drinks to be served or after courses or the meal is complete</p>
+                </div>
+                <p class="font-weight-bold mb-4 mt-4">
+                  A limited amount of reservations can be made for dining area only (25% of capacity), NO restervations for outdoor dining, NO tables are currently available in the bar area.
+                </p>
+                <center class="p-4">
+                  <a style="background-color: #d00; border: none; border-radius: 4px; color: #fff; text-decoration: none; text-transform: uppercase; padding: 10px 40px;" href="http://chowtime.com/app/user?id=crogans.94611.us" title="Go to Chowtime website" target="_blank">Reservations</a>
+                </center> -->
+                <p>--------------------------------------</p>
+                <!-- <h3 class="font-weight-bold mb-4 mt-4" style="text-shadow: 2px 2px #fff;">
+                  To each and every cherished customer of Crogan's
+                </h3>
+                <p class="font-weight-bold mb-4 mt-4" style="text-shadow: 2px 2px #fff;">
+                  It has been a difficult year for all of us, but we are grateful for all the support we have received. We wish you and your family a safe and enjoyable year.
+                </p> -->
+                <!-- <p class="font-weight-bold mb-4 mt-4" style="text-shadow: 2px 2px #fff;">
+                  To each and every cherished customer of Crogan's: As you all know, the outbreak of COVID-19 is impacting all businesses, including the hard-working staff of the food industry. Government and social responses are adapting at a rapid pace, and we believe it is more important than ever to monitor what is happening, to rally support however we can.
+                </p> -->
+                <!-- <h3 class="font-weight-bold" style="text-shadow: 2px 2px #fff;"> Precations we have taken:</h3>
+                <div class="row col-md-6 col-sm-12 text-left mx-auto" style="text-shadow: 2px 2px #fff;">
+                  <p class="font-weight-bold d-block"><i class="far fa-check-square"></i> Performed a detailed deep cleaning</p>
+                  <p class="font-weight-bold d-block"><i class="far fa-check-square"></i> Put disinfection protocols in place</p>
+                  <p class="font-weight-bold d-block"><i class="far fa-check-square"></i> All employee's wear masks at all times</p>
+                  <p class="font-weight-bold d-block"><i class="far fa-check-square"></i> Trained employees on how to limit the spread of COVID-19</p>
+                  <p class="font-weight-bold d-block"><i class="far fa-check-square"></i> Detailed risk assessment</p>
+                  <p class="font-weight-bold d-block"><i class="far fa-check-square"></i> Setup outdoor seating for dining</p>
+                  <p class="font-weight-bold d-block"><i class="far fa-check-square"></i> Established physical distancing guidelines</p>
+                </div> -->
+                <p class="font-weight-bold mb-4 mt-4"><i class="fas fa-user"></i> Owner: Mike Williams</p>
+                <!-- <h3 class="font-weight-bold mb-4 mt-4" style="text-shadow: 2px 2px #fff;">~ Happy Holidays! ~
+                </h3> -->
+              </div>
+            </div>
+          </div>
+          <!-- Reservation section -->
+          <div class="text-center">
+            <p>--------------------------------------</p>
+            <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us" title="Go to Chowtime website">
+                <h2 class="font-weight-bold mt-4">To make a reservation online go to Chowtime!</h2>
+              </a>
+              <h4 id="lrgParties" class="mx-auto">To make a reservation for more than 20 people or to reserve our private backroom, please call the restaurant directly at:</h4>
+              <h4 class="font-weight-bold mb-3 mx-auto">
+                <a href="tel:15103392098" title="Call Crogan's Montclair"><i class="fas fa-phone"></i>(510)339-2098</a>
+              </h4>
+              <div class="row mt-2">
+                <div class="col-sm-4 mx-auto">
+                  <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us" title="Go to Chowtime website">
+                    <img class="col-img cover-img chow-logo" alt="Chowtime Logo" src="img/chowTime.png">
+                  </a>
+                  <p class="mt-2">*Reservations are for dining room only!*</p>
+                  <p class="mb-3">Cocktail area is open seating</p>
+                </div>
+              </div>
+          </div>
+            <!-- END Reservation section -->
+        </main>
+        <!-- End of Descriptive COVID Cleaning, Percautions, etc -->
+  </div>
+      <footer id="footer" style="position: absolute;">
+        <ul class="footer">
+          <li>
+            <h5 id="daysTill">Days until Saint Paddy's Day!</h5>
+            <h5 class="pt-0 pb-0" id="countDown"></h5>
           </li>
-          <!-- Menu link that has a dropdown list -->
-          <li onclick="toTheTop()" class="nav-item">
-            <router-link to="/menu" class="nav-link font-white text-shadow-blk">Menu</router-link>
-          </li>
-          <!-- About us link -->
-          <li onclick="toTheTop()" class="nav-item">
-            <router-link to="/about" class="nav-link font-white text-shadow-blk">About Us</router-link>
-          </li>
-          <!-- Reservation link -->
-          <li onclick="toTheTop()" class="nav-item">
-            <router-link to="/reservations" class="nav-link font-white text-shadow-blk">Reservations</router-link>
-          </li>
-          <!-- Contact link -->
-          <li onclick="toTheTop()" class="nav-item">
-            <router-link to="/contact" class="nav-link font-white text-shadow-blk">Contact</router-link>
-          </li>
-          <li onclick="toTheTop()" class="nav-item">
-            <router-link to="/delivery" class="nav-link font-white text-shadow-blk">Delivery</router-link>
+          <li>
+            <h6 class="pb-0 pt-0"><a href="https://goo.gl/maps/e9wrRZYKHwL2" target="_blank">6101 LaSalle Avenue, Oakland, CA 94611</a><span class="village"> - Montclair Village - </span><span class="phone"><a href="tel:15103392098">(510)339-2098</a></span></h6>
+            <h6 class="pt-0 pb-0">Mon-Sat 11:30am til 9:00pm</h6>
+            <h6 class="pt-0">Sun 11:30am til 8:00pm</h6>
+            <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=MnK1bn087hx0Vg0ecB6OVfGDSfp5ev62IrMCrg2Gd8nunyYwPDTI96PyQfji"></script></span>
+            <!-- <h6 class="pt-0 pb-0">Mon-Thurs 4pm to 8pm</h6> -->
+            <!-- <h6 class="pt-0">Everyday 12pm to 8pm</h6> -->
           </li>
         </ul>
-    </nav>
-    <!-- main section with content swap using vue -->
-    <main id="main" class="content">
-        <transition mode="out-in" name="slide-fade">
-            <router-view>
-            </router-view>
-        </transition>
-    </main>
-</div>
-    <footer>
-      <ul class="footer">
-        <li>
-          <h5 id="daysTill">Days until Saint Patty's Day!</h5>
-          <h5 class="pt-0 pb-0" id="countDown"></h5>
-        </li>
-        <li>
-          <h6 class="pb-0 pt-0"><a href="https://goo.gl/maps/e9wrRZYKHwL2" target="_blank">6101 LaSalle Avenue, Oakland, CA 94611</a><span class="village"> - Montclair Village - </span><span class="phone"><a href="tel:15103392098">(510)339-2098</a></span></h6>
-          <h6 class="pt-0 pb-0">Mon-Sat 11:30am to 10:00pm</h6>
-          <h6 class="pt-0">Sun til 9:30pm</h6>
-        </li>
-      </ul>
-    </footer>
+      </footer>
 
 
-<!-- Jquery -->
-<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<!-- Popper Bootstrap Java Script -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<!-- Bootstrap Java Script -->
-<!-- <script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/bootstrap.min.js"></script> -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<!-- Load Babel -->
-<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-<!-- Vue JS -->
-<script src="js/vue.min.js"></script>
-<!-- Vue Router  -->
-<script src="js/vue-router.min.js"></script>
-<!-- es5 Polyfills Vue with Babel -->
-<script src="polyfills/polyfillPromise.js"></script>
-<script src="polyfills/polyfillAuto.js"></script>
-<!-- Count Down to saint Patty's day js -->
-<script src="js/countdown.js" type="text/javascript"></script>
-<!-- One page application with vue.js -->
-<script src="js/onePageVue.js" type="text/javascript"></script>
-<!-- Custom Java Script -->
-<script src="js/main.js" type="text/javascript"></script>
+  <!-- Jquery -->
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- Popper Bootstrap Java Script -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <!-- Bootstrap Java Script -->
+  <!-- <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.min.js"></script> -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- Load Babel -->
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <!-- es5 Polyfills Vue with Babel -->
+  <script src="polyfills/polyfillPromise.js"></script>
+  <script src="polyfills/polyfillAuto.js"></script>
+  <!-- Count Down to saint Patty's day js -->
+  <script src="js/countdown.js?v=1.1" type="text/javascript"></script>
+  <!-- Custom Java Script -->
+  <script src="js/main.js?v=2.0" type="text/javascript"></script>
 
-</body>
+  </body>
 </html>

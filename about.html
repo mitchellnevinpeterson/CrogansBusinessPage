@@ -31,7 +31,7 @@
      <!-- Menu zoom CSS -->
      <link rel="stylesheet" type="text/css" href="css/menuZoom.css">
     <!-- Custom Main CSS -->
-    <link rel="stylesheet" href="css/main.css?v=1.1"> 
+    <link rel="stylesheet" href="css/main.css?v=1.3">
   </head>
   <body id="body" onclick="footerPos(event)">
         <!-- Top Logo -->
@@ -41,7 +41,7 @@
     <!-- div for the one page application -->
   <div id="app">
       <!-- Navigation for SMALL Devices- Hides/Shows @media Queries -->
-    <nav id="navSmall">
+    <nav id="navSmall" class="animated">
       <div id="buttonDrop" class="btn-group">
         <button id="smallNavDrop" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <img id="topLogo" src="img/logo4.gif" class="smTopLogo" alt="Crogan's Logo">
@@ -49,32 +49,32 @@
             <span></span>
             <span></span>
             <span></span>
-          </div> 
+          </div>
         </button>
         <div id="dropMenu" class="dropdown-menu dropdown-menu-right">
           <ul class="jose-bold text-uppercase">
             <!-- Home link -->
             <li onclick="toTheTop()" class="nav-item">
-              <a href="index.html" class="nav-link dropdown-item font-white text-shadow-blk">Home</a>
+              <a href="index.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to home page">Home</a>
             </li>
             <!-- Menu link -->
             <li onclick="toTheTop()" class="nav-item">
-              <a href="menu.html" class="nav-link dropdown-item font-white text-shadow-blk">Menu</a>
+              <a href="menu.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to Menu page">Menu</a>
             </li>
             <!-- About us link -->
             <li onclick="toTheTop()" class="nav-item">
-              <a href="about.html" class="nav-link dropdown-item font-white text-shadow-blk">About Us</a>
+              <a href="about.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to about us page">About Us</a>
             </li>
             <!-- Reservation link -->
             <li onclick="toTheTop()" class="nav-item">
-              <a href="reservations.html" class="nav-link dropdown-item font-white text-shadow-blk">Reservations</a>
+              <a href="reservations.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to reservations page">Reservations</a>
             </li>
             <!-- Contact link -->
             <li onclick="toTheTop()" class="nav-item">
-              <a href="contact.html" class="nav-link dropdown-item font-white text-shadow-blk">Contact</a>
+              <a href="contact.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to contact page">Contact</a>
             </li>
             <li onclick="toTheTop()" class="nav-item">
-              <a href="delivery.html" class="nav-link dropdown-item font-white text-shadow-blk">Delivery</a>
+              <a href="delivery.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to delivery page">Delivery</a>
             </li>
           </ul>
         </div>
@@ -85,26 +85,26 @@
           <ul class="nav jose-bold text-uppercase">
             <!-- Home link -->
             <li onclick="toTheTop()" class="nav-item jose-bold text-uppercase">
-              <a href="index.html" class="nav-link font-white text-shadow-blk">Home</a>
+              <a href="index.html" class="nav-link font-white text-shadow-blk" title="Go to home page">Home</a>
             </li>
             <!-- Menu link -->
             <li onclick="toTheTop()" class="nav-item jose-bold text-uppercase">
-              <a href="menu.html" class="nav-link font-white text-shadow-blk">Menu</a>
+              <a href="menu.html" class="nav-link font-white text-shadow-blk" title="Go to menu page">Menu</a>
             </li>
             <!-- About us link -->
             <li onclick="toTheTop()" class="nav-item jose-bold text-uppercase">
-              <a href="about.html" class="nav-link font-white text-shadow-blk">About Us</a>
+              <a href="about.html" class="nav-link font-white text-shadow-blk" title="Go to about us page">About Us</a>
             </li>
             <!-- Reservation link -->
             <li onclick="toTheTop()" class="nav-item jose-bold text-uppercase">
-              <a href="reservations.html" class="nav-link font-white text-shadow-blk">Reservations</a>
+              <a href="reservations.html" class="nav-link font-white text-shadow-blk" title="Go to reservations page">Reservations</a>
             </li>
             <!-- Contact link -->
             <li onclick="toTheTop()" class="nav-item jose-bold text-uppercase">
-              <a href="contact.html" class="nav-link font-white text-shadow-blk">Contact</a>
+              <a href="contact.html" class="nav-link font-white text-shadow-blk" title="Go to contact page">Contact</a>
             </li>
             <li onclick="toTheTop()" class="nav-item jose-bold text-uppercase">
-              <a href="delivery.html" class="nav-link font-white text-shadow-blk">Delivery</a>
+              <a href="delivery.html" class="nav-link font-white text-shadow-blk" title="Go to delivery page">Delivery</a>
             </li>
           </ul>
       </nav>
@@ -119,24 +119,37 @@
         <div>
           <p class="p-tag-about">Good times in the heart of Montclair! When you're in the mood for good times and great food, be sure to visit our restaurant. We're located in one of the most pleasant Village settings and are known for our delightful staff and excellent dining.</p>
         </div>
+        <!-- Happy hour Section-------------------------------------------------------------- -->
+        <div class="happy-hour-discription">
+          <h1 id="heading" class="font-weight-bold font-white">Finished with all your tasks for the day?</h1>
+          <h2 class="font-weight-bold">Join us for Happy Hour!</h2>
+          <h4 class="font-weight-bold"><u>Monday through Friday 3:00pm to 5:00pm</u></h4>
+              <div class="happy-hour-discription">
+<!--                 <h4>$1 Off All Wines $ Full-Sized Beers</h4>
+                <h4>$2 Off All Liquors & Cocktails</h4> -->
+                <h4>$5 Well Drinks</h4>
+                <h4>$5 House Wines</h4>
+                <h4>$5 Draught Beers</h4>
+                <h4>$3 Off All Appetizers</h4>
+        </div>
         <!-- Top Pictures in About Section -->
         <div id="picsAbout" class="row text-center mb-5">
           <!-- Picture of Joe at the bar of Crogan's -->
           <div class="col-md-4 col-8 mt-3 mx-auto">
             <div class="img-div">
-                <img class="col-img cover-img" src="img/joeBar.jpg" alt="Joe the bartender at Crogan's Montclair">
+                <img class="col-img cover-img" src="img/joeBar.jpg" alt="A picture of Joe the bartender at Crogan's Montclair">
             </div>
           </div>
           <!-- Window front at Crogans -->
           <div class="col-md-5 col-10 mt-3 mx-auto">
             <div class="img-div">
-                <img class="col-img cover-img" src="img/croganWindows.jpg" alt="Outside front view of Crogan's Montclair">
+                <img class="col-img cover-img" src="img/croganWindows.jpg" alt="A picture of the outside front view of Crogan's Montclair">
             </div>
           </div>
           <!-- Jameson bottle at Crogan's -->
           <div class="col-md-3 col-7 mt-3 mx-auto">
             <div class="img-div">
-                <img class="col-img cover-img" src="img/jamoBottle.jpg" alt="A bottle of Jameson at Crogan's">
+                <img class="col-img cover-img" src="img/jamoBottle.jpg" alt="A Picture of a bottle of Jameson at Crogan's">
             </div>
           </div>
         </div>
@@ -190,95 +203,86 @@
           </div>
         </div> -->
         <!-- Heading for the poem that inspired the name of Crogan's -->
-        <div>
+        <div class="mx-auto">
           <h1 id="heading" class="font-weight-bold font-white">The poem that inspired the name of Crogan's</h1>
         </div>
         <!-- The picture of the poem of the Crogan name -->
         <div class="row">
           <div class="col-12 mx-auto">
-            <img class="col-img cover-img" alt="Poem of Party at Crogans" src="img/poem.jpg">
+            <img class="col-img cover-img" alt=" Picture of the poem called: Party at Crogans" src="img/poem.jpg">
           </div>
         </div>
         <!-- Grid of Links -->
         <h1 id="heading" class="font-weight-bold font-white mt-5">Order delivery through our delivery platforms!</h1>
         <div id="links" class="row mx-auto">
           <!-- Uber Eats Delivery -->
-          <div class="col-md-4">
-            <div class="logo-div logo-div-height">
+          <div class="col-md-6">
+            <div class="logo-div logo-div-height" title="Go to Uber Eats website">
               <a target="_blank" href="https://www.ubereats.com/san-francisco/food-delivery/crogans/TR7gAqtSS7Kcta58Q2O03w/">
-                <img class="col-img logo-img" src="img/uberEats.png" alt="Link to Uber Eats delivery Crogan's">
+                <img class="col-img logo-img" src="img/uberEats.png" alt="Logo link to Uber Eats delivery Crogan's">
               <h5 class="mt-3">Order delivery on Uber Eats!</h5>
               </a>
             </div>
           </div>
-          <!-- Amazon Delivery -->
-          <div class="col-md-4">
-            <div class="logo-div logo-div-height">
-              <a target="_blank" href="https://www.amazon.com/restaurants/crogan%27s-montclair-oakland/d/B01M03ROZM">
-                <img class="col-img logo-img" src="img/amazon.jpg" alt="Link to Amazon delivery Crogan's">
-              <h5 class="mt-3">Order delivery on Amazon!</h5>
-              </a>
-            </div>
-          </div>
           <!-- Doordash Delivery -->
-          <div class="col-md-4">
-            <div class="logo-div logo-div-height">
-              <a target="_blank" href="https://www.doordash.com/store/crogans-montclair-restaurant-oakland-46272/?utm_campaign=46272&utm_medium=website&utm_source=partner-link">
-                <img class="col-img logo-img" src="img/doordash.png" alt="Link to Doordash delivery Crogan's">
+          <div class="col-md-6">
+            <div class="logo-div logo-div-height" title="Go to Doordash Website">
+              <a target="_blank" href="https://order.online/business/crogans-montclair-restaurant-30607">
+                <img class="col-img logo-img" src="img/doordash.png" alt="Logo link to Doordash delivery Crogan's">
               <h5 class="mt-3">Order delivery on Doordash!</h5>
               </a>
             </div>
           </div>
           <!-- GrubHub Delivery -->
           <div class="col-md-4 ml-auto border-top-1">
-            <div class="logo-div logo-div-height">
+            <div class="logo-div logo-div-height" title="Go to GrubHub website">
               <a target="_blank" href="https://www.grubhub.com/restaurant/crogans-montclair-restaurant-6101-la-salle-ave-oakland/852951">
-                <img class="col-img logo-img" src="img/grubhub.png" alt="Link to GrubHub delivery Crogan's">
+                <img class="col-img logo-img" src="img/grubhub.png" alt="Logo link to GrubHub delivery Crogan's">
               <h5>Order delivery on GrubHub!</h5>
               </a>
             </div>
           </div>
           <!-- Postmates Delivery -->
           <div class="col-md-4 mr-auto border-top-1">
-            <div class="logo-div logo-div-height">
+            <div class="logo-div logo-div-height" title="Go to Postmates website">
               <a target="_blank" href="https://postmates.com/merchant/crogans-montclair-oakland">
-                <img class="col-img logo-img" src="img/postmates.png" alt="Link to Postmates delivery Crogan's">
+                <img class="col-img logo-img" src="img/postmates.png" alt="Logo link to Postmates delivery Crogan's">
               <h5>Order delivery on Postmates!</h5>
               </a>
             </div>
           </div>
           <!-- Menustar Delivery -->
                 <div class="col-md-4 mr-auto border-top-1">
-                  <div class="logo-div logo-div-height">
+                  <div class="logo-div logo-div-height" title="Go to Menustar website">
                     <a target="_blank" href="https://themenustar3.com/webspace/menus.php?code=crogans.mobile-webview3.com">
-                      <img class="col-img logo-img" src="img/logoMenuStar.png" alt="Link to Menustar delivery Crogan's">
+                      <img class="col-img logo-img" src="img/logoMenuStar.png" alt="Logo link to Menustar delivery Crogan's">
                     <h5>Order delivery through Menustar!</h5>
                     </a>
                   </div>
                 </div>
           <!-- Check Please link -->
           <div class="col-md-4 border-top-1">
-            <div class="logo-div logo-div-height">
+            <div class="logo-div logo-div-height" title="Go to Check Please website">
               <a target="_blank" href="https://www.kqed.org/checkplease/1345/crogans-montclair-reviews">
-                <img class="col-img logo-img" src="img/checkPlease.png" alt="Link to Check Please Crogan's">
+                <img class="col-img logo-img" src="img/checkPlease.png" alt="Logo link to Check Please Crogan's">
               <h5>Check us out on Check Please!</h5>
               </a>
             </div>
           </div>
           <!-- Oakland Magazine link -->
           <div class="col-md-4 ml-auto border-top-1">
-            <div class="logo-div logo-div-height">
+            <div class="logo-div logo-div-height" title="Go to Oakland Magazine website">
               <a target="_blank" href="http://www.oaklandmagazine.com/Oakland-Magazine/July-August-2010/Best-of-Oakland/">
-                <img class="col-img logo-img" src="img/oaklandMag.gif" alt="Link to Oakland Magazine">
+                <img class="col-img logo-img" src="img/oaklandMag.gif" alt="Logo link to Oakland Magazine">
               <h5>Voted Best Buffalo Wings!</h5>
               </a>
             </div>
           </div>
           <!-- Facebook Link -->
           <div class="col-md-4 mr-auto border-top-1">
-            <div class="logo-div logo-div-height">
+            <div class="logo-div logo-div-height" title="Go to Crogan's Facebook Page">
               <a target="_blank" href="https://www.facebook.com/crogansmontclair">
-                <img class="col-img logo-img" src="img/facebook.png" alt="Link to Facebook Crogan's">
+                <img class="col-img logo-img" src="img/facebook.png" alt="Logo link to Facebook Crogan's">
               <h5>Follow us on Facebook!</h5>
               </a>
             </div>
@@ -286,15 +290,21 @@
         </div>
         <!-- Heading for make a reservation -->
         <div>
-          <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us"><h1 id="heading" class="font-weight-bold font-white">Make a reservation!</h1></a>
+          <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us" title="Go to Chowtime website">
+            <h1 id="heading" class="font-weight-bold font-white">Make a reservation!</h1>
+          </a>
           <!-- Description of Delivery/Reservations -->
           <div class="text-center">
-            <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us"><h2 class="font-weight-bold mt-4">To make a reservation online go to Chowtime!</h2></a>
+            <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us" title="Go to Chowtime website">
+              <h2 class="font-weight-bold mt-4">To make a reservation online go to Chowtime!</h2>
+            </a>
             <h4 id="lrgParties" class="mx-auto">To make a reservation for more than 20 people or to reserve our private backroom, please call the restaurant directly at:</h4>
-            <h4 class="font-weight-bold mb-3"><a href="tel:15103392098"><i class="fas fa-phone"></i>(510)339-2098</a></h4>
+            <h4 class="font-weight-bold mb-3">
+              <a href="tel:15103392098" title="Call Crogan's Montclair"><i class="fas fa-phone"></i>(510)339-2098</a>
+            </h4>
             <div class="row mt-2">
               <div class="col-4-sm mx-auto">
-                <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us">
+                <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us" title="Go to Chowtime website">
                   <img class="col-img cover-img chow-logo" alt="Chowtime Logo" src="img/chowTime.png">
                 </a>
                 <p class="mt-2">*Reservations are for dining room only!*</p>
@@ -304,19 +314,20 @@
           </div>
         </div>
       </div>
-          
+
       </main>
   </div>
-      <footer style="position: absolute;">
+      <footer id="footer" style="position: absolute;">
         <ul class="footer">
           <li>
-            <h5 id="daysTill">Days until Saint Patty's Day!</h5>
+            <h5 id="daysTill">Days until Saint Paddy's Day!</h5>
             <h5 class="pt-0 pb-0" id="countDown"></h5>
           </li>
           <li>
             <h6 class="pb-0 pt-0"><a href="https://goo.gl/maps/e9wrRZYKHwL2" target="_blank">6101 LaSalle Avenue, Oakland, CA 94611</a><span class="village"> - Montclair Village - </span><span class="phone"><a href="tel:15103392098">(510)339-2098</a></span></h6>
-            <h6 class="pt-0 pb-0">Mon-Sat 11:30am to 10:00pm</h6>
-            <h6 class="pt-0">Sun til 9:30pm</h6>
+            <h6 class="pt-0 pb-0">Mon-Sat 11:30am til 9:00pm</h6>
+            <h6 class="pt-0">Sun 11:30am til 8:00pm</h6>
+            <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=MnK1bn087hx0Vg0ecB6OVfGDSfp5ev62IrMCrg2Gd8nunyYwPDTI96PyQfji"></script></span>
           </li>
         </ul>
       </footer>
@@ -338,9 +349,9 @@
   <script src="polyfills/polyfillPromise.js"></script>
   <script src="polyfills/polyfillAuto.js"></script>
   <!-- Count Down to saint Patty's day js -->
-  <script src="js/countdown.js?v=1.0" type="text/javascript"></script>
+  <script src="js/countdown.js?v=1.1" type="text/javascript"></script>
   <!-- Custom Java Script -->
-  <script src="js/main.js?v=1.4" type="text/javascript"></script>
+  <script src="js/main.js?v=2.0" type="text/javascript"></script>
 
   </body>
 </html>

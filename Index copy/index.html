@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="uft-8" />
+    <!-- Responsive Veiwport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Description for google search  -->
+    <meta name="description" content="Good times in the heart of Montclair! When you're in the mood for good times and great food, be sure to visit our restaurant. We're located in one of the most pleasant Village settings and are known for our delightful staff and excellent dining.">
+    <!-- Cache Control -->
+    <meta http-equiv="Cache-control" content="must-revalidate">
+    <!-- Favicon -->
+    <link rel="icon" href="img/logo5.gif">
+    <!-- Title -->
+    <title>Crogan's</title>
+    <!-- Boot Strap CSS-->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> -->
+    <!-- Animate Stylesheet -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,400,400i,700" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- Slidewhow CSS -->
+     <link rel="stylesheet" type="text/css" href="css/slideshow.css" />
+     <!-- Menu zoom CSS -->
+     <link rel="stylesheet" type="text/css" href="css/menuZoom.css?v=1.0">
+    <!-- Custom Main CSS -->
+    <link rel="stylesheet" href="css/main.css?v=1.3"> 
+  </head>
+  <body class="no-scroll" id="body" onclick="footerPos(event)">
+          <!-- Navigation for SMALL Devices- Hides/Shows @media Queries -->
+    <nav id="navSmall">
+      <div id="buttonDrop" class="btn-group">
+        <button id="smallNavDrop" type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img id="topLogo" src="img/logo4.gif" class="smTopLogo" alt="Crogan's Logo">
+          <div id="nav-icon1">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div> 
+        </button>
+        <div id="dropMenu" class="dropdown-menu dropdown-menu-right">
+          <ul class="jose-bold text-uppercase">
+            <!-- Home link -->
+            <!-- <li onclick="toTheTop()" class="nav-item">
+              <a href="home.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to home Page">Home</a>
+            </li> -->
+            <!-- Menu link -->
+            <li class="nav-item">
+              <a href="menu.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to menu page">Menu</a>
+            </li>
+            <!-- About us link -->
+            <!-- <li class="nav-item">
+              <a href="about.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to about us page">About Us</a>
+            </li> -->
+            <!-- Reservation link -->
+            <!-- <li class="nav-item">
+              <a href="reservations.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to reservation page">Reservations</a>
+            </li> -->
+            <!-- Contact link -->
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to contact page">Contact</a>
+            </li>
+            <!-- Delivery link -->
+            <li class="nav-item">
+              <a href="delivery.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to delivery page">Delivery</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+        <!-- Top Logo -->
+  <header id="topHeader" class="top-logo-wrap text-center fluid-img">
+          <img id="topLogo" src="img/logo4.gif" alt="Crogan's Logo" title="Crogan's Logo">
+  </header>
+    <!-- div for the one page application -->
+  <div id="app">
+
+      <!-- Navagation For LARGE Devices- Hides/Shows @media Queries-->
+      <nav id="navLrg" class="navbar navbar-expand-sm mx-auto">
+          <ul class="nav jose-bold text-uppercase">
+            <!-- Home link -->
+            <!-- <li onclick="toTheTop()" class="nav-item jose-bold text-uppercase">
+              <a href="home.html" class="nav-link font-white text-shadow-blk" title="Go to home page">Home</a>
+            </li> -->
+            <!-- Menu link -->
+            <li  class="nav-item jose-bold text-uppercase">
+              <a href="menu.html" class="nav-link font-white text-shadow-blk" title="Go to menu page">Menu</a>
+            </li>
+            <!-- About us link -->
+            <!-- <li class="nav-item jose-bold text-uppercase">
+              <a href="about.html" class="nav-link font-white text-shadow-blk" title="Go to about us page">About Us</a>
+            </li> -->
+            <!-- Reservation link -->
+            <!-- <li class="nav-item jose-bold text-uppercase">
+              <a href="reservations.html" class="nav-link font-white text-shadow-blk" title="Go to reservations page">Reservations</a>
+            </li> -->
+            <!-- Contact link -->
+            <li class="nav-item jose-bold text-uppercase">
+              <a href="contact.html" class="nav-link font-white text-shadow-blk" title="Go to contact page">Contact</a>
+            </li>
+            <!-- Delivery link -->
+            <li class="nav-item jose-bold text-uppercase">
+              <a href="delivery.html" class="nav-link font-white text-shadow-blk" title="Go to delivery page">Delivery</a>
+            </li>
+          </ul>
+      </nav>
+      <!-- main section with content swap using vue -->
+      <main id="main" class="content">
+        <area alt="A picture slide show of Crogan's">
+          <ul class="cb-slideshow" title="A picture slide show of Crogan's">
+            <li><span class="slideshow-img">Image 01</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Irish American Dining</h1></div></li>
+            <li><span class="slideshow-img">Image 02</span><div><h1 class="text-uppercase light-grey-bckgrd jose-bold">Home away from home</h1></div></li>
+            <li><span class="slideshow-img">Image 03</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Traditional Drinks</h1></div></li>
+            <li><span class="slideshow-img">Image 04</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Full Bar, Beer, and Wine</h1></div></li>
+            <li><span class="slideshow-img">Image 05</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Great service, Feel at Home Ambience</h1></div></li>
+            <li><span class="slideshow-img">Image 06</span><div><h1 class="text-uppercase text-shadow-blk jose-bold">Food is fresh and made to order</h1></div></li>
+        </ul>
+        </area>
+          
+      </main>
+  </div>
+      <footer id="footer">
+        <ul class="footer">
+          <li>
+            <h5 id="daysTill">Days until Saint Patty's Day!</h5>
+            <h5 class="pt-0 pb-0" id="countDown"></h5>
+          </li>
+          <li>
+            <h6 class="pb-0 pt-0"><a href="https://goo.gl/maps/e9wrRZYKHwL2" target="_blank">6101 LaSalle Avenue, Oakland, CA 94611</a><span class="village"> - Montclair Village - </span><span class="phone"><a href="tel:15103392098">(510)339-2098</a></span></h6>
+            <h6 class="pt-0 pb-0">Mon-Sat 11:30am to 10:00pm</h6>
+            <h6 class="pt-0">Sun til 9:30pm</h6>
+          </li>
+        </ul>
+      </footer>
+
+
+  <!-- Jquery -->
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- Popper Bootstrap Java Script -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <!-- Bootstrap Java Script -->
+  <!-- <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.min.js"></script> -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- Load Babel -->
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <!-- es5 Polyfills Vue with Babel -->
+  <script src="polyfills/polyfillPromise.js"></script>
+  <script src="polyfills/polyfillAuto.js"></script>
+  <!-- Count Down to saint Patty's day js -->
+  <script src="js/countdown.js?v=1.0" type="text/javascript"></script>
+  <!-- Custom Java Script -->
+  <script src="js/main.js?v=1.9" type="text/javascript"></script>
+
+  </body>
+</html>

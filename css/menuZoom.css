@@ -1,6 +1,6 @@
 /* Style the Image Used to Trigger the Modal */
 #menuImage {
-    cursor: pointer;
+    /*cursor: pointer;*/
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;

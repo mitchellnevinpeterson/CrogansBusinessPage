@@ -23,7 +23,7 @@
 	font-weight: 700;
 }
 /*------------------------------------------------------------------------------
-==============================All Sections===========================================
+==============================All Sections======================================
 -------------------------------------------------------------------------------*/
 html {
 	height: 100%;
@@ -56,25 +56,25 @@ footer {
 h1 {
 	margin-top: 15px;
 	padding: 10px;
-	font-size: 2.81rem; 
+	font-size: 2.81rem;
 	text-align: center;
 }
 
 h2 {
-	margin-top: 15px; 
+	margin-top: 15px;
 	text-align: center;
 }
 
 h5 {
 	padding: 10px 0 0 0;
-	font-size: 1.4rem; 
-	font-weight: bold; 
+	font-size: 1.4rem;
+	font-weight: bold;
 	text-align: center;
 }
 
 h6 {
 	padding: 8px 0;
-	font-size: .9rem; 
+	font-size: .9rem;
 	text-align: center;
 }
 
@@ -153,8 +153,17 @@ img.border-1 {
 	border: 1px solid #000;
 }
 
+.no-scroll {
+	overflow: hidden;
+}
+
+.button-wrap {
+	border: none;
+	background-color: transparent;
+}
+
 /*------------------------------------------------------------------------------
-==============================Top Logo===========================================
+==============================Top Logo==========================================
 -------------------------------------------------------------------------------*/
 .top-logo-wrap {
 	background-color: #fff;
@@ -193,6 +202,9 @@ img.border-1 {
 	width: 100%;
 	margin: 0 auto;
 	background-color: #153b26;
+}
+#dropMenu {
+	z-index: 9999;
 }
 
 .btn-group {
@@ -306,7 +318,7 @@ img.border-1 {
 -------------------------------------------------------------------------------*/
 .nav-link {
 	font-size: 1.125rem;
-	
+
 }
 
 .nav-link:hover {
@@ -343,7 +355,6 @@ img.border-1 {
 
 a:hover,
 nav router-link:hover {
-	font-size: 1.25rem;
 	text-shadow: 2px 2px 2px #fff;
 	text-decoration: none;
 }
@@ -360,7 +371,34 @@ nav router-link:hover {
 }
 
 /*------------------------------------------------------------------------------
-==============================Menu Section====================================
+==============================COVID-19 Section==================================
+-------------------------------------------------------------------------------*/
+#covid19:before {
+	content: ' ';
+	display: block;
+	position: absolute;
+	opacity: .15; 			/*.15*/
+	object-fit: cover;
+	background-repeat: repeat;
+	background-position: center;
+	width: 100%;
+	height: 95%;
+	z-index: -1;
+	top: 0;
+	bottom: 106;
+	margin-top: 43px;
+	background-image: url(..//img/crogansFrontCovid.jpg); /*guinness_happy.png*/
+	/*crogansFrontCovid*/
+}z-index: -1;
+}
+#covid19Text:before {
+	position: relative;
+	color: #000 !important;
+	z-index: 9999;
+}
+
+/*------------------------------------------------------------------------------
+==============================Menu Section======================================
 -------------------------------------------------------------------------------*/
 #menuImage {
 	width: 80%;
@@ -379,7 +417,7 @@ nav router-link:hover {
 	text-align: center;
 	background-color: rgba(21, 59, 38, .8);
 	border-radius: 7px;
-	z-index: 9999;
+	z-index: 8999;
 }
 
 #foodMenu li {
@@ -401,6 +439,27 @@ nav router-link:hover {
 #foodMenuZoom {
 	width: 70%;
 }
+
+.sticky-food-nav {
+	text-align: center;
+  	position: fixed;
+  	top: 43px;
+  	left: 0;
+  	width: 100%;
+  	z-index: 8999;
+	padding: 0;
+	background-color: rgb(21, 59, 38, .85);
+	border-radius: 7px;
+}
+
+.menu-header {
+	border-bottom: 2px solid #009900;
+}
+
+.header-letter-spacing {
+	letter-spacing: .75rem !important;
+}
+
 /*------------------------------------------------------------------------------
 ==============================About Section====================================
 -------------------------------------------------------------------------------*/
@@ -524,7 +583,7 @@ iframe {
 /*------------------------------------------------------------------------------
 ==============================Animation===========================================
 -------------------------------------------------------------------------------*/
-.slide-fade-enter, 
+.slide-fade-enter,
 .slide-fade-leave {
 	-webkit-transform: translateX(50px);
 	    -ms-transform: translateX(50px);
@@ -536,7 +595,7 @@ iframe {
 -webkit-transition: 0.75s ease;
 -o-transition: 0.75s ease;
 transition: 0.75s ease;
-} 
+}
 
 .slide-fade-leave-active {
 	-webkit-transition: 0.3s ease;
@@ -552,7 +611,7 @@ transition: 0.75s ease;
 	width: 90%;
 	height: 80%;
 	margin: 109px 5% 0 5%;
-	
+
 	}
 	.navbar {
 		width: 80%;
@@ -591,7 +650,7 @@ transition: 0.75s ease;
 	.cb-slideshow h1 {
 	margin-bottom: 40px;
 	}
-	
+
 }
 
 @media (max-width: 991px) {
@@ -628,8 +687,8 @@ transition: 0.75s ease;
 	}
 	.logo-img {
 		max-width: 150px;
-	} 
-	
+	}
+
 }
 /*@media (min-width: 804px) {
 	footer {
@@ -661,10 +720,10 @@ transition: 0.75s ease;
 		position: relative;
 		padding-bottom: 0;
 	}
-	
+
 	.menu-nav {
 		display: block;
-		margin-top: 15px;
+		margin-top: 20px;
 	}
 	.p-tag-about,
 	.p-tag-reservations {
@@ -693,7 +752,7 @@ transition: 0.75s ease;
 	margin-right: 38%;
 	}*/
 	#foodMenu li {
-	display: block;
+	/*display: block;*/
 	}
 
 	#foodMenuZoom li {
@@ -801,6 +860,7 @@ transition: 0.75s ease;
 	.cb-slideshow h1 {
 	margin-bottom: 20px;
 	}
+	p.w-75 {
+		width: 100%!important;
+	}
 }
-
-

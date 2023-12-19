@@ -31,45 +31,44 @@
      <!-- Menu zoom CSS -->
      <link rel="stylesheet" type="text/css" href="css/menuZoom.css?v=1.0">
     <!-- Custom Main CSS -->
-    <link rel="stylesheet" href="css/main.css?v=1.1"> 
+    <link rel="stylesheet" href="css/main.css?v=1.5">
   </head>
   <body id="body" onclick="footerPos(event)">
           <!-- Navigation for SMALL Devices- Hides/Shows @media Queries -->
-    <nav id="navSmall">
+    <nav id="navSmall" class="animated">
       <div id="buttonDrop" class="btn-group">
-        <button id="smallNavDrop" type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button id="smallNavDrop" type="button" class="btn dropdown-toggle animated" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <img id="topLogo" src="img/logo4.gif" class="smTopLogo" alt="Crogan's Logo">
           <div id="nav-icon1">
             <span></span>
             <span></span>
             <span></span>
-          </div> 
+          </div>
         </button>
         <div id="dropMenu" class="dropdown-menu dropdown-menu-right">
           <ul class="jose-bold text-uppercase">
             <!-- Home link -->
-            <li class="nav-item">
-              <a href="index.html" class="nav-link dropdown-item font-white text-shadow-blk">Home</a>
+            <li onclick="toTheTop()" class="nav-item">
+              <a href="index.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to home page">Home</a>
             </li>
             <!-- Menu link -->
-            <li class="nav-item">
-              <a href="menu.html" class="nav-link dropdown-item font-white text-shadow-blk">Menu</a>
+            <li onclick="toTheTop()" class="nav-item">
+              <a href="menu.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to Menu page">Menu</a>
             </li>
             <!-- About us link -->
-            <li class="nav-item">
-              <a href="about.html" class="nav-link dropdown-item font-white text-shadow-blk">About Us</a>
-            </li>
+            <!-- <li onclick="toTheTop()" class="nav-item">
+              <a href="about.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to about us page">About Us</a>
+            </li> -->
             <!-- Reservation link -->
-            <li class="nav-item">
-              <a href="reservations.html" class="nav-link dropdown-item font-white text-shadow-blk">Reservations</a>
+            <li onclick="toTheTop()" class="nav-item">
+              <a href="reservations.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to reservations page">Reservations</a>
             </li>
-            <!-- Find us link -->
-            <li class="nav-item">
-              <a href="contact.html" class="nav-link dropdown-item font-white text-shadow-blk">Contact</a>
+            <!-- Contact link -->
+            <li onclick="toTheTop()" class="nav-item">
+              <a href="contact.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to contact page">Contact</a>
             </li>
-            <!-- Delivery link -->
-            <li class="nav-item">
-              <a href="delivery.html" class="nav-link dropdown-item font-white text-shadow-blk">Delivery</a>
+            <li onclick="toTheTop()" class="nav-item">
+              <a href="delivery.html" class="nav-link dropdown-item font-white text-shadow-blk" title="Go to delivery page">Delivery</a>
             </li>
           </ul>
         </div>
@@ -86,52 +85,1463 @@
       <nav id="navLrg" class="navbar navbar-expand-sm mx-auto">
           <ul class="nav jose-bold text-uppercase">
             <!-- Home link -->
-            <li class="nav-item jose-bold text-uppercase">
-              <a href="index.html" class="nav-link font-white text-shadow-blk">Home</a>
+            <li onclick="toTheTop()" class="nav-item jose-bold text-uppercase">
+              <a href="index.html" class="nav-link font-white text-shadow-blk" title="Go to home page">Home</a>
             </li>
             <!-- Menu link -->
-            <li class="nav-item jose-bold text-uppercase">
-              <a href="menu.html" class="nav-link font-white text-shadow-blk">Menu</a>
+            <li onclick="toTheTop()" class="nav-item jose-bold text-uppercase">
+              <a href="menu.html" class="nav-link font-white text-shadow-blk" title="Go to menu page">Menu</a>
             </li>
             <!-- About us link -->
-            <li class="nav-item jose-bold text-uppercase">
-              <a href="about.html" class="nav-link font-white text-shadow-blk">About Us</a>
-            </li>
+            <!-- <li onclick="toTheTop()" class="nav-item jose-bold text-uppercase">
+              <a href="about.html" class="nav-link font-white text-shadow-blk" title="Go to about us page">About Us</a>
+            </li> -->
             <!-- Reservation link -->
-            <li class="nav-item jose-bold text-uppercase">
-              <a href="reservations.html" class="nav-link font-white text-shadow-blk">Reservations</a>
+            <li onclick="toTheTop()" class="nav-item jose-bold text-uppercase">
+              <a href="reservations.html" class="nav-link font-white text-shadow-blk" title="Go to reservations page">Reservations</a>
             </li>
-            <!-- Find us link -->
-            <li class="nav-item jose-bold text-uppercase">
-              <a href="contact.html" class="nav-link font-white text-shadow-blk">Contact</a>
+            <!-- Contact link -->
+            <li onclick="toTheTop()" class="nav-item jose-bold text-uppercase">
+              <a href="contact.html" class="nav-link font-white text-shadow-blk" title="Go to contact page">Contact</a>
             </li>
-            <!-- Delivery link -->
-            <li class="nav-item jose-bold text-uppercase">
-              <a href="delivery.html" class="nav-link font-white text-shadow-blk">Delivery</a>
+            <li onclick="toTheTop()" class="nav-item jose-bold text-uppercase">
+              <a href="delivery.html" class="nav-link font-white text-shadow-blk" title="Go to delivery page">Delivery</a>
             </li>
+          </ul>
           </ul>
       </nav>
       <!-- main section with content swap using vue -->
       <main id="main" class="content">
         <div class="menuDivWrap text-center container">
-        <ul onclick="menuSwap(event)" id="foodMenu" class="animated menu-nav">
-          <li><a class="menu font-white text-shadow-blk" value="startersMenu">Starters/Soups</a></li>
-          <li><a class="menu font-white text-shadow-blk" value="entreeMenu">Entr&#233es</a></li>
-          <li><a class="menu font-white text-shadow-blk" value="sandwichMenu">Sandwiches/Pasta/Salad</a></li>
-          <li><a class="menu font-white text-shadow-blk" value="dessertMenu">Dessert</a></li>
-          <li><a class="menu font-white text-shadow-blk" value="brunchMenu">Weekend Brunch</a></li>
-          <li><a class="menu font-white text-shadow-blk" value="kidsMenu">Kids Menu</a></li>
-          <li><a class="menu font-white text-shadow-blk" value="happyHourMenu">Happy Hour!</a></li>
+        <ul id="foodMenu" class="animated menu-nav">
+          <li onclick="fadeOut()">
+            <!-- <button class="button-wrap" value="Starters" title="Appetizers, Soups and Starter Salads Menu"> -->
+              <a class="menu font-white text-shadow-blk" href="#appetizers" title="Appetizer Menu" value="startersMenu">Starters</a>
+            <!-- </button> -->
+          </li>
+          <li onclick="fadeOut()">
+            <!-- <button class="button-wrap" value="Entr&#233es" title="Entrees Menu (Chicken, Beef, Pork and Seafood"> -->
+              <a class="menu font-white text-shadow-blk" href="#entrees" title="Entree Menu" value="entreeMenu">Entr&#233es</a>
+            <!-- </button> -->
+          </li>
+          <li onclick="fadeOut()">
+            <!-- <button class="button-wrap" value="Sandwiches/Pasta/Salad" title="Sandwiches, Pasta and Salad Menus"> -->
+              <a class="menu font-white text-shadow-blk" href="#sandwiches" title="Sandwich/Burger Menu" value="sandwichMenu">Sandwiches</a>
+            <!-- </button> -->
+          </li>
+          <li onclick="fadeOut()">
+            <!-- <button class="button-wrap" value="Sandwiches/Pasta/Salad" title="Sandwiches, Pasta and Salad Menus"> -->
+              <a class="menu font-white text-shadow-blk" href="#pastas" title="Pasta Menu" value="sandwichMenu">Pasta</a>
+            <!-- </button> -->
+          </li>
+          <li onclick="fadeOut()">
+            <!-- <button class="button-wrap" value="Sandwiches/Pasta/Salad" title="Sandwiches, Pasta and Salad Menus"> -->
+              <a class="menu font-white text-shadow-blk" href="#salads" title="Salad Menu" value="sandwichMenu">Salads</a>
+            <!-- </button> -->
+          </li>
+          <li onclick="fadeOut()">
+            <!-- <button class="button-wrap" value="Kids Menu" title="Kid's Menu"> -->
+              <a class="menu font-white text-shadow-blk" href="#dessertMenu" title="Kids' Menu" value="dessertMenu">Dessert Menu</a>
+            <!-- </button> -->
+          </li>
+          <li onclick="fadeOut()">
+            <!-- <button class="button-wrap" value="Kids Menu" title="Kid's Menu"> -->
+              <a class="menu font-white text-shadow-blk" href="#kidsMenu" title="Kids' Menu" value="kidsMenu">Kids' Menu</a>
+            <!-- </button> -->
+          </li>
+          <li onclick="fadeOut()">
+            <!-- <button class="button-wrap" value="Weekend Brunch" title="Weekend Brunch Menu"> -->
+              <a class="menu font-white text-shadow-blk" href="#weekendBrunch" title="Weekend Brunch" value="brunchMenu">Weekend Brunch</a>
+            <!-- </button> -->
+          </li>
+          <!-- <li>
+            <button class="button-wrap" value="Dessert" title="Dessert Menu">
+              <a class="menu font-white text-shadow-blk" value="dessertMenu">Dessert</a>
+            </button>
+          </li> -->
+
+          <!-- <li>
+            <button class="button-wrap" value="Happy Hour!" title="Happy Hour Menu">
+              <a class="menu font-white text-shadow-blk" value="happyHourMenu">Happy Hour!</a>
+            </button>
+          </li> -->
         </ul>
-        <p class="mt-2 p-tag"><em><strong>-Some items on the menu have recently been changed-</strong></em></p>
-        <p class="mt-2 p-tag">*Click on menu image to zoom in*</p>
-        <img id="menuImage" onclick="zoom()" class="menus" src="img/startersMenu.jpg?lastmod=12345678" alt="Crogan's Menu">
+        <!-- Some item have changed paragraph disclaimer -->
+        <!-- <p class="mt-5 p-tag"><em><strong>-Some items on the menu have recently been changed-</strong></em></p> -->
+
+        <!-- Menu section hard coded HTML Written -->
+        <section class="container">
+<!-- ------------------------------------------------------------------------------  -->
+<!-- Menu Header Notice---------------------------------------------------- -->
+          <div class="mt-5 pt-3"> <!-- Begining of menu header -->
+            <p class="d-inline-block w-75"><strong>* Please call the restaurant for any questions you may have. *</strong>
+            </p>
+            <p class="d-inline-block w-75">
+              <strong>
+                <a href="tel:15103392098"><i class="fas fa-phone"></i>(510)339-2098</a>
+              </strong>
+            </p>
+<!-- Chownow link ----------------------------------------------------------------------------------------------------->
+            <center class="pt-4">
+              <a class="chownow-order-online" style="background-color: #d00; border: none; border-radius: 4px; color: #fff; text-decoration: none; text-transform: uppercase; padding: 10px 40px;" href="https://ordering.chownow.com/order/23135/locations" target="_blank">Order Online</a>
+            </center>
+            <center class="pt-5">
+                  <a class="chownow-order-online" style="background-color: #153b26; border: none; border-radius: 4px; color: #fff; text-decoration: none; text-transform: uppercase; padding: 10px 40px;" href="https://ordering.chownow.com/order/23135/locations" target="_blank">Gift Certificates</a>
+            </center>
+          </div> <!-- End of menu header -->
+<!-- ------------------------------------------------------------------------------  -->
+<!-- Starter section---------------------------------------------------- -->
+<!-- Appetizers---------------------------------------------------- -->
+          <div id="appetizers" class="row mx-auto">
+            <!-- Food Type Header -->
+            <div class="col-md-12 mt-5">
+              <h2 class="mt-5 text-center d-block menu-header"><strong class="header-letter-spacing">Appetizers</strong></h2>
+            </div>
+            <!-- Item -->
+            <div class="col-md-6 text-left">
+              <div class="mt-5">
+                <div>
+                  <p class="d-inline-block w-75">
+                    <strong>Sliders</strong>
+                  </p>
+                  <p class="d-inline-block w-auto text-right"><strong>$14<sup>.95</sup></strong></p>
+                </div>
+                <p class="m-0 pr-5">Choose from classic hamburger or pulled BBQ pork</p>
+              </div>
+             </div><!-- End Item -->
+             <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Seared Ahi Tuna</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right">$12<sup>.95</sup></p>
+                  </div>
+                  <p class="m-0 pr-5">With spicy ginger-lime dressing and sesame seeds</p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Fried Zucchini</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$14<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">House made panko breaded zucchini served with ranch dressing</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Cajun Popcorn Shrimp</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$14<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Served with a side of chipotle aioli</p>
+                </div>
+              </div> <!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Brussel Sprouts</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$12<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Sauteed in butter with lemon zest and chili flakes</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Personal Pizza</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right">$10<sup>.95</sup></p>
+                  </div>
+                  <p class="m-0 pr-5">Choose from classic cheese or pepperoni</p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Chipotle Mussels</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right">$14<sup>.95</sup></p>
+                  </div>
+                  <p class="m-0 pr-5">Served in a chipotle garlic wine sauce with chorizo</p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Buffalo Wings</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$15<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Tossed in your choice of spicy Buffalo sauce or house BBQ sauce</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Fried Calamari</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$14<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Lightly battered calamari rings and tentacles served with house cocktail sauce</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Potato Skins</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$13<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Fried potato wedges topped with melted Monterey Jack and cheddar cheeses, bacon, and scallions served with a side of sour cream</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Black Bean Nachos</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$14<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Crispy corn chips topped with black beans, cheddar cheese, pico de gallo, guacamole and sour cream
+                    <br>-Add chicken for $4
+                    <br>-Add steak for $5</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Quesadilla</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$11<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Mixed jack and cheddar cheese between crispy flour tortillas with pico de gallo, guacamole, and sour cream
+                    <br>-Add chicken for $4
+                    <br>-Add steak for $5
+                    <br>-Add shrimp for $7</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Prawn Skewer</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right">$14<sup>.95</sup></p>
+                  </div>
+                  <p class="m-0 pr-5">Skewer of four grilled prawns marinated in garlic, herbs, and olive oil</p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>French Fries</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$8<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Regular, garlic, spicy fries, sweet potato<br>Served with ranch dressing<!-- <br>-$3 more for onion rings --></p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>House Fried Potato Chips</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$8<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Served with ranch dressing</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Beer Battered Onion Rings</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$12<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Served with house made ranch dressing</p>
+                </div>
+              </div> <!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Crab Cakes</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$15<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Two house-made crab cakes served with chipotle aioli</p>
+                </div>
+              </div><!-- End Item -->
+<!--Soups ------------------------------------------------------------------  -->
+              <!-- Food Type Header -->
+            <div class="col-md-12 mt-5">
+              <h2 class="mt-5 text-center d-block menu-header"><strong class="header-letter-spacing">Soups</strong></h2>
+            </div>
+              <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Daily Soup</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right">$5<sup>.95</sup></p>
+                  </div>
+                  <p class="m-0 pr-5">Call to ask us about our daily soup!<br>-Bowl size add $2</p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Clam Chowder</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$9<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">A creamy, white, New England style chowder with bacon<br>-Bowl size add $2</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Vegetarian Black Bean Soup</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$9<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">A thick black bean soup with pico de gallo and sour cream
+                    <br>-Bowl size add $2</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>French Onion Gratin&#233e</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$10<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Traditional style French onion soup topped with melted Swiss and a touch of parmesan cheese</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Daily Soup Special</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$8<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">
+                    -Bowl size add $2
+                    <br>Please call the restaurant for dialy soup selection.
+                    <br><strong><span class="phone"><a href="tel:15103392098">(510)339-2098</a></span></strong>
+                  </p>
+                </div>
+              </div><!-- End Item -->
+
+<!--Starter Salads ------------------------------------------------------------------  -->
+              <!-- Food Type Header -->
+            <div class="col-md-12 mt-5">
+              <h2 class="mt-5 text-center d-block menu-header"><strong class="header-letter-spacing">Starter Salads</strong></h2>
+            </div>
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>House Walnut & Apple Salad</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$8<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Garden greens with candied walnuts and apple slices tossed in a honey-balsamic vinaigrette<!-- <br>-Entree size add $3 --></p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Mediteranean Salad</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$10<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Chopped romaine with sliced pepperoncini, feta cheese and tossed in an herb vinaigrette.<!-- <br>-Entree size add $3 --></p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Iceberg Wedge Salad</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$9<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">A quarter-head of iceberg lettuce topped with bleu cheese dressing, bacon bits, and diced tomatoes</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Shaved Fennel & Snow Pea Salad</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right">$9<sup>.95</sup></p>
+                  </div>
+                  <p class="m-0 pr-5">Fresh shaved fennel, cherry tomatoes, snow peas and green beans tossed in red wine vinaigrette topped with shaved parmesan cheese </p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Beet Salad</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$10<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">A mixture of red beets with green beans, feta cheese and Roma tomatoes tossed in a herb vinaigrette dressing</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Classic Caesar Salad</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$9<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Whole romaine leaves tossed with Caesar dressing and topped with shaved parmesan cheese, anchovies, and our house-made croutons
+                    <br>-Large size add $4
+                  </p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Spinach Salad</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$9<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Baby spinach, bacon, and musrooms tossed in a balsamic vinaigrette</p>
+                </div>
+              </div><!-- End Item -->
+          </div><!-- End of Starter Section -->
+<!-- ------------------------------------------------------------------------------  -->
+<!-- Entrees section-------------------------------------------- -->
+<!-- Salads Entrees section------------------------------------------------ -->
+          <div id="salads" class="row mx-auto mt-5">
+            <div class="col-md-12 mt-5">
+              <h2 class="mt-5 text-center d-block menu-header"><strong class="header-letter-spacing">Salad Entree</strong></h2>
+            </div>
+            <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Chicken Cobb Salad</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$18<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Roasted chicken breast over mixed greens topped with bacon bits, diced tomatoes, sliced avocado, crumbled bleu cheese, and bleu cheese dressing
+                    <br>-Substitute shrimp for $4 more</p>
+                </div>
+              </div>
+              <!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Steak Salad</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$19<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Sliced 6 oz. char-broiled to order, served over mixed greens with Roma tomatoes, red onions, feta cheese, and herb vinaigrette<!-- <br>-Substitute shrimp for $4 more --></p>
+                </div>
+              </div>
+              <!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Mandarin Chicken Salad</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$17<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Mixed greens with roasted red bell peppers, mandarin organges, peanuts, fried wontons, tossed in a sesame vinaigrette</p>
+                </div>
+              </div>
+              <!-- End Item -->
+              <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Grilled Chicken Caesar Salad</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right">$15<sup>.95</sup></p>
+                  </div>
+                  <p class="m-0 pr-5">Whole romaine leaves tossed with Caesar dressing and topped with shaved parmesan cheese, anchovies, and our house-made croutons</p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Shrimp Avocado Salad</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$21<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Fresh shrimp tossed in a Chipotle aioli over avocado with mixed greens, Roma tomatoes, red onion, and a side of herb vinaigrette</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Stuffed Shrimp Avocado Salad</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right">$16<sup>.95</sup></p>
+                  </div>
+                  <p class="m-0 pr-5">Fresh shrimp tossed in a smoky chipotle aioli over avocado with mixed greens, Roma tomatoes, red onion, and a side of chateau vinaigrette</p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Mandarin Chicken Salad</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right">$15<sup>.95</sup></p>
+                  </div>
+                  <p class="m-0 pr-5">Grilled chicken breast over shredded napa cabbage topped with mandarin oranges segments, roasted red bell peppers, fried wonton strips, and peanuts tossed in an Asian vinaigrette<br>-Substitute seared tuna for $7 more</p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Tri-Tip Arugula Salad</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right">$16<sup>.95</sup></p>
+                  </div>
+                  <p class="m-0 pr-5">A sliced 6 oz. tri-tip steak char-broiled to order served over a baby arugula salad with almonds, feta cheese, red bell peppers, and Dijon champagne vinaigrette</p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Prawn Spinach Salad</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right">$18<sup>.95</sup></p>
+                  </div>
+                  <p class="m-0 pr-5">Skewer of four grilled prawns over a spinach salad with candied walnuts, cranberries, oranges, and a chateau vinaigrette</p>
+                </div>
+              </div> --><!-- End Item -->
+          </div><!-- End of Salad Entrees -->
+          <!-- ------------------------------------------------------------------------------  -->
+          <!-- Sandwiches section------------------------------------------ -->
+          <div id="sandwiches" class="row mx-auto mt-5">
+            <div class="col-md-12 mt-5">
+              <h2 class="mt-5 text-center d-block menu-header"><strong class="header-letter-spacing">Sandwiches</strong></h2>
+              <p class="m-0 w-100 pt-4">-All sandwiches come with your choice of house salad, French fries, sweet potato fries, coleslaw, or house fried potato chips-</p>
+            </div>
+            <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>California Turkey Club Sandwich</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$15<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Sliced turkey with bacon, avocado, lettuce, tomato, and mayonnaise on toasted sourdough</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Pulled BBQ Pork Sandwich</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$15<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Slow roasted pulled pork tossed in our sweet house BBQ sauce, topped with cole slaw and pickles on a toasted brioche bun</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Fried Shrimp Po'Boy</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$16<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Battered shrimp with Cholula aioli, shredded lettuce, tomato, pickles, and served on a soft French roll</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Poblano Cheese Steak Sandwich</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right">$14<sup>.95</sup></p>
+                  </div>
+                  <p class="m-0 pr-5">In-house slow-roasted tri tip with roasted poblano peppers and onions topped with melted Provolone cheese on a French roll </p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>French Dip Sandwich</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$16<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">In-house slow-roasted beef sliced thin and topped with Swiss cheese on a soft French roll with a cup of au jus for dipping</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Reuben Sandwich</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$16<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">House corned beef, Swiss, Russian dressing and sauerkraut on toasted rye bread</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Bacon & Avocado Sandwich</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$15<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Thick bacon slices, avocado, lettuce, tomato, mayonnaise, and served on toasted wheat</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Steak Sandwich</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$16<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Sliced steak served on a garlic buttered soft French roll with garlic butter, cheddar cheese and topped with grilled onions</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Chicken Sandwich</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$15<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Grilled chicken breast with avocado, bacon, pepper jack cheese, lettuce, sliced tomato, servered on a French roll</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Crab Sandwich</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$22<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">4 ounces of Atlantic Blue Crab with bacon, avocado, lettuce, tomato, chipotle aioli, served on toasted sourdough</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Crogan's Philly Cheese Steak</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$16<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Sliced roast beef tossed with bell peppers, onions, and melted pepper jack cheese</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Katsu Chicken Sandwich</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right">$14<sup>.95</sup></p>
+                  </div>
+                  <p class="m-0 pr-5">Panko breaded chicken breast with katsu sauce over spicy jalapeno slaw served on a soft French roll</p>
+                </div>
+              </div> --><!-- End Item -->
+<!--Burgers ---------------------------------------------------------------  -->
+              <!-- Food Type Header -->
+            <div class="col-md-12 mt-5">
+              <h2 class="mt-5 text-center d-block menu-header"><strong class="header-letter-spacing">Burgers</strong></h2>
+            </div>
+            <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Crogan's Hamburger</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$15<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Choice of ground beef, ground turkey or Gardenburger served on a brioche bun
+                    <br>Choice of cheese</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Golden Bear Burger</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$18<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Ground beef hamburger with cheddar cheese, grilled onions, and bacon, served on a brioche bun</p>
+                </div>
+              </div><!-- End Item -->
+            <!-- Item -->
+              <!-- <div class="col-md-12 text-left text-center">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Build Your Own Burger</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$14<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="d-inline-block w-100">
+                    <u>-Choice of Patty-</u>
+                  </p>
+                  <p class="m-0 w-100">Choice of ground chuck steak patty, turkey patty, or Garden Burger</p>
+                  <p class="d-inline-block w-100">
+                    <u>-Choice of Cheese-</u>
+                  </p>
+                  <p class="m-0 w-100">Choose from cheddar, Swiss, provolone, or bleu cheese for $0.50 each</p>
+                  <p class="d-inline-block w-100">
+                    <u>-Your Basic Toppings-</u>
+                  </p>
+                  <p class="m-0 w-100">Add sauteed onions, mushrooms, or jalapeno slices for $1.50 each</p>
+                  <p class="d-inline-block w-100">
+                    <u>-Premium Toppings-</u>
+                  </p>
+                  <p class="m-0 w-100">Add two strips of bacon or sliced avocado for $2.50 each</p>
+                  <p class="d-inline-block w-100">
+                    <u>-Sides-</u>
+                  </p>
+                  <p class="m-0 w-100">All burgers come with your choice of house salad, French fries, coleslaw, or sweet potato fries</p>
+
+                </div>
+              </div> --><!-- End Item -->
+          </div><!-- End of Sandwich Section -->
+<!-- ------------------------------------------------------------------------------  -->
+<!-- Pasta section------------------------------------------------ -->
+          <div id="pastas" class="row mx-auto mt-5">
+            <div class="col-md-12 mt-5">
+              <h2 class="mt-5 text-center d-block menu-header"><strong class="header-letter-spacing">Pastas</strong></h2>
+            </div>
+            <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Pesto Gnocchi</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$15<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Potato gnocchi in a pesto cream sauce<br>-Add chicken for $3 more<br>-Add four prawns for $7 more</p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Penne Di Mare</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$21<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Scallops, prawns, mussels, and calamari in penne pasta with garlic-herb marinara, spinach, and tomato</p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left mx-auto">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Chicken & Mushroom Linguine</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$17<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Linguine pasta tossed with chicken, mushrooms, spinach, and diced tomatoes in a creamy Alfredo sauce</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left mx-auto">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Baked Penne Bolognese</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$19<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Penne noodles tossed with marinara sauce with ground beef and topped with mozzarella cheese</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <!-- <div class="col-md-6 text-left mx-auto">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Shrimp Pesto Linguine</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$21<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Linguine pasta tossed with shrimp, diced tomatoes, onions, and garlic in a pesto cream sauce</p>
+                </div>
+              </div> --><!-- End Item -->
+          </div><!-- End of Pasta section -->
+<!-- ------------------------------------------------------------------------------  -->
+<!-- Poultry-------------------------------------------- -->
+          <div id="entrees" class="row mx-auto mt-5">
+            <div class="col-md-12 mt-5">
+              <h2 class="mt-5 text-center d-block menu-header"><strong class="header-letter-spacing">Poultry</strong></h2>
+            </div>
+            <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Chicken Marsala</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$17<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Pan fried chicken breast with a rich marsala mushroom sauce served with mashed potatoes and sauteed broccoli</p>
+                </div>
+              </div> --><!-- End Item -->
+              <div class="col-md-6 text-left mx-auto">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Chicken Picatta</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$22<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Pan fried chicken breast with a lemon caper butter sauce served with mashed potatoes and sauteed broccoli</p>
+                </div>
+              </div>
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Rocky's Chicken</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$25<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Rockys organic deboned free-range chicken, topped with a natural au jus potatoes and sauteed spinach</p>
+                </div>
+              </div><!-- End Item -->
+<!--Beef ---------------------------------------------------------------  -->
+              <!-- Food Type Header -->
+            <div class="col-md-12 mt-5">
+              <h2 class="mt-5 text-center d-block menu-header"><strong class="header-letter-spacing">Beef</strong></h2>
+            </div>
+            <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Corned Beef & Cabbage</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$16<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Slices of salt-cured, boiled beef and quartered cabbage with roasted potatoes, carrots, and au jus</p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left mx-auto">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Braised Short Rib</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$25<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Tender, braised beef with a demi glaze served over mashed potatoes and sauteed spinach</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left mx-auto">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Char-Broiled Bistro Filet</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$25<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">An 8 oz. steak cooked medium rare, served with garlic mashed potatoes, sauteed spinach, onions, mushrooms, garlic, and topped with red wine gravy</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left mx-auto">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Prime Rib</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$37<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">12 oz prime rib cut served with mashed potatoes and sauteed green beans</p>
+                  <p class="m-0 pr-5">* Only served Friday, Saturday, & Sunday *</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Rib-Eye Steak</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$34<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">A marbled, 12 oz. Certified Angus Beef rib-eye steak char-broiled to order and served with scalloped potatoes and green beans</p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Shepherd's Pie</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$21<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">A beef steak stew with onions, carrots, celery, and peas topped with mashed potatoes</p>
+                </div>
+              </div><!-- End Item -->
+<!--Pork ---------------------------------------------------------------  -->
+              <!-- Food Type Header -->
+            <div class="col-md-12 mt-5">
+              <h2 class="mt-5 text-center d-block menu-header"><strong class="header-letter-spacing">Pork</strong></h2>
+            </div>
+            <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Roasted Pork Loin</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$19<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Three pork loin medallions topped with an apple-cranberry chutney and served with scalloped potatoes and green beans with red bell peppers</p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left mx-auto">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Baby Back Ribs</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$26<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">A succulent half-rack of pork ribs slow-cooked and smothered in our own sweet BBQ sauce with coleslaw and French fries<br>-Double the ribs, add $8</p>
+                </div>
+              </div><!-- End Item -->
+<!--Seafood ---------------------------------------------------------------  -->
+              <!-- Food Type Header -->
+            <div class="col-md-12 mt-5">
+              <h2 class="mt-5 text-center d-block menu-header"><strong class="header-letter-spacing">Seafood</strong></h2>
+            </div>
+            <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Paella</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$21<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Mussels, chicken, Pacific cod, chorizo, and shrimp with saffron rice, bell peppers, and diced tomatoes</p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Pan-Fried Barramundi</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$25<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Topped with a lemon butter sauce, served with rice pilaf and sauteed Brussels sprouts</p>
+                </div>
+              </div><!-- End Item -->
+                            <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Pan-Fried Mahi-Mahi</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$21<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Served with rice pilaf, sauteed Brussels sprouts, and topped with a lemon better sauce</p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Almond Crusted Cod</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$25<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Served with rice pilaf, sautéed spicy green beans, and topped with a jalapeño tartar sauce</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Peppered Seared Tuna</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$21<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">A 6 oz. piece of peppered yellow fin tuna, pan seared [rare] topped with ginger sesame glaze served with rice pilaf and ginger snow peas </p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Fish Tacos</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$17<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Choose from grilled or beer-battered Pacific cod in two flour tortillas with shredded iceberg, pico de gallo, guacamole, and chipotle aioli</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Char-Broiled Salmon</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$21<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Topped with beurre blanc sauce and served over a mix of couscous, snow peas, and cherry tomatoes</p>
+                </div>
+              </div> --><!-- End Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Char-Broiled Salmon</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$25<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Served with quinoa, green beans, red bell peppers and topped with a blood orange reduction</p>
+                </div>
+              </div>
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Fish & Chips</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$17<sup>.95</sup></strong></</p>
+                  </div>
+                  <p class="m-0 pr-5">Pacific cod, fried crisp, in a beer batter and served with sides of French fries and coleslaw</p>
+                </div><!-- End of Seafood Section -->
+              </div><!-- End Item -->
+          </div><!-- End of Entree Section -->
+<!-- ------------------------------------------------------------------------------  -->
+<!-- Kids Menu section---------------------------------------------- -->
+          <div id="kidsMenu" class="row mx-auto mt-5">
+            <div class="col-md-12 mt-5">
+              <h2 class="mt-5 text-center d-block menu-header"><strong class="header-letter-spacing">Kids' Menu</strong></h2>
+              <p class="m-0 w-100 pt-4">-All kids' meals include a kids size soda, milk, or juice-</p>
+            </div>
+            <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Crogan's Kid Burger</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$10<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">All-natural ground beef patty, served on a brioche bun with a choice of side</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Grilled Cheese Sandwich</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$8<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Sourdough bread with melted cheddar cheese with a choice of side</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Kids' Pizza</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$8<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Choice of cheese or pepperoni. Can be enough for 2 kids!</p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Kids' Fish n' Chips</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$10<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Beer battered fish served with fries and cole slaw</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Fried Chicken Tenders</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$10<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Served with choice of side and house made ranch</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Mini Corn Dogs</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$10<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Bite size corn dogs served with a choice of side</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Cheese Quesadilla</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$8<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Served with sides of fresh guacamole, pico de gallo and sour cream</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Kraft Mac n' Cheese</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$8<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Just like the one in the box!</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Kids' Pasta</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$8<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">-Linguini pasta-<br>-Choice of marinara sauce, cheese sauce, or parmesan and butter-</p>
+                </div>
+              </div><!-- End Item -->
+          </div><!-- End of Kids Menu Section -->
+<!-- ------------------------------------------------------------------------------  -->
+<!-- Dessert Menu section---------------------------------------------- -->
+          <div id="dessertMenu" class="row mx-auto mt-5">
+            <div class="col-md-12 mt-5">
+              <h2 class="mt-5 text-center d-block menu-header"><strong class="header-letter-spacing">Dessert Menu</strong></h2>
+              <p class="m-0 w-100 pt-4">-Not all desserts travel well for togo orders-</p>
+            </div>
+            <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Chocolate Peanut Butter Cake</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$8<sup>.50</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">A layer of dense crunchy peanut butter filling between two layers of moist chocolate cake</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Apple Tart Ala Mode</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$8<sup>.50</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">A warm golden-brown tart that has sliced apples in a sweet glaze inside and is served with a scoop of vanilla ice cream</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Creame Brulee Cheesecake</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$8<sup>.50</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">A slice of rich, creamy cheesecake topped with a drizzle of caramel sauce and served with a side of whipped cream
+                  <br>*Nut Allergy</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <!--<div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Chocolate Mousse Cake</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$8<sup>.50</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Rich chocolate cake layered with a light fluffy mousse</p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Ice Cream Sundae</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$8<sup>.50</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Three scoops of vanilla ice cream topped with roasted peanuts, chocolate and caramel sauces, whipped cream, and a cherry
+                  <br>*Peanut Allergy</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Ice Cream Scoop</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$3<sup>.50</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">A scoop of ice cream <break>*Add a second scoop of ice cream for $2.50 more</p>
+                </div>
+              </div><!-- End Item -->
+          </div><!-- End of Dessert Menu Section -->
+<!-- ------------------------------------------------------------------------------  -->
+<!-- Weekend Brunch section------------------------------------------ -->
+          <div id="weekendBrunch" class="row mx-auto mt-5">
+            <div class="col-md-12 mt-5">
+              <h2 class="mt-5 text-center d-block menu-header"><strong class="header-letter-spacing">Weekend Brunch</strong></h2>
+              <p class="m-0 w-100 pt-4">-Brunch is only served on Saturdays and Sundays-</b><br>-until 3:00pm-</p>
+            </div>
+            <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Breakfast Burrito</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$14<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Scrambled eggs, chorizo sausage, black beans, diced tomatoes, jack and cheddar cheese all wrapped inside a flour tortilla and topped with pico de gallo, served with sides of country potatoes and fruit</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>French Toast</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$14<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Egg-battered Texas toast pan-fried topped with strawberries and powdered sugar, served with sides of bacon and fruit</p>
+                </div>
+              </div><!-- End Item -->
+              <!-- Item -->
+              <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Crogan's Scramble</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$14<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Scrambled eggs with ground beef, mushrooms, bell peppers, spinach, and red onion, served with sides of country potatoes and fruit</p>
+                </div>
+              </div><!-- End Item -->
+            <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Egg Breakfast</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$9<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Two eggs prepared to order with sourdough toast, a side of country potatoes, a fruit cup, and your choice of bacon, ham, or pork sausage</p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Huevos Rancheros</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"></strong>$10<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">Two eggs over topped with black beans, spicy ranchero salsa, and Monterey Jack cheese atop a deep fried corn tortilla and served with country potatoes and a fruit cup</p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <!-- <div class="col-md-6 text-left">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Eggs Benedict</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$10<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0 pr-5">A lightly toasted English muffin with thick-cut pork belly bacon and a poached egg topped with Hollandaise sauce and served with a side of country potatoes and a fruit cup</p>
+                </div>
+              </div> --><!-- End Item -->
+              <!-- Item -->
+              <!-- <div class="col-md-12 text-center">
+                <div class="mt-5">
+                  <div>
+                    <p class="d-inline-block w-75">
+                      <strong>Build Your Own Omelet</strong>
+                    </p>
+                    <p class="d-inline-block w-auto text-right"><strong>$9<sup>.95</sup></strong></p>
+                  </div>
+                  <p class="m-0">A simple egg omelet served with sourdough toast, country potatoes, and a fruit cup<br>-<strong>Add</strong> feta, cheddar, or Monterey Jack cheeses for $1 each-<br>-<strong>Add</strong> sausage, Canadian bacon, or sliced avocado for $1 each-<br>-<strong>Add</strong> grilled onions, bell peppers, mushrooms, or baby spinach for $0.50 each-</p>
+                </div>
+              </div>--><!-- End Item -->
+          </div><!-- End of Weekend Brunch Section -->
+<!-- Happy hour Section-------------------------------------------------------------- -->
+          <!-- <div class="happy-hour-discription">
+            <h1 id="heading" class="font-weight-bold font-white">Finially done with the daily grind?</h1>
+            <h2 class="font-weight-bold">Join us for Happy Hour!</h2>
+            <h4 class="font-weight-bold"><u>Monday through Friday 4:00pm to 6:00pm</u></h4>
+            <h4>$1 Off All Wines & Full-Sized Beers</h4>
+            <h4>$2 Off All Liquors & Cocktails</h4>
+            <h4>$3 Off All Appetizers</h4>
+          </div>
+        </section> --><!-- End of Menu Section -->
+<!-- ------------------------------------------------------------------------------  -->
+<!-- End of Menu Section -->
+
+        <!-- <p class="mt-2 p-tag">*Click on menu image to zoom in*</p> -->
+        <!-- <img id="menuImage" class="menus" src="img/startersMenu.jpg?lastmod=12345678" alt="Crogan's Menu"> -->
         <!-- The Modal to Zoom Menu Imgs -->
-        <div id="myModal" class="modal">
+        <!-- <div id="myModal" class="modal"> -->
           <!-- The Close Button -->
-          <span onclick="closeZoom()" class="close">&times;</span>
+          <!-- <span onclick="closeZoom()" class="close">&times;</span> -->
           <!-- The menu nav -->
-          <ul onclick="menuSwapZoom(event)" id="foodMenuZoom" class="animated menu-nav">
+          <!-- <ul onclick="menuSwapZoom(event)" id="foodMenuZoom" class="animated menu-nav">
             <li><a class="menu-zoom font-white text-shadow-blk" value="startersMenu">Starters/Soups</a></li>
             <li><a class="menu-zoom font-white text-shadow-blk" value="entreeMenu">Entr&#233es</a></li>
             <li><a class="menu-zoom font-white text-shadow-blk" value="sandwichMenu">Sandwiches/Pasta/Salad</a></li>
@@ -139,20 +1549,24 @@
             <li><a class="menu-zoom font-white text-shadow-blk" value="brunchMenu">Weekend Brunch</a></li>
             <li><a class="menu-zoom font-white text-shadow-blk" value="kidsMenu">Kids Menu</a></li>
             <li><a class="menu-zoom font-white text-shadow-blk" value="happyHourMenu">Happy Hour!</a></li>
-          </ul>
+          </ul> -->
           <!-- Modal Content (The Image) -->
-          <img class="modal-content" id="img01">
-        </div>
+          <!-- <img class="modal-content" id="img01">
+        </div> -->
         <!-- Heading for make a reservation -->
-        <div id="menuReservation" class="container">
-          <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us"><h1 id="heading" class="font-weight-bold font-white">Make a reservation!</h1></a>
+        <!-- <div id="menuReservation" class="container">
+          <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us"><h1 id="heading" class="font-weight-bold font-white">Make a reservation!</h1></a> -->
           <!-- Description of Delivery/Reservations -->
-          <div class="text-center">
-            <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us"><h2 class="font-weight-bold mt-4">To make a reservation online go to Chowtime!</h2></a>
+          <!-- <div class="text-center">
+            <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us">
+              <h2 class="font-weight-bold mt-4">To make a reservation online go to Chowtime!</h2>
+            </a>
             <h4 id="lrgParties" class="mx-auto">To make a reservation for more than 20 people or to reserve our private backroom, please call the restaurant directly at:</h4>
-            <h4 class="font-weight-bold mb-3"><a href="tel:15103392098"><i class="fas fa-phone"></i>(510)339-2098</a></h4>
+            <h4 class="font-weight-bold mb-3">
+              <a href="tel:15103392098"><i class="fas fa-phone"></i>(510)339-2098</a>
+            </h4>
             <div class="row mt-2">
-              <div class="col-4-sm mx-auto">
+              <div class="col-sm-4 mx-auto">
                 <a target="_blank" href="http://chowtime.com/app/user?id=crogans.94611.us">
                   <img class="col-img cover-img chow-logo" alt="Chowtime Logo" src="img/chowTime.png">
                 </a>
@@ -161,40 +1575,36 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- Links -->
         <h1 id="heading" class="font-weight-bold font-white mt-5">Order delivery through our delivery platforms!</h1>
+<!-- Chownow link ----------------------------------------------------------------------------------------------------->
+        <center class="pt-4">
+          <a class="chownow-order-online" style="background-color: #d00; border: none; border-radius: 4px; color: #fff; text-decoration: none; text-transform: uppercase; padding: 10px 40px;" href="https://ordering.chownow.com/order/23135/locations" target="_blank">Order Online</a>
+        </center>
+<!-- Chownow link ----------------------------------------------------------------------------------------------------->
         <div id="links" class="row mx-auto">
           <!-- Uber Eats Delivery -->
-          <div class="col-md-4">
-            <div class="logo-div logo-div-height">
+          <div class="col-md-6">
+            <div class="logo-div logo-div-height" title="Go to Uber Eats website">
               <a target="_blank" href="https://www.ubereats.com/san-francisco/food-delivery/crogans/TR7gAqtSS7Kcta58Q2O03w/">
                 <img class="col-img logo-img" src="img/uberEats.png" alt="Link to Uber Eats delivery Crogan's">
               <h5>Order delivery on Uber Eats!</h5>
               </a>
             </div>
           </div>
-          <!-- Amazon Delivery -->
-          <div class="col-md-4">
-            <div class="logo-div logo-div-height">
-              <a target="_blank" href="https://www.amazon.com/restaurants/crogan%27s-montclair-oakland/d/B01M03ROZM">
-                <img class="col-img logo-img" src="img/amazon.jpg" alt="Link to Amazon delivery Crogan's">
-              <h5>Order delivery on Amazon!</h5>
-              </a>
-            </div>
-          </div>
           <!-- Doordash Delivery -->
-          <div class="col-md-4">
-            <div class="logo-div logo-div-height">
-              <a target="_blank" href="https://www.doordash.com/store/crogans-montclair-restaurant-oakland-46272/?utm_campaign=46272&utm_medium=website&utm_source=partner-link">
+          <div class="col-md-6">
+            <div class="logo-div logo-div-height" title="Go to Doordash Website">
+              <a target="_blank" href="https://order.online/business/crogans-montclair-restaurant-30607">
                 <img class="col-img logo-img" src="img/doordash.png" alt="Link to Doordash delivery Crogan's">
               <h5>Order delivery on Doordash!</h5>
               </a>
             </div>
           </div>
           <!-- GrubHub Delivery -->
-          <div class="col-md-4 ml-auto">
-            <div class="logo-div logo-div-height">
+          <div class="col-md-6 ml-auto">
+            <div class="logo-div logo-div-height" title="Go to GrubHub website">
               <a target="_blank" href="https://www.grubhub.com/restaurant/crogans-montclair-restaurant-6101-la-salle-ave-oakland/852951">
                 <img class="col-img logo-img" src="img/grubhub.png" alt="Link to GrubHub delivery Crogan's">
               <h5>Order delivery on GrubHub!</h5>
@@ -202,8 +1612,8 @@
             </div>
           </div>
           <!-- Postmates Delivery -->
-          <div class="col-md-4 mr-auto">
-            <div class="logo-div logo-div-height">
+          <div class="col-md-6 mr-auto">
+            <div class="logo-div logo-div-height" title="Go to Postmates website">
               <a target="_blank" href="https://postmates.com/merchant/crogans-montclair-oakland">
                 <img class="col-img logo-img" src="img/postmates.png" alt="Link to Postmates delivery Crogan's">
               <h5>Order delivery on Postmates!</h5>
@@ -211,28 +1621,31 @@
             </div>
           </div>
          <!-- Menustar Delivery -->
-          <div class="col-md-4 mr-auto">
-            <div class="logo-div logo-div-height">
+          <!-- <div class="col-md-4 mr-auto">
+            <div class="logo-div logo-div-height" title="Go to Menustar website">
               <a target="_blank" href="https://themenustar3.com/webspace/menus.php?code=crogans.mobile-webview3.com">
                 <img class="col-img logo-img" src="img/logoMenuStar.png" alt="Link to Menustar delivery Crogan's">
               <h5>Order delivery through Menustar!</h5>
               </a>
-            </div>
+            </div> -->
           </div>
         </div>
-          
+
       </main>
   </div>
-      <footer style="position: absolute;">
+      <footer id="footer" style="position: absolute;" dataScrollDirection="No scroll yet">
         <ul class="footer">
           <li>
-            <h5 id="daysTill">Days until Saint Patty's Day!</h5>
+            <h5 id="daysTill">Days until Saint Paddy's Day!</h5>
             <h5 class="pt-0 pb-0" id="countDown"></h5>
           </li>
           <li>
             <h6 class="pb-0 pt-0"><a href="https://goo.gl/maps/e9wrRZYKHwL2" target="_blank">6101 LaSalle Avenue, Oakland, CA 94611</a><span class="village"> - Montclair Village - </span><span class="phone"><a href="tel:15103392098">(510)339-2098</a></span></h6>
-            <h6 class="pt-0 pb-0">Mon-Sat 11:30am to 10:00pm</h6>
-            <h6 class="pt-0">Sun til 9:30pm</h6>
+            <h6 class="pt-0 pb-0">Mon-Sat 11:30am til 9:00pm</h6>
+            <h6 class="pt-0">Sun 11:30am til 8:00pm</h6>
+            <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=MnK1bn087hx0Vg0ecB6OVfGDSfp5ev62IrMCrg2Gd8nunyYwPDTI96PyQfji"></script></span>
+            <!-- <h6 class="pt-0 pb-0">Mon-Thurs 4pm to 8pm</h6> -->
+            <!-- <h6 class="pt-0">Everyday 12pm to 8pm</h6> -->
           </li>
         </ul>
       </footer>
@@ -254,9 +1667,11 @@
   <script src="polyfills/polyfillPromise.js"></script>
   <script src="polyfills/polyfillAuto.js"></script>
   <!-- Count Down to saint Patty's day js -->
-  <script src="js/countdown.js?v=1.0" type="text/javascript"></script>
+  <script src="js/countdown.js?v=1.1" type="text/javascript"></script>
   <!-- Custom Java Script -->
-  <script src="js/main.js?v=1.4" type="text/javascript"></script>
+  <!-- <script src="js/main.js?v=1.6" type="text/javascript"></script> -->
+  <!-- Java script to animate the menu navigation bar-->
+  <script src="js/menuNavAnimation.js?v=2.0" type="text/javascript"></script>
 
   </body>
 </html>
